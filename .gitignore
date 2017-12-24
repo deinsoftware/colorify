@@ -1,0 +1,19 @@
+### VisualStudio ###
+.vs/*
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history
+
+### SonarQube ###
+.sonar/
+.scannerwork/
+
+### Project ###
+**/bin
+**/obj
+**/dist
