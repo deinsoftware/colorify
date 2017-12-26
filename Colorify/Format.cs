@@ -15,6 +15,7 @@ namespace Colorify
                 throw new ArgumentException(nameof(theme));
             }
             _theme = theme._colors;
+            DefaultColor();
         }
 
 
@@ -37,13 +38,17 @@ namespace Colorify
             var t = _theme[color];
             Console.BackgroundColor = t._background;
             Console.ForegroundColor = t._foreground;
+            Console.Clear();
         }
 
         public void ResetColor(){
             Console.ResetColor();
+            Clear();
         }
 
-
+        public void Clear(){
+            Console.Clear();
+        }
 
         public void Write(string text, string color = Colors.txtDefault)
         {
@@ -55,6 +60,12 @@ namespace Colorify
         {
             SetColor(color);
             Out.WriteLine(text);
+        }
+
+        public void AlignCenter(string text, string color = Colors.txtDefault)
+        {
+            SetColor(color);
+            Out.AlignCenter(text);
         }
 
         public void AlignRight(string text, string color = Colors.txtDefault)
@@ -82,10 +93,21 @@ namespace Colorify
             Wrapper.Text(text);
         }
 
-        public void RepeatLine(string text, string color = Colors.txtDefault){
+        public void RepeatLine(char character){
+            RepeatLine(character, Colors.txtDefault);
+        }
+
+        public void RepeatLine(char character, string color){
             SetColor(color);
-            char c = ( String.IsNullOrEmpty(text) ? ' ' : text[0] );
-            Out.RepeatLine(c);
+            Out.RepeatLine(character);
+        }
+
+        public void BlankLines(int lines = 1){
+            BlankLines(lines, Colors.txtDefault);
+        }
+
+        public void BlankLines(string color){
+            BlankLines(1, color);
         }
 
         public void BlankLines(int lines, string color = Colors.txtDefault){
