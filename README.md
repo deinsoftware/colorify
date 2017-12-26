@@ -128,7 +128,7 @@ _format.WriteLine("Background Danger", Colors.bgDanger);
 **Theme for Windows (Dark):**  
 ![Colors for Windows](Sample/images/colors-win.png "Colors for Window")
 
-Colors are defined on `Theme` folder. There is two themes for MacOs and Windows. You can edit the `ThemeMac.cs` or `ThemeWin.cs` files or create a new one implementing the `ITheme` interface.
+Colors are defined on [Theme](https://github.com/equiman/colorify/tree/master/Colorify/Theme) folder. There is two themes for MacOs and Windows. You can edit the `ThemeMac.cs` or `ThemeWin.cs` files or create a new one implementing the `ITheme` interface.
 
 Take a look on official documentation: [ConsoleColor Enumeration](https://msdn.microsoft.com/en-us/library/system.consolecolor)
 
