@@ -27,8 +27,8 @@ namespace Sample
 
         static void Sample(){
             _format.AlignRight("Right text", Colors.txtDefault);
-            _format.AlignLeft("Left text");
-            _format.Extreme("<-Left->|<-Right->");
+            _format.AlignLeft("Left text", Colors.bgDanger);
+            _format.Extreme("<-Left->|<-Right->", Colors.bgSuccess);
             _format.BlankLines(2);
         }
     }
