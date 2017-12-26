@@ -1,24 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Drawing;
-using System.Linq;
-using System.Net;
-using System.Text;
-using ToolBox.Validations;
 using Colorify.Terminal;
+using Colorify.UI;
 
-namespace Colorify.UI
+namespace Colorify
 {
     public class Format
     {
-        private Dictionary<string, Color> _theme {get; set;}
+        Dictionary<string, Color> _theme {get; set;}
 
         public Format(ITheme theme){
-            _theme = theme.Colors;
+            if (theme == null)
+            {
+                throw new ArgumentException(nameof(theme));
+            }
+            _theme = theme._colors;
         }
 
-        private void SetColor(string color = "text-default"){
+
+
+        void SetColor(string color = "text-default"){
             Color value;
             if (_theme.TryGetValue(color, out value))
             {
@@ -31,7 +32,7 @@ namespace Colorify.UI
             }
         }
 
-        private void DefaultColor(string color = "bg-default")
+        void DefaultColor(string color = "bg-default")
         {
             var t = _theme[color];
             Console.BackgroundColor = t._background;
@@ -39,7 +40,7 @@ namespace Colorify.UI
             Console.Clear();
         }
 
-        private void ResetColor(){
+        void ResetColor(){
             Console.ResetColor();
         }
 
@@ -75,9 +76,9 @@ namespace Colorify.UI
 
         public void Extreme(string text, string color)
         {
+            SetColor(color);
             string left = text.Split('|')[0];
             string right = text.Split('|')[1];
-            SetColor(color);
             Out.Extreme(left, right);
             ResetColor();
         }

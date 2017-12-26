@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Drawing;
-using System.Linq;
-using System.Net;
-using System.Text;
-using ToolBox.Platform;
 
 namespace Colorify.UI
 {
@@ -15,14 +9,20 @@ namespace Colorify.UI
         {
             get
             {
-                return new ThemeMac();
+                var platform = new ThemeMac();
+                platform.SetColors();
+                return platform;
             }
         }
     }
 
     public sealed class ThemeMac : ITheme
     {
-        public Dictionary<string, Color> Colors {get; set;}
+        public ThemeMac(){
+            SetColors();
+        }
+
+        public Dictionary<string, Color> _colors {get; set;}
 
         public ConsoleColor DefaultBackground(){
             return ConsoleColor.Black;
@@ -40,20 +40,20 @@ namespace Colorify.UI
             return color;
         }
         public void SetColors(){
-            Colors.Add("text-default", AddColor(null                   , null                   ));
-            Colors.Add("bg-default"  , AddColor(null                   , null                   ));
-            Colors.Add("text-muted"  , AddColor(null                   , ConsoleColor.Gray      ));
-            Colors.Add("text-primary", AddColor(null                   , ConsoleColor.DarkGray  ));
-            Colors.Add("text-warning", AddColor(null                   , ConsoleColor.DarkYellow));
-            Colors.Add("text-danger" , AddColor(null                   , ConsoleColor.DarkRed   ));
-            Colors.Add("bg-muted"    , AddColor(ConsoleColor.Gray      , ConsoleColor.Black     ));
-            Colors.Add("bg-primary"  , AddColor(ConsoleColor.DarkGray  , ConsoleColor.White     ));
-            Colors.Add("bg-warning"  , AddColor(ConsoleColor.DarkYellow, ConsoleColor.White     ));
-            Colors.Add("bg-danger"   , AddColor(ConsoleColor.DarkRed   , ConsoleColor.White     ));
-            Colors.Add("text-success", AddColor(null                   , ConsoleColor.DarkGreen ));
-            Colors.Add("text-info"   , AddColor(null                   , ConsoleColor.DarkCyan  ));
-            Colors.Add("bg-success"  , AddColor(ConsoleColor.DarkGreen , ConsoleColor.White     ));
-            Colors.Add("bg-info"     , AddColor(ConsoleColor.DarkCyan  , ConsoleColor.White     ));
+            _colors.Add("text-default", AddColor(null                   , null                   ));
+            _colors.Add("bg-default"  , AddColor(null                   , null                   ));
+            _colors.Add("text-muted"  , AddColor(null                   , ConsoleColor.Gray      ));
+            _colors.Add("text-primary", AddColor(null                   , ConsoleColor.DarkGray  ));
+            _colors.Add("text-warning", AddColor(null                   , ConsoleColor.DarkYellow));
+            _colors.Add("text-danger" , AddColor(null                   , ConsoleColor.DarkRed   ));
+            _colors.Add("bg-muted"    , AddColor(ConsoleColor.Gray      , ConsoleColor.Black     ));
+            _colors.Add("bg-primary"  , AddColor(ConsoleColor.DarkGray  , ConsoleColor.White     ));
+            _colors.Add("bg-warning"  , AddColor(ConsoleColor.DarkYellow, ConsoleColor.White     ));
+            _colors.Add("bg-danger"   , AddColor(ConsoleColor.DarkRed   , ConsoleColor.White     ));
+            _colors.Add("text-success", AddColor(null                   , ConsoleColor.DarkGreen ));
+            _colors.Add("text-info"   , AddColor(null                   , ConsoleColor.DarkCyan  ));
+            _colors.Add("bg-success"  , AddColor(ConsoleColor.DarkGreen , ConsoleColor.White     ));
+            _colors.Add("bg-info"     , AddColor(ConsoleColor.DarkCyan  , ConsoleColor.White     ));
         }
     }
 }

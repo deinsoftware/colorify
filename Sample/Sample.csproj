@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Colorify\Colorify.csproj" />
+    <ProjectReference Include="..\..\_devTB\ToolBox\ToolBox.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
