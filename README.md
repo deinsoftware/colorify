@@ -2,7 +2,7 @@
 
 
 **Colorify** was created to simplify and automate tasks related to NET Core console formating. Was born in 
-[HardHat](https://github.com/equiman/hardhat/) project as a Class. Now grow up as library and can be used by other console applications.
+[HardHat](https://github.com/equiman/hardhat/) project as a Class. Now grew up as library and can be used by other console applications.
 
 Contributions or Beer :beers: will be appreciated :thumbsup:
 
