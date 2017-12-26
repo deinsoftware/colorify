@@ -64,7 +64,7 @@ In your project folder, where is located .csproj file run this command on termin
 | win | `dotnet add reference "D:\Developer\DEIN\Projects\_devCC\Colorify\Colorify.csproj"` |
 | mac | `dotnet add reference ~/Developer/DEIN/Projects/_devCC/Colorify/Colorify.csproj` |
 
-Or take a look of official documentation: [dotnet-add reference](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-reference)
+Take a look on official documentation: [dotnet-add reference](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-reference)
 
 Keep calm, you are almost done. Review this final steps and enjoy the life, no more tedious and repetitive tasks stealing your precious time.
 
@@ -122,9 +122,15 @@ _format.WriteLine("Background Warning", Colors.bgWarning);
 _format.WriteLine("Background Danger", Colors.bgDanger);
 ```
 
-![Colors](Sample/images/colors.png "Colors")
+**Theme for MacOS (Light):**  
+![Colors for MacOS](Sample/images/colors-mac.png "Colors for MacOS")
 
-Colors are defined on `Theme` folder. There is two themes for MacOs and Windows. You can edit the `ThemeMac.cs` (Light) or `ThemeWin.cs` (Dark) files or create a new one implementing the `ITheme` interface.
+**Theme for Windows (Dark):**  
+![Colors for Windows](Sample/images/colors-win.png "Colors for Window")
+
+Colors are defined on `Theme` folder. There is two themes for MacOs and Windows. You can edit the `ThemeMac.cs` or `ThemeWin.cs` files or create a new one implementing the `ITheme` interface.
+
+Take a look on official documentation: [ConsoleColor Enumeration](https://msdn.microsoft.com/en-us/library/system.consolecolor)
 
 ### Write
 
@@ -266,6 +272,6 @@ This project is licensed under the GNU GPLv3 License - see the [LICENSE](LICENSE
 ### Acknowledgments
 
 * [StackOverflow](http://stackoverflow.com): The largest online community for programmers.
-* [Dot Net Perls](https://www.dotnetperls.com/console-color): C# Console Color, Text and BackgroundColor
+* [Dot Net Perls](https://www.dotnetperls.com/console-color): C# Console Color, Text and BackgroundColor.
 
 ⇧ [Back to menu](#menu)
