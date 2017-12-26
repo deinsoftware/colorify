@@ -80,7 +80,7 @@ namespace Colorify
             Out.AlignLeft(text);
         }
 
-        public void Extreme(string text, string color = Colors.txtDefault)
+        public void AlignSplit(string text, string color = Colors.txtDefault)
         {
             SetColor(color);
             string left = text.Split('|')[0];
