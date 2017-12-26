@@ -2,7 +2,7 @@
 
 
 **Colorify** was created to simplify and automate tasks related to NET Core console formating. Was born in 
-[HardHat](https://github.com/equiman/hardhat/) project as a Class. Now grow up as library and can be used other console applications.
+[HardHat](https://github.com/equiman/hardhat/) project as a Class. Now grow up as library and can be used by other console applications.
 
 Contributions or Beer :beers: will be appreciated :thumbsup:
 
@@ -257,13 +257,13 @@ Please read [CONTRIBUTING](CONTRIBUTING.md) for details on our code of conduct, 
 
 ### Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [HardHat](https://github.com/equiman/colorify/tags) on GitHub.
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [Colorify](https://github.com/equiman/colorify/tags) on GitHub.
 
 ### Authors
 
 * **Camilo Martinez** [[Equiman](http://stackoverflow.com/story/equiman)]
 
-See also the list of [contributors](https://github.com/equiman/hardhat/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/equiman/colorify/contributors) who participated in this project.
 
 ### License
 
