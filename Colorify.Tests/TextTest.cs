@@ -3,10 +3,10 @@ using Xunit;
 
 namespace Colorify.Tests
 {
-    public class UnitTest1
+    public class TextTest
     {
         [Fact]
-        public void Test1()
+        public void Justify()
         {
 
         }
