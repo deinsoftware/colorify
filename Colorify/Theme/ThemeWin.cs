@@ -9,9 +9,7 @@ namespace Colorify.UI
         {
             get
             {
-                var platform = new ThemeWin();
-                platform.SetColors();
-                return platform;
+                return new ThemeWin();
             }
         }
     }
@@ -29,7 +27,7 @@ namespace Colorify.UI
         }
 
         public ConsoleColor DefaultForeground(){
-            return ConsoleColor.Black;
+            return ConsoleColor.White;
         }
 
         public Color AddColor(ConsoleColor? background, ConsoleColor? foreground){
@@ -41,6 +39,7 @@ namespace Colorify.UI
         }
 
         public void SetColors(){
+            var colors = new Dictionary<string, Color>();
             _colors.Add("text-default", AddColor(null                   , null                   ));
             _colors.Add("bg-default"  , AddColor(null                   , null                   ));
             _colors.Add("text-muted"  , AddColor(null                   , ConsoleColor.DarkGray  ));
@@ -55,6 +54,7 @@ namespace Colorify.UI
             _colors.Add("text-info"   , AddColor(null                   , ConsoleColor.DarkCyan  ));
             _colors.Add("bg-success"  , AddColor(ConsoleColor.DarkGreen , ConsoleColor.White     ));
             _colors.Add("bg-info"     , AddColor(ConsoleColor.DarkCyan  , ConsoleColor.White     ));
+            _colors = colors;
         }
     }
 }

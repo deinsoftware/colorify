@@ -1,4 +1,5 @@
-﻿using Colorify;
+﻿using System;
+using Colorify;
 using Colorify.UI;
 using ToolBox.Platform;
 
@@ -10,6 +11,7 @@ namespace Sample
 
         static void Main(string[] args)
         {
+            Console.ReadKey();
             switch (OS.GetCurrent())
             {
                 case "win":
