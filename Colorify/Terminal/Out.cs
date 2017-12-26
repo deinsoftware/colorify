@@ -12,22 +12,23 @@ namespace Colorify.Terminal
             Console.WriteLine( $" {text}" );
         }
 
-        public static void PadLeft(string text)
+        public static void AlignRight(string text)
         {
-            Console.WriteLine( $" {text.PadLeft(Console.WindowWidth - 1)}" );
+            Console.WriteLine( $"{(" " + text).PadLeft(Console.WindowWidth)}" );
         }
 
-        public static void PadRight(string text)
+        public static void AlignLeft(string text)
         {
-            Console.WriteLine( $" {text.PadRight(Console.WindowWidth - 1)}" );
+            Console.WriteLine( $"{(text + " ").PadRight(Console.WindowWidth)} " );
         }
         
         public static void Extreme(string left, string right)
         {
-            int l = Console.WindowWidth / 2;
-            Console.Write( $" {left.PadLeft(l - 0)}" );
-            int r = Console.WindowWidth - l;
-            Console.WriteLine( $"{right.PadRight(r - 1)}" );
+            int r = Console.WindowWidth / 2;
+            int l = Console.WindowWidth - r;
+
+            Console.Write(left.PadRight(r));
+            Console.WriteLine(right.PadLeft(l));
         }
 
         public static void RepeatLine(char character)

@@ -11,7 +11,6 @@ namespace Sample
 
         static void Main(string[] args)
         {
-            Console.ReadKey();
             switch (OS.GetCurrent())
             {
                 case "win":
@@ -22,11 +21,15 @@ namespace Sample
                     break;
             }
             Sample();
+            Console.ReadKey();
+            _format.ResetColor();
         }
 
         static void Sample(){
-            _format.PadLeft("Left text", Colors.txtDefault);
-            _format.PadRight("Right text", Colors.txtDefault);
+            _format.AlignRight("Right text", Colors.txtDefault);
+            _format.AlignLeft("Left text");
+            _format.Extreme("<-Left->|<-Right->");
+            _format.BlankLines(2);
         }
     }
 }
