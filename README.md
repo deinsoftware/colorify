@@ -42,7 +42,7 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install?
 
 * [NET Core SDK](https://www.microsoft.com/net/download)
-* [ToolBox](https://github.com/equiman/hardhat/)
+* [ToolBox](https://github.com/equiman/toolbox/)
 
 ### Installing
 
