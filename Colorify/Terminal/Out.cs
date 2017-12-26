@@ -14,12 +14,12 @@ namespace Colorify.Terminal
 
         public static void AlignRight(string text)
         {
-            Console.WriteLine( $"{(" " + text).PadLeft(Console.WindowWidth)}" );
+            Console.WriteLine( $"{text.PadLeft(Console.WindowWidth)}" );
         }
 
         public static void AlignLeft(string text)
         {
-            Console.WriteLine( $"{(text + " ").PadRight(Console.WindowWidth)} " );
+            Console.WriteLine( $"{text.PadRight(Console.WindowWidth)} " );
         }
         
         public static void Extreme(string left, string right)
@@ -27,8 +27,8 @@ namespace Colorify.Terminal
             int r = Console.WindowWidth / 2;
             int l = Console.WindowWidth - r;
 
-            Console.Write(left.PadRight(r));
-            Console.WriteLine(right.PadLeft(l));
+            Console.Write(left.PadRight(r - 0));
+            Console.WriteLine(right.PadLeft(l - 0));
         }
 
         public static void RepeatLine(char character)
