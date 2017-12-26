@@ -2,12 +2,57 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "taskName": "build",
+            "label": "build",
             "command": "dotnet",
             "type": "process",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "args": [
+                "build",
+                "${workspaceFolder}/Colorify/Colorify.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build tests",
+            "command": "dotnet",
+            "type": "process",
+            "group": "build",
             "args": [
                 "build",
                 "${workspaceFolder}/Colorify.Tests/Colorify.Tests.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish win",
+            "command": "dotnet",
+            "args": [
+                "publish",
+                "${workspaceRoot}/Colorify/Colorify.csproj",
+                "-o",
+                "${workspaceRoot}/Library/win/",
+                "-c",
+                "release",
+                "-r",
+                "win10-x64"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish mac",
+            "command": "dotnet",
+            "args": [
+                "publish",
+                "${workspaceRoot}/Colorify/Colorify.csproj",
+                "-o",
+                "${workspaceRoot}/Library/mac/",
+                "-c",
+                "release",
+                "-r",
+                "osx.10.12-x64"
             ],
             "problemMatcher": "$msCompile"
         }
