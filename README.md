@@ -57,7 +57,7 @@ Clone **Colorify** from GitHub on *recommended* path. Using this command on term
 
 ## Add Reference
 
-In your project folder, where is located .csproj file run this command on terminal:
+In **your project folder**, where is located `.csproj` file run this command on terminal:
 
 | OS | Command |
 | --- | --- |
@@ -100,6 +100,13 @@ This command `_colorify.ResetColor();` is important in order to reset default te
 ## Usage
 
 I'll try explain the usage, but I think the best way is take a look in [Sample](https://github.com/equiman/colorify/tree/master/Sample) folder, better easy to use guide that words.
+
+In Colorify solution folder, where is located `Colorify.sln` file run this command on terminal:
+
+```terminal
+cd Sample
+dotnet run
+```
 
 ### Colors
 
