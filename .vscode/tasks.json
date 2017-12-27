@@ -27,6 +27,17 @@
             "problemMatcher": "$msCompile"
         },
         {
+            "label": "build sample",
+            "command": "dotnet",
+            "type": "process",
+            "group": "build",
+            "args": [
+                "build",
+                "${workspaceFolder}/Sample/Sample.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
             "label": "publish win",
             "command": "dotnet",
             "args": [
