@@ -22,12 +22,12 @@ namespace Colorify.Terminal
 
         public static void AlignRight(string text)
         {
-            Console.WriteLine( $"{text.PadLeft(Console.WindowWidth)}" );
+            Console.Write( $"{text.PadLeft(Console.WindowWidth)}" );
         }
 
         public static void AlignLeft(string text)
         {
-            Console.WriteLine( $"{text.PadRight(Console.WindowWidth)}" );
+            Console.Write( $"{text.PadRight(Console.WindowWidth)}" );
         }
 
         public static void AlignCenter(string text){
@@ -55,7 +55,7 @@ namespace Colorify.Terminal
         public static void DivisionLine(char character)
         {
             string text = new String(character, Console.WindowWidth);
-            Console.WriteLine(text);
+            Console.Write(text);
         }
 
         public static void BlankLines(int? lines = 1)
