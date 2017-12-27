@@ -75,23 +75,23 @@ On the main class Program, add an static property Format and inside Main method 
 ```csharp
 class Program
 {
-  private static Format _colorify {get; set;}
+    private static Format _colorify {get; set;}
 
-  static void Main(string[] args)
-  {
-      switch (OS.GetCurrent())
-      {
-          case "win":
-              _colorify = new Format(Theme.Win);
-              break;
-          case "mac":
-              _colorify = new Format(Theme.Mac);
-              break;
-      }
-      //Foo()
-      //Bar()
-      _colorify.ResetColor();
-  }
+    static void Main(string[] args)
+    {
+        switch (OS.GetCurrent())
+        {
+            case "win":
+                _colorify = new Format(Theme.Win);
+                break;
+            case "mac":
+                _colorify = new Format(Theme.Mac);
+                break;
+        }
+        //Foo()
+        //Bar()
+        _colorify.ResetColor();
+    }
 }
 ```
 
