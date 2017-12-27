@@ -26,9 +26,9 @@ namespace Sample
 
         static void Menu(){
             _colorify.Clear();
-            _colorify.RepeatLine('=', Colorify.Colors.bgInfo);
+            _colorify.DivisionLine('=', Colorify.Colors.bgInfo);
             _colorify.AlignCenter("COLORIFY SAMPLE", Colorify.Colors.bgInfo);
-            _colorify.RepeatLine('=', Colorify.Colors.bgInfo);
+            _colorify.DivisionLine('=', Colorify.Colors.bgInfo);
             _colorify.BlankLines();
             _colorify.Write($"{" 1]", -4}"); _colorify.WriteLine("Colors");
             _colorify.Write($"{" 2]", -4}"); _colorify.WriteLine("Write");
@@ -39,7 +39,7 @@ namespace Sample
             _colorify.BlankLines();
             _colorify.AlignRight("[X] Exit ", Colorify.Colors.txtDanger);
             _colorify.BlankLines();
-            _colorify.RepeatLine('=', Colorify.Colors.bgInfo);
+            _colorify.DivisionLine('=', Colorify.Colors.bgInfo);
             _colorify.BlankLines();
             _colorify.Write($"{" Make your choice:", -25}");
             string opt = Console.ReadLine();
@@ -53,7 +53,7 @@ namespace Sample
                 case "3": WriteLine(); break;
                 case "4": TextAlign(); break;
                 case "5": BlankLines(); break;
-                case "6": DivisionLines(); break;
+                case "6": DivisionLine(); break;
                 case "x": break;
                 default: Menu(); break;
             }
@@ -122,14 +122,14 @@ namespace Sample
             Back();
         }
 
-        static void DivisionLines(){
-            _colorify.RepeatLine('-', Colorify.Colors.bgDefault);
-            _colorify.RepeatLine('+', Colorify.Colors.bgMuted);
-            _colorify.RepeatLine('~', Colorify.Colors.bgPrimary);
-            _colorify.RepeatLine('=', Colorify.Colors.bgSuccess);
-            _colorify.RepeatLine('-', Colorify.Colors.bgInfo);
-            _colorify.RepeatLine('*', Colorify.Colors.bgWarning);
-            _colorify.RepeatLine('.', Colorify.Colors.bgDanger);
+        static void DivisionLine(){
+            _colorify.DivisionLine('-', Colorify.Colors.bgDefault);
+            _colorify.DivisionLine('+', Colorify.Colors.bgMuted);
+            _colorify.DivisionLine('~', Colorify.Colors.bgPrimary);
+            _colorify.DivisionLine('=', Colorify.Colors.bgSuccess);
+            _colorify.DivisionLine('-', Colorify.Colors.bgInfo);
+            _colorify.DivisionLine('*', Colorify.Colors.bgWarning);
+            _colorify.DivisionLine('.', Colorify.Colors.bgDanger);
 
             Back();
         }

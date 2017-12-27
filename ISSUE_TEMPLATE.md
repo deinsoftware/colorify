@@ -22,9 +22,9 @@ Please help provide information about the failure if this is a bug. If it is not
 
 Please provide detailed steps for reproducing the issue.
 
-1 step 1
-2 step 2
-3 you get it...
+1. step 1
+1. step 2
+1. you get it...
 
 ### Context
 

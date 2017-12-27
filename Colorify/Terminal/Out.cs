@@ -52,7 +52,7 @@ namespace Colorify.Terminal
             Console.Write($"{right}".PadLeft(leftMargin));
         }
 
-        public static void RepeatLine(char character)
+        public static void DivisionLine(char character)
         {
             string text = new String(character, Console.WindowWidth);
             Console.WriteLine(text);
@@ -62,7 +62,7 @@ namespace Colorify.Terminal
         {
             for (int i = 0; i < lines; i++)
             {
-                RepeatLine(' ');
+                DivisionLine(' ');
             }
         }
     }

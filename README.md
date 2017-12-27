@@ -21,8 +21,8 @@ Contributions or Beer :beers: will be appreciated :thumbsup:
   * [Write](#write)
   * [WriteLine](#writeline)
   * [Align](#align)
-  * [Blank Lines](#blank-lines)
-  * [Division Lines](#division-lines)
+  * [BlankLines](#blanklines)
+  * [DivisionLine](#divisionline)
 * [About](#about)
   * [Built With](#built-with)
   * [Contributing](#contributing)
@@ -214,7 +214,7 @@ _colorify.AlignSplit("<-Text to Left| Text to Right->", Colorify.Colors.bgSucces
 
 ![Align](Sample/images/align.png "Align")
 
-### Blank Lines
+### BlankLines
 
 `_colorify.BlankLines` works like `Console.WriteLine` but without text. You can combine the amount of lines and color. Default values will be `1` line and `Colors.txtDefault`.
 
@@ -232,21 +232,21 @@ _colorify.BlankLines(3, Colorify.Colors.bgSuccess);
 
 ![BlankLines x 3](Sample/images/linesx3.png "BlankLines x 3")
 
-### Division Lines
+### DivisionLine
 
-`_colorify.DivisionLines` works like `Console.WriteLine` but without the same character as full width text. . If you don't specify a color will use the `Colors.txtDefault` by default.
+`_colorify.DivisionLine` works like `Console.WriteLine` but without the same character as full width text. . If you don't specify a color will use the `Colors.txtDefault` by default.
 
 ```csharp
-_colorify.RepeatLine('-', Colorify.Colors.bgDefault);
-_colorify.RepeatLine('+', Colorify.Colors.bgMuted);
-_colorify.RepeatLine('~', Colorify.Colors.bgPrimary);
-_colorify.RepeatLine('=', Colorify.Colors.bgSuccess);
-_colorify.RepeatLine('-', Colorify.Colors.bgInfo);
-_colorify.RepeatLine('*', Colorify.Colors.bgWarning);
-_colorify.RepeatLine('.', Colorify.Colors.bgDanger);
+_colorify.DivisionLine('-', Colorify.Colors.bgDefault);
+_colorify.DivisionLine('+', Colorify.Colors.bgMuted);
+_colorify.DivisionLine('~', Colorify.Colors.bgPrimary);
+_colorify.DivisionLine('=', Colorify.Colors.bgSuccess);
+_colorify.DivisionLine('-', Colorify.Colors.bgInfo);
+_colorify.DivisionLine('*', Colorify.Colors.bgWarning);
+_colorify.DivisionLine('.', Colorify.Colors.bgDanger);
 ```
 
-![DivisionLines](Sample/images/division.png "DivisionLines")
+![DivisionLine](Sample/images/division.png "DivisionLine")
 
 ⇧ [Back to menu](#menu)
 

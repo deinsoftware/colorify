@@ -93,13 +93,13 @@ namespace Colorify
             Wrapper.Text(text);
         }
 
-        public void RepeatLine(char character){
-            RepeatLine(character, Colors.txtDefault);
+        public void DivisionLine(char character){
+            DivisionLine(character, Colors.txtDefault);
         }
 
-        public void RepeatLine(char character, string color){
+        public void DivisionLine(char character, string color){
             SetColor(color);
-            Out.RepeatLine(character);
+            Out.DivisionLine(character);
         }
 
         public void BlankLines(int lines = 1){
