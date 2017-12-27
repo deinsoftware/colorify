@@ -75,27 +75,27 @@ On the main class Program, add an static property Format and inside Main method 
 ```csharp
 class Program
 {
-  private static Format _format {get; set;}
+  private static Format _colorify {get; set;}
 
   static void Main(string[] args)
   {
       switch (OS.GetCurrent())
       {
           case "win":
-              _format = new Format(Theme.Win);
+              _colorify = new Format(Theme.Win);
               break;
           case "mac":
-              _format = new Format(Theme.Mac);
+              _colorify = new Format(Theme.Mac);
               break;
       }
       //Foo()
       //Bar()
-      _format.ResetColor();
+      _colorify.ResetColor();
   }
 }
 ```
 
-This command `_format.ResetColor();` is important in order to reset default terminal colors when programs finish.
+This command `_colorify.ResetColor();` is important in order to reset default terminal colors when programs finish.
 
 ## Usage
 
@@ -106,20 +106,20 @@ I'll try explain the usage, but I think the best way is take a look in [Sample](
 **Colorify** colors was created inspired on [Bootstrap colors](https://getbootstrap.com/docs/4.0/utilities/colors/) a list whit a meaning easy to remember.
 
 ```csharp
-_format.WriteLine("Text Default", Colors.txtDefault);
-_format.WriteLine("Text Muted", Colors.txtMuted);
-_format.WriteLine("Text Primary", Colors.txtPrimary);
-_format.WriteLine("Text Success", Colors.txtSuccess);
-_format.WriteLine("Text Info", Colors.txtInfo);
-_format.WriteLine("Text Warning", Colors.txtWarning);
-_format.WriteLine("Text Danger", Colors.txtDanger);
-_format.WriteLine("Background Default", Colors.bgDefault);
-_format.WriteLine("Background Muted", Colors.bgMuted);
-_format.WriteLine("Background Primary", Colors.bgPrimary);
-_format.WriteLine("Background Success", Colors.bgSuccess);
-_format.WriteLine("Background Info", Colors.bgInfo);
-_format.WriteLine("Background Warning", Colors.bgWarning);
-_format.WriteLine("Background Danger", Colors.bgDanger);
+_colorify.WriteLine("Text Default", Colors.txtDefault);
+_colorify.WriteLine("Text Muted", Colors.txtMuted);
+_colorify.WriteLine("Text Primary", Colors.txtPrimary);
+_colorify.WriteLine("Text Success", Colors.txtSuccess);
+_colorify.WriteLine("Text Info", Colors.txtInfo);
+_colorify.WriteLine("Text Warning", Colors.txtWarning);
+_colorify.WriteLine("Text Danger", Colors.txtDanger);
+_colorify.WriteLine("Background Default", Colors.bgDefault);
+_colorify.WriteLine("Background Muted", Colors.bgMuted);
+_colorify.WriteLine("Background Primary", Colors.bgPrimary);
+_colorify.WriteLine("Background Success", Colors.bgSuccess);
+_colorify.WriteLine("Background Info", Colors.bgInfo);
+_colorify.WriteLine("Background Warning", Colors.bgWarning);
+_colorify.WriteLine("Background Danger", Colors.bgDanger);
 ```
 
 **Theme for MacOS (Light):**  
@@ -134,47 +134,47 @@ Take a look on official documentation: [ConsoleColor Enumeration](https://msdn.m
 
 ### Write
 
-`_format.Write` work like `Console.Write` but wrapped with colors. If you don't specify a color will use the `Colors.txtDefault` by default.
+`_colorify.Write` work like `Console.Write` but wrapped with colors. If you don't specify a color will use the `Colors.txtDefault` by default.
 
 ```csharp
-_format.Write("Text");
+_colorify.Write("Text");
 ```
 
 ```csharp
-_format.Write("Text", Colors.bgDefault);
+_colorify.Write("Text", Colors.bgDefault);
 ```
 
-You can stack a multiple `_format.Write`, just remember define the last one as WriteLine.
+You can stack a multiple `_colorify.Write`, just remember define the last one as WriteLine.
 
 ```csharp
-_format.Write(" Default ", Colors.bgDefault);
-_format.Write(" Muted   ", Colors.bgMuted);
-_format.Write(" Primary ", Colors.bgPrimary);
-_format.Write(" Success ", Colors.bgSuccess);
-_format.Write(" Info    ", Colors.bgInfo);
-_format.Write(" Warning ", Colors.bgWarning);
-_format.WriteLine(" Danger  ", Colors.bgDanger);
+_colorify.Write(" Default ", Colors.bgDefault);
+_colorify.Write(" Muted   ", Colors.bgMuted);
+_colorify.Write(" Primary ", Colors.bgPrimary);
+_colorify.Write(" Success ", Colors.bgSuccess);
+_colorify.Write(" Info    ", Colors.bgInfo);
+_colorify.Write(" Warning ", Colors.bgWarning);
+_colorify.WriteLine(" Danger  ", Colors.bgDanger);
 ```
 
 ![Write](Sample/images/write.png "Write")
 
 ### WriteLine
 
-`_format.WriteLine` work like `Console.WriteLine` with a line terminator after the text but wrapped with colors. If you don't specify a color will use the `Colors.txtDefault` by default.
+`_colorify.WriteLine` work like `Console.WriteLine` with a line terminator after the text but wrapped with colors. If you don't specify a color will use the `Colors.txtDefault` by default.
 
 ```csharp
-_format.WriteLine("Text with line terminator");
+_colorify.WriteLine("Text with line terminator");
 ```
 
 ```csharp
-_format.WriteLine("Text with line terminator", Colors.bgDefault);
+_colorify.WriteLine("Text with line terminator", Colors.bgDefault);
 ```
 
 Automatic line wrap with long text:
 
 ```csharp
-_format.Write("Short Text at First Preceded with a ", Colorify.Colors.bgInfo);
-_format.WriteLine(" Long Multilinetext with Line Wrap that bring a new line", Colorify.Colors.bgSuccess);
+_colorify.Write("Short Text at First Preceded with a ", Colorify.Colors.bgInfo);
+_colorify.WriteLine(" Long Multilinetext with Line Wrap that bring a new line", Colorify.Colors.bgSuccess);
 ```
 
 ![WriteLine](Sample/images/writeline.png "WriteLine")
@@ -184,59 +184,59 @@ _format.WriteLine(" Long Multilinetext with Line Wrap that bring a new line", Co
 All the align methods (Center/Left/Right) works like `Console.WriteLine` but with align operation and wrapped with colors. If you don't specify a color will use the `Colors.txtDefault` by default.
 
 ```csharp
-_format.AlignCenter("Text Aligned to Center");
-_format.AlignRight("Text Aligned to Right");
-_format.AlignLeft("Text Aligned to Left");
+_colorify.AlignCenter("Text Aligned to Center");
+_colorify.AlignRight("Text Aligned to Right");
+_colorify.AlignLeft("Text Aligned to Left");
 ```
 
 ```csharp
-_format.AlignCenter("Text Aligned to Center", Colorify.Colors.bgInfo);
-_format.AlignRight("Text Aligned to Right", Colorify.Colors.txtDefault);
-_format.AlignLeft("Text Aligned to Left", Colorify.Colors.txtDanger);
+_colorify.AlignCenter("Text Aligned to Center", Colorify.Colors.bgInfo);
+_colorify.AlignRight("Text Aligned to Right", Colorify.Colors.txtDefault);
+_colorify.AlignLeft("Text Aligned to Left", Colorify.Colors.txtDanger);
 ```
 
 `AlignSplit` is the way to show two values on the same line. Text will be split with pipe `|` character, the first element will be aligned to left and second aligned to right.
 
 ```csharp
-_format.AlignSplit("<-Text to Left| Text to Right->");
+_colorify.AlignSplit("<-Text to Left| Text to Right->");
 ```
 
 ```csharp
-_format.AlignSplit("<-Text to Left| Text to Right->", Colorify.Colors.bgSuccess);
+_colorify.AlignSplit("<-Text to Left| Text to Right->", Colorify.Colors.bgSuccess);
 ```
 
 ![Align](Sample/images/align.png "Align")
 
 ### Blank Lines
 
-`_format.BlankLines` works like `Console.WriteLine` but without text. You can combine the amount of lines and color. Default values will be `1` line and `Colors.txtDefault`.
+`_colorify.BlankLines` works like `Console.WriteLine` but without text. You can combine the amount of lines and color. Default values will be `1` line and `Colors.txtDefault`.
 
 ```csharp
-_format.BlankLines();
-_format.BlankLines(Colorify.Colors.bgDanger);
+_colorify.BlankLines();
+_colorify.BlankLines(Colorify.Colors.bgDanger);
 ```
 
 ![BlankLines](Sample/images/lines.png "BlankLines")
 
 ```csharp
-_format.BlankLines(3);
-_format.BlankLines(3, Colorify.Colors.bgSuccess);
+_colorify.BlankLines(3);
+_colorify.BlankLines(3, Colorify.Colors.bgSuccess);
 ```
 
 ![BlankLines x 3](Sample/images/linesx3.png "BlankLines x 3")
 
 ### Division Lines
 
-`_format.DivisionLines` works like `Console.WriteLine` but without the same character as full width text. . If you don't specify a color will use the `Colors.txtDefault` by default.
+`_colorify.DivisionLines` works like `Console.WriteLine` but without the same character as full width text. . If you don't specify a color will use the `Colors.txtDefault` by default.
 
 ```csharp
-_format.RepeatLine('-', Colorify.Colors.bgDefault);
-_format.RepeatLine('+', Colorify.Colors.bgMuted);
-_format.RepeatLine('~', Colorify.Colors.bgPrimary);
-_format.RepeatLine('=', Colorify.Colors.bgSuccess);
-_format.RepeatLine('-', Colorify.Colors.bgInfo);
-_format.RepeatLine('*', Colorify.Colors.bgWarning);
-_format.RepeatLine('.', Colorify.Colors.bgDanger);
+_colorify.RepeatLine('-', Colorify.Colors.bgDefault);
+_colorify.RepeatLine('+', Colorify.Colors.bgMuted);
+_colorify.RepeatLine('~', Colorify.Colors.bgPrimary);
+_colorify.RepeatLine('=', Colorify.Colors.bgSuccess);
+_colorify.RepeatLine('-', Colorify.Colors.bgInfo);
+_colorify.RepeatLine('*', Colorify.Colors.bgWarning);
+_colorify.RepeatLine('.', Colorify.Colors.bgDanger);
 ```
 
 ![DivisionLines](Sample/images/division.png "DivisionLines")
