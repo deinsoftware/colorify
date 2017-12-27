@@ -1,11 +1,33 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <ItemGroup>
+  <PropertyGroup>
+    <AssemblyName>Colorify</AssemblyName>
+    <PackageId>Colorify</PackageId>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    
+    <Authors>Camilo Martinez</Authors>
+    <Company>dein Software</Company>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <AssemblyTitle>Colorify</AssemblyTitle>
+    <Description>C# NETCore Console Library with Text Format: colors, alignment and lot more</Description>
+    <Copyright>dein Software © 2017</Copyright>
+
+    <PackageTags>dotnet;core;win10-x64;osx.10.12-x64</PackageTags>
+    <PackageIconUrl>https://github.com/equiman/colorify/blob/master/Colorify/icon.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/equiman/colorify</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/equiman/colorify/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/equiman/colorify</RepositoryUrl>
+    
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RuntimeIdentifiers>win10-x64;osx.10.12-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
+    <!-- Resources -->
+    <None Update="icon.png" CopyToOutputDirectory="PreserveNewest" />
+    <!-- Packages -->
     <ProjectReference Include="..\..\_devTB\ToolBox\ToolBox.csproj" />
   </ItemGroup>
-
-  <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
-  </PropertyGroup>
-
 </Project>
