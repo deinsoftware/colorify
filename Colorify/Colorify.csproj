@@ -24,8 +24,6 @@
     <RuntimeIdentifiers>win10-x64;osx.10.12-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
-    <!-- Resources -->
-    <None Update="icon.png" CopyToOutputDirectory="PreserveNewest" />
     <!-- Packages -->
     <ProjectReference Include="..\..\_devTB\ToolBox\ToolBox.csproj" />
   </ItemGroup>
