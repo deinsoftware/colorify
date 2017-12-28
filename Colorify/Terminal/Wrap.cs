@@ -18,7 +18,7 @@ namespace Colorify.Terminal
             }
             if (!String.IsNullOrEmpty(line.ToString().Trim()))
             {
-                Console.WriteLine($" {line.ToString().Trim()}");
+                Out.WriteLine($"{line.ToString().TrimEnd()}");
             }
         }
 
@@ -29,7 +29,7 @@ namespace Colorify.Terminal
                 (line.ToString().Contains(Environment.NewLine))
             )
             {
-                Console.WriteLine($" {line.ToString().Trim()}");
+                Out.WriteLine($" {line.ToString().TrimEnd()}");
                 line.Clear();
             }
         }
@@ -39,13 +39,13 @@ namespace Colorify.Terminal
             if ( item.Length >= _chunkSize )
             {
                 if (line.Length > 0){
-                    Console.WriteLine($" {line.ToString().Trim()}");
+                    Out.WriteLine($" {line.ToString().TrimEnd()}");
                     line.Clear();
                 }
                 for (int i = 0; i < item.Length ; i += _chunkSize)
                 {
                     if (i + _chunkSize > item.Length) { _chunkSize = item.Length  - i; }
-                    Console.WriteLine($" {item.Substring(i, _chunkSize).Trim()}");
+                    Out.WriteLine($" {item.Substring(i, _chunkSize).TrimEnd()}");
                     line.Clear();
                 }
             } else {
