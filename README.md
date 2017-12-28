@@ -75,7 +75,7 @@ On the main class Program, add an static property Format and inside Main method 
 ```csharp
 class Program
 {
-    private static Format _colorify {get; set;}
+    public static Format _colorify {get; set;}
 
     static void Main(string[] args)
     {
@@ -95,7 +95,14 @@ class Program
 }
 ```
 
-This command `_colorify.ResetColor();` is important in order to reset default terminal colors when programs finish.
+Take note that `_colorify.ResetColor();` command is important in order to reset default terminal colors when programs finish.
+
+If you want to use `_colorify` in other class, add an static using to `Program` class:
+
+```csharp
+using static Namesapace.Program;
+```
+replace Namespace with defined namespace in your project.
 
 ## Usage
 
