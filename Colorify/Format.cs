@@ -38,7 +38,6 @@ namespace Colorify
             var t = _theme[color];
             Console.BackgroundColor = t._background;
             Console.ForegroundColor = t._foreground;
-            Console.Clear();
         }
 
         public void ResetColor(){
@@ -54,30 +53,35 @@ namespace Colorify
         {
             SetColor(color);
             Out.Write(text);
+            DefaultColor();
         }
 
         public void WriteLine(string text, string color = Colors.txtDefault)
         {
             SetColor(color);
             Out.WriteLine(text);
+            DefaultColor();
         }
 
         public void AlignCenter(string text, string color = Colors.txtDefault)
         {
             SetColor(color);
             Out.AlignCenter(text);
+            DefaultColor();
         }
 
         public void AlignRight(string text, string color = Colors.txtDefault)
         {
             SetColor(color);
             Out.AlignRight(text);
+            DefaultColor();
         }
 
         public void AlignLeft(string text, string color = Colors.txtDefault)
         {
             SetColor(color);
             Out.AlignLeft(text);
+            DefaultColor();
         }
 
         public void AlignSplit(string text, string color = Colors.txtDefault)
@@ -86,11 +90,13 @@ namespace Colorify
             string left = text.Split('|')[0];
             string right = text.Split('|')[1];
             Out.Extreme(left, right);
+            DefaultColor();
         }
 
         public void Wrap(string text, string color = Colors.txtDefault){
             SetColor(color);
             Wrapper.Text(text);
+            DefaultColor();
         }
 
         public void DivisionLine(char character){
@@ -100,6 +106,7 @@ namespace Colorify
         public void DivisionLine(char character, string color){
             SetColor(color);
             Out.DivisionLine(character);
+            DefaultColor();
         }
 
         public void BlankLines(int lines = 1){
@@ -113,6 +120,7 @@ namespace Colorify
         public void BlankLines(int lines, string color = Colors.txtDefault){
             SetColor(color);
             Out.BlankLines(lines);
+            DefaultColor();
         }
     }
 }
