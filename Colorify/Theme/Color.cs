@@ -9,9 +9,15 @@ namespace Colorify.UI
 
         public Color(ConsoleColor background, ConsoleColor foreground) : this()
         {
+            try
+            {
                 _background = background;
                 _foreground = foreground;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }
-
