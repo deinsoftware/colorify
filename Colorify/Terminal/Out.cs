@@ -5,64 +5,121 @@ namespace Colorify.Terminal
     public static class Out
     {
         public static void Write(string text){
-            Console.Write(text);
+            try
+            {
+                Console.Write(text);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public static void WriteLine(string text){
-            int size = Console.WindowWidth;
-            if (size != Console.CursorLeft + 1)
+            try
             {
-                size = size - Console.CursorLeft;
+                int size = Console.WindowWidth - 1;
+                if (size != Console.CursorLeft + 1)
+                {
+                    size = size - Console.CursorLeft;
+                }
+                if (size < text.Length){
+                    size = Console.WindowWidth + size;
+                }
+                Console.WriteLine( $"{text.PadRight(size)}" );
             }
-            if (size < text.Length){
-                size = Console.WindowWidth + size;
+            catch (Exception)
+            {
+                throw;
             }
-            Console.Write( $"{text.PadRight(size)}" );
         }
 
         public static void AlignRight(string text)
         {
-            Console.Write( $"{text.PadLeft(Console.WindowWidth)}" );
+            try
+            {
+                Console.WriteLine( $"{text.PadLeft(Console.WindowWidth - 1)}" );
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public static void AlignLeft(string text)
         {
-            Console.Write( $"{text.PadRight(Console.WindowWidth)}" );
+            try
+            {
+                Console.WriteLine( $"{text.PadRight(Console.WindowWidth - 1)}" );
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public static void AlignCenter(string text){
-            decimal size = Console.WindowWidth - text.Length;
-            int rightSize = (int)Math.Round(size / 2);
-            int leftSize = (int)(size - rightSize);
-            string leftMargin = new String(' ', leftSize);
-            string rightMargin = new String(' ', rightSize);
+            try
+            {
+                decimal size = Console.WindowWidth - 1 - text.Length;
+                int rightSize = (int)Math.Round(size / 2);
+                int leftSize = (int)(size - rightSize);
+                string leftMargin = new String(' ', leftSize);
+                string rightMargin = new String(' ', rightSize);
 
-            Console.Write(leftMargin);
-            Console.Write(text);
-            Console.Write(rightMargin);
+                Console.Write(leftMargin);
+                Console.Write(text);
+                Console.WriteLine(rightMargin);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            
         }
         
         public static void Extreme(string left, string right)
         {
-            decimal size = Console.WindowWidth;
-            int rightMargin = (int)Math.Round(size / 2);
-            int leftMargin = (int)(size - rightMargin);
+            try
+            {
+                decimal size = Console.WindowWidth - 1;
+                int rightMargin = (int)Math.Round(size / 2);
+                int leftMargin = (int)(size - rightMargin);
 
-            Console.Write($"{left}".PadRight(rightMargin));
-            Console.Write($"{right}".PadLeft(leftMargin));
+                Console.Write($"{left}".PadRight(rightMargin));
+                Console.WriteLine($"{right}".PadLeft(leftMargin));
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public static void DivisionLine(char character)
         {
-            string text = new String(character, Console.WindowWidth);
-            Console.Write(text);
+            try
+            {
+                string text = new String(character, Console.WindowWidth - 1);
+                Console.WriteLine(text);    
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         public static void BlankLines(int? lines = 1)
         {
-            for (int i = 0; i < lines; i++)
+            try
             {
-                DivisionLine(' ');
+                for (int i = 0; i < lines; i++)
+                {
+                    DivisionLine(' ');
+                }
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
     }
