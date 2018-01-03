@@ -1,4 +1,5 @@
-﻿using ToolBox.Validations;
+﻿using System;
+using ToolBox.Validations;
 
 namespace Colorify
 {
@@ -20,11 +21,18 @@ namespace Colorify
         public const string bgDanger   = "bg-danger"   ;
 
         public static string txtStatus  (params bool[] values) {
-            if (Bool.SomeFalse(values))
+            try
             {
-                return txtMuted;
-            } else {
-                return txtPrimary;
+                if (Bool.SomeFalse(values))
+                {
+                    return txtMuted;
+                } else {
+                    return txtPrimary;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
     }
