@@ -1,8 +1,8 @@
-# Colorify [ for Win, Mac and Linux ]
+# dein Colorify [ for Win, Mac and Linux ]
 
 **Colorify** was created to simplify and automate tasks related to NET Core console formating. Was born in [HardHat](https://github.com/equiman/hardhat/) project as a Class. Now grew up as library and can be used by other console applications.
 
-Contributions or Beer :beers: will be appreciated :thumbsup:
+Contributions or Beer will be appreciated
 
 > The Code is Dark and Full of Errors!  
 > Console is your friend ... don't be afraid!
@@ -11,8 +11,9 @@ Contributions or Beer :beers: will be appreciated :thumbsup:
 
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
-  * [Installing](#installing)
-  * [Add Reference](#add-reference)
+    * [Dependencies](#dependencies)
+    * [Add As Package](#add-as-package)
+    * [Add As Reference](#add-as-reference)
   * [Instantiate Library](#instantiate-library)
 * [Usage](#usage)
   * [Colors](#colors)
@@ -44,27 +45,44 @@ What things you need to install?
 
 ### Installing
 
-Follow this steps to install on your local machine
+**ToolBox** is available as [project](https://github.com/equiman/toolbox/) or [package](https://www.nuget.org/packages/dein.ToolBox). We strong recommend add as a NuGet package if don't need make modifications directly on source code library.
 
-Clone **Colorify** from GitHub on *recommended* path. Using this command on terminal:
+Follow this instructions to add **ToolBox** in your project.
+
+#### Dependencies
+
+* [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json) Library
+* [dein.ToolBox](https://www.nuget.org/packages/dein.ToolBox) Library
+
+#### Add As Package
+
+In your project folder, where is located .csproj file run this command on terminal:
+
+```terminal
+dotnet add package dein.Colorify
+dotnet add package dein.ToolBox
+dotnet add package Newtonsoft.Json --version 10.0.3
+```
+
+Official documentation: [dotnet add package](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-package)
+
+#### Add As Reference
+
+Clone **ToolBox** from GitHub on *recommended* path. Using this command on terminal:
 
 | OS | Command |
 | --- | --- |
 | win | `git clone https://github.com/equiman/colorify.git "D:\Developer\DEIN\Projects\_devCC"` |
 | mac | `git clone https://github.com/equiman/colorify.git ~/Developer/DEIN/Projects/_devCC` |
 
-## Add Reference
-
-In **your project folder**, where is located `.csproj` file run this command on terminal:
+In your project folder, where is located .csproj file run this command on terminal:
 
 | OS | Command |
 | --- | --- |
 | win | `dotnet add reference "D:\Developer\DEIN\Projects\_devCC\Colorify\Colorify.csproj"` |
 | mac | `dotnet add reference ~/Developer/DEIN/Projects/_devCC/Colorify/Colorify.csproj` |
 
-Take a look on official documentation: [dotnet-add reference](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-reference)
-
-Keep calm, you are almost done. Review this final steps and enjoy the life, no more tedious and repetitive tasks stealing your precious time.
+Official documentation: [dotnet add reference](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-reference)
 
 ### Instantiate Library
 
@@ -105,9 +123,11 @@ replace Namespace with defined namespace in your project.
 
 ## Usage
 
-I'll try explain the usage, but I think the best way is take a look in [Sample](https://github.com/equiman/colorify/tree/master/Sample) folder, better easy to use guide that words.
+Keep calm, you are almost done. Review this usage steps and enjoy the life. 
 
-In Colorify solution folder, where is located `Colorify.sln` file run this command on terminal:
+To understand how this library works, take a look inside [Sample](https://github.com/equiman/colorify/tree/master/Sample) folder. Better easy to use guide than words.
+
+Just go to project folder, where is located `Colorify.sln` file run this command on terminal:
 
 ```terminal
 cd Sample

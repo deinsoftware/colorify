@@ -66,6 +66,20 @@
                 "osx.10.12-x64"
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "pack",
+            "command": "dotnet",
+            "args": [
+                "pack",
+                "${workspaceRoot}/Colorify/Colorify.csproj",
+                "/p:NuspecFile=${workspaceRoot}/Colorify/Colorify.nuspec",
+                "-o",
+                "${workspaceRoot}/Package/",
+                "-c",
+                "release"
+            ],
+            "problemMatcher": "$msCompile"
         }
     ]
 }
