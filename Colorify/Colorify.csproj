@@ -13,7 +13,7 @@
     <Copyright>dein Software © 2017</Copyright>
 
     <PackageTags>dotnet;core;win10-x64;osx.10.12-x64</PackageTags>
-    <PackageIconUrl>https://github.com/equiman/colorify/blob/master/Colorify/icon.png</PackageIconUrl>
+    <PackageIconUrl>https://github.com/equiman/colorify/blob/master/icon.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/equiman/colorify</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/equiman/colorify/blob/master/LICENSE</PackageLicenseUrl>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
