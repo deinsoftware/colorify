@@ -1,8 +1,6 @@
-# Colorify [ for Win & Mac ]
+# Colorify [ for Win, Mac and Linux ]
 
-
-**Colorify** was created to simplify and automate tasks related to NET Core console formating. Was born in 
-[HardHat](https://github.com/equiman/hardhat/) project as a Class. Now grew up as library and can be used by other console applications.
+**Colorify** was created to simplify and automate tasks related to NET Core console formating. Was born in [HardHat](https://github.com/equiman/hardhat/) project as a Class. Now grew up as library and can be used by other console applications.
 
 Contributions or Beer :beers: will be appreciated :thumbsup:
 
@@ -82,10 +80,11 @@ class Program
         switch (OS.GetCurrent())
         {
             case "win":
-                _colorify = new Format(Theme.Win);
+            case "gnu":
+                _colorify = new Format(Theme.Dark);
                 break;
             case "mac":
-                _colorify = new Format(Theme.Mac);
+                _colorify = new Format(Theme.Light);
                 break;
         }
         //Foo()
@@ -136,13 +135,13 @@ _colorify.WriteLine("Background Warning", Colors.bgWarning);
 _colorify.WriteLine("Background Danger", Colors.bgDanger);
 ```
 
-**Theme for MacOS (Light):**  
-![Colors for MacOS](Sample/images/colors-mac.png "Colors for MacOS")
+**Light (for MacOS):**  
+![Ligth](Sample/images/colors-mac.png "Colors for MacOS")
 
-**Theme for Windows (Dark):**  
-![Colors for Windows](Sample/images/colors-win.png "Colors for Window")
+**Dark (for Windows and Linux):**  
+![Dark](Sample/images/colors-win.png "Colors for Window and Linux")
 
-Colors are defined on [Theme](https://github.com/equiman/colorify/tree/master/Colorify/Theme) folder. There is two themes for MacOs and Windows. You can edit the `ThemeMac.cs` or `ThemeWin.cs` files or create a new one implementing the `ITheme` interface.
+Colors are defined on [Theme](https://github.com/equiman/colorify/tree/master/Colorify/Theme) folder. There is two themes Light (for MacOs) and Dark (for Windows and Linux). You can edit the `ThemeLight.cs` or `ThemeDark.cs` files or create a new one implementing the `ITheme` interface.
 
 Take a look on official documentation: [ConsoleColor Enumeration](https://msdn.microsoft.com/en-us/library/system.consolecolor)
 
@@ -188,7 +187,7 @@ Automatic line wrap with long text:
 
 ```csharp
 _colorify.Write("Short Text at First Preceded with a ", Colorify.Colors.bgInfo);
-_colorify.WriteLine(" Long Multilinetext with Line Wrap that bring a new line", Colorify.Colors.bgSuccess);
+_colorify.WriteLine(" Long Multi line text with Line Wrap that bring a new line", Colorify.Colors.bgSuccess);
 ```
 
 ![WriteLine](Sample/images/writeline.png "WriteLine")
@@ -204,9 +203,9 @@ _colorify.AlignLeft("Text Aligned to Left");
 ```
 
 ```csharp
-_colorify.AlignCenter("Text Aligned to Center", Colorify.Colors.bgInfo);
-_colorify.AlignRight("Text Aligned to Right", Colorify.Colors.txtDefault);
-_colorify.AlignLeft("Text Aligned to Left", Colorify.Colors.txtDanger);
+_colorify.AlignCenter("Text Aligned to Center", Colors.bgInfo);
+_colorify.AlignRight("Text Aligned to Right", Colors.txtDefault);
+_colorify.AlignLeft("Text Aligned to Left", Colors.txtDanger);
 ```
 
 `AlignSplit` is the way to show two values on the same line. Text will be split with pipe `|` character, the first element will be aligned to left and second aligned to right.
@@ -216,7 +215,7 @@ _colorify.AlignSplit("<-Text to Left| Text to Right->");
 ```
 
 ```csharp
-_colorify.AlignSplit("<-Text to Left| Text to Right->", Colorify.Colors.bgSuccess);
+_colorify.AlignSplit("<-Text to Left| Text to Right->", Colors.bgSuccess);
 ```
 
 ![Align](Sample/images/align.png "Align")
@@ -234,7 +233,7 @@ _colorify.BlankLines(Colorify.Colors.bgDanger);
 
 ```csharp
 _colorify.BlankLines(3);
-_colorify.BlankLines(3, Colorify.Colors.bgSuccess);
+_colorify.BlankLines(3, Colors.bgSuccess);
 ```
 
 ![BlankLines x 3](Sample/images/linesx3.png "BlankLines x 3")
@@ -244,13 +243,13 @@ _colorify.BlankLines(3, Colorify.Colors.bgSuccess);
 `_colorify.DivisionLine` works like `Console.WriteLine` but without the same character as full width text. . If you don't specify a color will use the `Colors.txtDefault` by default.
 
 ```csharp
-_colorify.DivisionLine('-', Colorify.Colors.bgDefault);
-_colorify.DivisionLine('+', Colorify.Colors.bgMuted);
-_colorify.DivisionLine('~', Colorify.Colors.bgPrimary);
-_colorify.DivisionLine('=', Colorify.Colors.bgSuccess);
-_colorify.DivisionLine('-', Colorify.Colors.bgInfo);
-_colorify.DivisionLine('*', Colorify.Colors.bgWarning);
-_colorify.DivisionLine('.', Colorify.Colors.bgDanger);
+_colorify.DivisionLine('-', Colors.bgDefault);
+_colorify.DivisionLine('+', Colors.bgMuted);
+_colorify.DivisionLine('~', Colors.bgPrimary);
+_colorify.DivisionLine('=', Colors.bgSuccess);
+_colorify.DivisionLine('-', Colors.bgInfo);
+_colorify.DivisionLine('*', Colors.bgWarning);
+_colorify.DivisionLine('.', Colors.bgDanger);
 ```
 
 ![DivisionLine](Sample/images/division.png "DivisionLine")

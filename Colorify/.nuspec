@@ -12,7 +12,7 @@
         <iconUrl>https://github.com/equiman/colorify/blob/master/icon.png</iconUrl>
         <releaseNotes>This is where it all begins...</releaseNotes>
         <copyright>dein Software © 2017</copyright>
-        <tags>dotnet-core macos windows library csharp format-library colors alignment.</tags>
+        <tags>dotnet-core macos windows linux library csharp format-library colors alignment.</tags>
     </metadata>
     <dependencies>
         <dependency id="com.dein.toolbox" version="1.0.0" />

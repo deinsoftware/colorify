@@ -17,10 +17,11 @@ namespace Sample
                 switch (OS.GetCurrent())
                 {
                     case "win":
-                        _colorify = new Format(Theme.Win);
+                    case "gnu":
+                        _colorify = new Format(Theme.Dark);
                         break;
                     case "mac":
-                        _colorify = new Format(Theme.Mac);
+                        _colorify = new Format(Theme.Light);
                         break;
                 }
                 Menu();
@@ -146,7 +147,7 @@ namespace Sample
             try
             {
                 _colorify.Write("Short Text at First Preceded with a ", bgInfo);
-                _colorify.WriteLine(" Long Multilinetext with Line Wrap that bring a new line", bgSuccess);
+                _colorify.WriteLine(" Long Multi line text with Line Wrap that bring a new line", bgSuccess);
 
                 Back();
             }
