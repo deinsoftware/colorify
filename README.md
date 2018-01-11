@@ -1,6 +1,6 @@
 # dein Colorify [ for Win, Mac & Linux ]
 
-**Colorify** was created to simplify and automate tasks related to NET Core console formating. Was born in [HardHat](https://github.com/equiman/hardhat/) project as a Class. Now grew up as library and can be used by other console applications.
+**Colorify** was created to simplify and automate tasks related to NET Core console formating. Was born in [HardHat](https://github.com/deinsoftware/hardhat/) project as a Class. Now grew up as library and can be used by other console applications.
 
 Contributions or Beer will be appreciated
 
@@ -41,11 +41,11 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install?
 
 * [NET Core SDK](https://www.microsoft.com/net/download)
-* [ToolBox](https://github.com/equiman/toolbox/)
+* [ToolBox](https://github.com/deinsoftware/toolbox/)
 
 ### Installing
 
-**ToolBox** is available as [project](https://github.com/equiman/toolbox/) or [package](https://www.nuget.org/packages/dein.ToolBox). We strong recommend add as a NuGet package if don't need make modifications directly on source code library.
+**ToolBox** is available as [project](https://github.com/deinsoftware/toolbox/) or [package](https://www.nuget.org/packages/dein.ToolBox). We strong recommend add as a NuGet package if don't need make modifications directly on source code library.
 
 Follow this instructions to add **ToolBox** in your project.
 
@@ -72,8 +72,8 @@ Clone **ToolBox** from GitHub on *recommended* path. Using this command on termi
 
 | OS | Command |
 | --- | --- |
-| win | `git clone https://github.com/equiman/colorify.git "D:\Developer\DEIN\Projects\_devCC"` |
-| mac | `git clone https://github.com/equiman/colorify.git ~/Developer/DEIN/Projects/_devCC` |
+| win | `git clone https://github.com/deinsoftware/colorify.git "D:\Developer\DEIN\Projects\_devCC"` |
+| mac | `git clone https://github.com/deinsoftware/colorify.git ~/Developer/DEIN/Projects/_devCC` |
 
 In your project folder, where is located .csproj file run this command on terminal:
 
@@ -125,7 +125,7 @@ replace Namespace with defined namespace in your project.
 
 Keep calm, you are almost done. Review this usage steps and enjoy the life. 
 
-To understand how this library works, take a look inside [Sample](https://github.com/equiman/colorify/tree/master/Sample) folder. Better easy to use guide than words.
+To understand how this library works, take a look inside [Sample](https://github.com/deinsoftware/colorify/tree/master/Sample) folder. Better easy to use guide than words.
 
 Just go to project folder, where is located `Colorify.sln` file run this command on terminal:
 
@@ -161,7 +161,7 @@ _colorify.WriteLine("Background Danger", Colors.bgDanger);
 **Dark (for Windows and Linux):**  
 ![Dark](Sample/images/colors-win.png "Colors for Window and Linux")
 
-Colors are defined on [Theme](https://github.com/equiman/colorify/tree/master/Colorify/Theme) folder. There is two themes Light (for MacOs) and Dark (for Windows and Linux). You can edit the `ThemeLight.cs` or `ThemeDark.cs` files or create a new one implementing the `ITheme` interface.
+Colors are defined on [Theme](https://github.com/deinsoftware/colorify/tree/master/Colorify/Theme) folder. There is two themes Light (for MacOs) and Dark (for Windows and Linux). You can edit the `ThemeLight.cs` or `ThemeDark.cs` files or create a new one implementing the `ITheme` interface.
 
 Take a look on official documentation: [ConsoleColor Enumeration](https://msdn.microsoft.com/en-us/library/system.consolecolor)
 
@@ -283,6 +283,7 @@ _colorify.DivisionLine('.', Colors.bgDanger);
 ### Built With
 
 * [VS Code](https://code.visualstudio.com/) - Code editing redefined.
+* [SonarQube](https://sonarcloud.io/dashboard/index/dein:colorify) - Continuous code quality.
 
 ### Contributing
 
@@ -290,13 +291,13 @@ Please read [CONTRIBUTING](CONTRIBUTING.md) for details on our code of conduct, 
 
 ### Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [Colorify](https://github.com/equiman/colorify/tags) on GitHub.
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [Colorify](https://github.com/deinsoftware/colorify/tags) on GitHub.
 
 ### Authors
 
 * **Camilo Martinez** [[Equiman](http://stackoverflow.com/story/equiman)]
 
-See also the list of [contributors](https://github.com/equiman/colorify/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/deinsoftware/colorify/contributors) who participated in this project.
 
 ### License
 
