@@ -9,6 +9,12 @@ Fixed       for any bug fixes.
 Security    to invite users to upgrade in case of vulnerabilities.
 -->
 
+## [1.0.1] - 2017-01-12
+
+**Fixed:**
+
+* Code smells reported by SonarQube.
+
 ## [1.0.0] - 2017-12-26
 
 Where it all begins...
