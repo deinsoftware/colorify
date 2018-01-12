@@ -14,11 +14,13 @@ namespace Colorify.UI
         }
     }
 
-    public sealed class ThemeDark : ITheme
+    public sealed class ThemeDark : ThemeAction, ITheme
     {
         public ThemeDark(){
             try
             {
+                base._defaultBackground = ConsoleColor.Black;
+                base._defaultForeground = ConsoleColor.White;
                 SetColors();
             }
             catch (Exception)
@@ -28,43 +30,6 @@ namespace Colorify.UI
         }
 
         public Dictionary<string, Color> _colors {get; set;}
-
-        public ConsoleColor DefaultBackground(){
-            try
-            {
-                return ConsoleColor.Black;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
-        public ConsoleColor DefaultForeground(){
-            try
-            {
-                return ConsoleColor.White;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
-        public Color AddColor(ConsoleColor? background, ConsoleColor? foreground){
-            try
-            {
-                var color = new Color(
-                    background ?? DefaultBackground(),
-                    foreground ?? DefaultForeground()
-                );
-                return color;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
 
         public void SetColors(){
             try
