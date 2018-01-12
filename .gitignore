@@ -10,8 +10,7 @@
 .history
 
 ### SonarQube ###
-.sonar/
-.scannerwork/
+.sonarqube/
 
 ### Project ###
 **/bin

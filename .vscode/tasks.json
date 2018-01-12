@@ -27,6 +27,20 @@
             "problemMatcher": "$msCompile"
         },
         {
+            "label": "test",
+            "command": "dotnet",
+            "type": "process",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "args": [
+                "test",
+                "${workspaceFolder}/ToolBox.Tests/ToolBox.Tests.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
             "label": "build sample",
             "command": "dotnet",
             "type": "process",
@@ -80,6 +94,21 @@
                 "release"
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "sonar",
+            "type": "shell",
+            "windows": {
+                "command": "${workspaceRoot}\\sonar.bat"
+            },
+            "osx": {
+                "command": "${workspaceRoot}/sonar.sh"
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
         }
     ]
 }
