@@ -9,18 +9,11 @@ namespace Colorify.UI
         protected ConsoleColor _defaultForeground { get; set; }
 
         public Color AddColor(ConsoleColor? background, ConsoleColor? foreground){
-            try
-            {
-                var color = new Color(
-                    background ?? _defaultBackground,
-                    foreground ?? _defaultForeground
-                );
-                return color;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            var color = new Color(
+                background ?? _defaultBackground,
+                foreground ?? _defaultForeground
+            );
+            return color;
         }
     }
 }

@@ -9,69 +9,48 @@ namespace Colorify.Terminal
 
         public static void Text(string text)
         {
-            try
+            StringBuilder line = new StringBuilder();
+            string[] words = text.Split(' ');
+            _chunkSize = (Console.WindowWidth - 3);
+            foreach (var item in words)
             {
-                StringBuilder line = new StringBuilder();
-                string[] words = text.Split(' ');
-                _chunkSize = (Console.WindowWidth - 3);
-                foreach (var item in words)
-                {
-                    Line(ref line, item);
-                    Item(ref line, item);
-                }
-                if (!String.IsNullOrEmpty(line.ToString().Trim()))
-                {
-                    Out.WriteLine($"{line.ToString().TrimEnd()}");
-                }
+                Line(ref line, item);
+                Item(ref line, item);
             }
-            catch (Exception)
+            if (!String.IsNullOrEmpty(line.ToString().Trim()))
             {
-                throw;
+                Out.WriteLine($"{line.ToString().TrimEnd()}");
             }
         }
 
         static void Line(ref StringBuilder line, string item)
         {
-            try
+            if (
+                ((line.Length + item.Length) >= _chunkSize) || 
+                (line.ToString().Contains(Environment.NewLine))
+            )
             {
-                if (
-                    ((line.Length + item.Length) >= _chunkSize) || 
-                    (line.ToString().Contains(Environment.NewLine))
-                )
-                {
-                    Out.WriteLine($"{line.ToString().TrimEnd()}");
-                    line.Clear();
-                }
-            }
-            catch (Exception)
-            {
-                throw;
+                Out.WriteLine($"{line.ToString().TrimEnd()}");
+                line.Clear();
             }
         }
 
         static void Item(ref StringBuilder line, string item)
         {
-            try
+            if ( item.Length >= _chunkSize )
             {
-                if ( item.Length >= _chunkSize )
-                {
-                    if (line.Length > 0){
-                        Out.WriteLine($" {line.ToString().TrimEnd()}");
-                        line.Clear();
-                    }
-                    for (int i = 0; i < item.Length ; i += _chunkSize)
-                    {
-                        if (i + _chunkSize > item.Length) { _chunkSize = item.Length  - i; }
-                        Out.WriteLine($" {item.Substring(i, _chunkSize).TrimEnd()}");
-                        line.Clear();
-                    }
-                } else {
-                    line.Append($"{item} ");
+                if (line.Length > 0){
+                    Out.WriteLine($" {line.ToString().TrimEnd()}");
+                    line.Clear();
                 }
-            }
-            catch (Exception)
-            {
-                throw;
+                for (int i = 0; i < item.Length ; i += _chunkSize)
+                {
+                    if (i + _chunkSize > item.Length) { _chunkSize = item.Length  - i; }
+                    Out.WriteLine($" {item.Substring(i, _chunkSize).TrimEnd()}");
+                    line.Clear();
+                }
+            } else {
+                line.Append($"{item} ");
             }
         }
     }

@@ -21,18 +21,11 @@ namespace Colorify
         public const string bgDanger   = "bg-danger"   ;
 
         public static string txtStatus  (params bool[] values) {
-            try
+            if (Bool.SomeFalse(values))
             {
-                if (Bool.SomeFalse(values))
-                {
-                    return txtMuted;
-                } else {
-                    return txtPrimary;
-                }
-            }
-            catch (Exception)
-            {
-                throw;
+                return txtMuted;
+            } else {
+                return txtPrimary;
             }
         }
     }

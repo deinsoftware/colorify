@@ -5,10 +5,10 @@ namespace Colorify.Tests
 {
     public class TextTest
     {
-        [Fact]
-        public void Justify()
+        [Fact(Skip="TODO")]
+        public void Method_WhenCalls_NotImplemented()
         {
-
+            throw new NotImplementedException();
         }
     }
 }

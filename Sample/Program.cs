@@ -6,7 +6,7 @@ using ToolBox.Platform;
 
 namespace Sample
 {
-    class Program
+    static class Program
     {
         private static Format _colorify {get; set;}
 
@@ -37,59 +37,45 @@ namespace Sample
         }
 
         static void Menu(){
-            try
-            {
-                _colorify.Clear();
-                _colorify.DivisionLine('=', Colorify.Colors.bgInfo);
-                _colorify.AlignCenter("COLORIFY SAMPLE", Colorify.Colors.bgInfo);
-                _colorify.DivisionLine('=', Colorify.Colors.bgInfo);
-                _colorify.BlankLines();
-                _colorify.Write($"{" 1]", -4}"); _colorify.WriteLine("Colors");
-                _colorify.Write($"{" 2]", -4}"); _colorify.WriteLine("Write");
-                _colorify.Write($"{" 3]", -4}"); _colorify.WriteLine("WriteLine");
-                _colorify.Write($"{" 4]", -4}"); _colorify.WriteLine("Text Align");
-                _colorify.Write($"{" 5]", -4}"); _colorify.WriteLine("Blank Lines");
-                _colorify.Write($"{" 6]", -4}"); _colorify.WriteLine("Division Lines");
-                _colorify.BlankLines();
-                _colorify.AlignRight("[X] Exit ", Colorify.Colors.txtDanger);
-                _colorify.BlankLines();
-                _colorify.DivisionLine('=', Colorify.Colors.bgInfo);
-                _colorify.BlankLines();
-                _colorify.Write($"{" Make your choice:", -25}");
-                string opt = Console.ReadLine();
-                opt = opt.ToLower();
+            _colorify.Clear();
+            _colorify.DivisionLine('=', Colorify.Colors.bgInfo);
+            _colorify.AlignCenter("COLORIFY SAMPLE", Colorify.Colors.bgInfo);
+            _colorify.DivisionLine('=', Colorify.Colors.bgInfo);
+            _colorify.BlankLines();
+            _colorify.Write($"{" 1]", -4}"); _colorify.WriteLine("Colors");
+            _colorify.Write($"{" 2]", -4}"); _colorify.WriteLine("Write");
+            _colorify.Write($"{" 3]", -4}"); _colorify.WriteLine("WriteLine");
+            _colorify.Write($"{" 4]", -4}"); _colorify.WriteLine("Text Align");
+            _colorify.Write($"{" 5]", -4}"); _colorify.WriteLine("Blank Lines");
+            _colorify.Write($"{" 6]", -4}"); _colorify.WriteLine("Division Lines");
+            _colorify.BlankLines();
+            _colorify.AlignRight("[X] Exit ", Colorify.Colors.txtDanger);
+            _colorify.BlankLines();
+            _colorify.DivisionLine('=', Colorify.Colors.bgInfo);
+            _colorify.BlankLines();
+            _colorify.Write($"{" Make your choice:", -25}");
+            string opt = Console.ReadLine();
+            opt = opt.ToLower();
 
-                _colorify.Clear();
-                switch (opt)
-                {
-                    case "1": ThemeColors(); break;
-                    case "2": Write(); break;
-                    case "3": WriteLine(); break;
-                    case "4": TextAlign(); break;
-                    case "5": BlankLines(); break;
-                    case "6": DivisionLine(); break;
-                    case "x": break;
-                    default: Menu(); break;
-                }
-            }
-            catch (Exception)
+            _colorify.Clear();
+            switch (opt)
             {
-                throw;
+                case "1": ThemeColors(); break;
+                case "2": Write(); break;
+                case "3": WriteLine(); break;
+                case "4": TextAlign(); break;
+                case "5": BlankLines(); break;
+                case "6": DivisionLine(); break;
+                case "x": break;
+                default: Menu(); break;
             }
         }
 
         static void Back(){
-            try
-            {
-                _colorify.BlankLines();
-                _colorify.Write("Press [ANY] key to continue ");
-                Console.ReadKey();
-                Menu();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            _colorify.BlankLines();
+            _colorify.Write("Press [ANY] key to continue ");
+            Console.ReadKey();
+            Menu();
         }
 
         static void MessageException(string message) {
@@ -118,9 +104,9 @@ namespace Sample
 
                 Back();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageException(ex.ToString());
             }
         }
 
@@ -137,9 +123,9 @@ namespace Sample
                 
                 Back();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageException(ex.ToString());
             }
         }
 
@@ -151,9 +137,9 @@ namespace Sample
 
                 Back();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageException(ex.ToString());
             }
         }
 
@@ -167,9 +153,9 @@ namespace Sample
 
                 Back();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageException(ex.ToString());
             }
         }
 
@@ -183,9 +169,9 @@ namespace Sample
 
                 Back();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageException(ex.ToString());
             }
         }
 
@@ -202,9 +188,9 @@ namespace Sample
 
                 Back();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageException(ex.ToString());
             }
         }
     }
