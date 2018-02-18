@@ -45,9 +45,9 @@ What things you need to install?
 
 ### Installing
 
-**ToolBox** is available as [project](https://github.com/deinsoftware/toolbox/) or [package](https://www.nuget.org/packages/dein.ToolBox). We strong recommend add as a NuGet package if don't need make modifications directly on source code library.
+**Colorify** is available as [project](https://github.com/deinsoftware/colorify/) or [package](https://www.nuget.org/packages/dein.Colorify). We strong recommend add as a NuGet package if don't need make modifications directly on source code library.
 
-Follow this instructions to add **ToolBox** in your project.
+Follow this instructions to add **Colorify** in your project.
 
 #### Dependencies
 
@@ -68,7 +68,7 @@ Official documentation: [dotnet add package](https://docs.microsoft.com/en-us/do
 
 #### Add As Reference
 
-Clone **ToolBox** from GitHub on *recommended* path. Using this command on terminal:
+Clone **Colorify** from GitHub on *recommended* path. Using this command on terminal:
 
 | OS | Command |
 | --- | --- |

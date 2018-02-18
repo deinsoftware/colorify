@@ -9,6 +9,12 @@ Fixed       for any bug fixes.
 Security    to invite users to upgrade in case of vulnerabilities.
 -->
 
+## [1.0.2] - 2018-02-18
+
+**Fixed:**
+
+* NuGet package files.
+
 ## [1.0.1] - 2017-01-12
 
 **Fixed:**
