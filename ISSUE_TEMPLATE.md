@@ -38,6 +38,10 @@ Please provide detailed steps for reproducing the issue.
 Please provide any relevant information about your setup. This is important in case the issue is not reproducible except for under certain conditions.
 
 - Colorify Version:
+- ToolBox Version:
+- Newtonsoft.Json Version:
+- VS Code Version:
+- C# AddOn Version:
 - Operating System:
 
 ### Failure Logs
