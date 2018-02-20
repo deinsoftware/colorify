@@ -121,6 +121,10 @@ using static Namesapace.Program;
 ```
 replace Namespace with defined namespace in your project.
 
+⇧ [Back to menu](#menu)
+
+---
+
 ## Usage
 
 Keep calm, you are almost done. Review this usage steps and enjoy the life. 
