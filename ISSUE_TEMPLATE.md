@@ -40,8 +40,9 @@ Please provide any relevant information about your setup. This is important in c
 - Colorify Version:
 - ToolBox Version:
 - Newtonsoft.Json Version:
+
 - VS Code Version:
-- C# AddOn Version:
+- VS Version:
 - Operating System:
 
 ### Failure Logs
