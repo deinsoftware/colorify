@@ -1,13 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <ItemGroup>
-    <ProjectReference Include="..\Colorify\Colorify.csproj" />
-    <ProjectReference Include="..\..\_devTB\ToolBox\ToolBox.csproj" />
+    <PackageReference Include="dein.Colorify" Version="1.0.3" />
+    <PackageReference Include="dein.ToolBox" Version="1.1.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
   </ItemGroup>
-
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
-
 </Project>
