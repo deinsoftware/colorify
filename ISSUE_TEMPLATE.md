@@ -6,6 +6,13 @@ Please answer the following questions for yourself before submitting an issue.
 - [ ] I checked the documentation and found no answer
 - [ ] I checked to make sure that this issue has not already been filed
 
+# Libraries
+
+How was referenced the library in your project?
+
+- [ ] It was referenced as project
+- [ ] It was referenced as NuGet package
+
 ## Expected Behavior
 
 Please describe the behavior you are expecting
