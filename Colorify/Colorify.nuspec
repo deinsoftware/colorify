@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>dein.Colorify</id>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <title>dein Colorify</title>
     <authors>Camilo Martinez</authors>
     <owners>dein,equiman</owners>
@@ -19,11 +19,11 @@
     <developmentDependency>true</developmentDependency>
     <dependencies>
         <dependency id="Newtonsoft.Json" version="10.0.3" />
-        <dependency id="dein.ToolBox" version="1.1.2" />
+        <dependency id="dein.ToolBox" version="1.1.3" />
     </dependencies>
-    <files>
-      <file src="bin\release\**\*.dll" target="lib" />
-      <file src="bin\release\**\*.pdb" target="lib" />
-    </files>
   </metadata>
+  <files>
+    <file src="bin\release\netcoreapp2.0\C*.dll" target="lib\netcoreapp2.0" />
+    <file src="bin\release\netcoreapp2.0\C*.pdb" target="lib\netcoreapp2.0" />
+  </files>
 </package>
