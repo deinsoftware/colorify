@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
-    <PackageReference Include="dein.Colorify" Version="1.0.3" />
-    <PackageReference Include="dein.ToolBox" Version="1.1.3" />
+    <PackageReference Include="dein.Colorify" Version="1.0.4" />
+    <PackageReference Include="dein.ToolBox" Version="1.1.4" />
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
   </ItemGroup>
   <PropertyGroup>
