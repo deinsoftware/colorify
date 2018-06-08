@@ -9,6 +9,12 @@ Fixed       for any bug fixes.
 Security    to invite users to upgrade in case of vulnerabilities.
 -->
 
+## [1.0.5] - 2018-06-08
+
+**Fixed:**
+
+* Lock colors avoiding overwrite by another process.
+
 ## [1.0.4] - 2018-06-07
 
 **Changed:**

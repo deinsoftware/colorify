@@ -8,7 +8,8 @@ namespace Colorify.UI
         protected ConsoleColor _defaultBackground { get; set; }
         protected ConsoleColor _defaultForeground { get; set; }
 
-        public Color AddColor(ConsoleColor? background, ConsoleColor? foreground){
+        public Color AddColor(ConsoleColor? background, ConsoleColor? foreground)
+        {
             var color = new Color(
                 background ?? _defaultBackground,
                 foreground ?? _defaultForeground

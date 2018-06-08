@@ -4,33 +4,37 @@ namespace Colorify.Terminal
 {
     public static class Out
     {
-        public static void Write(string text){
+        public static void Write(string text)
+        {
             Console.Write(text);
         }
 
-        public static void WriteLine(string text){
+        public static void WriteLine(string text)
+        {
             int size = Console.WindowWidth - 1;
             if (size != Console.CursorLeft + 1)
             {
                 size = size - Console.CursorLeft;
             }
-            if (size < text.Length){
+            if (size < text.Length)
+            {
                 size = Console.WindowWidth + size;
             }
-            Console.WriteLine( $"{text.PadRight(size)}" );
+            Console.WriteLine($"{text.PadRight(size)}");
         }
 
         public static void AlignRight(string text)
         {
-            Console.WriteLine( $"{text.PadLeft(Console.WindowWidth - 1)}" );
+            Console.WriteLine($"{text.PadLeft(Console.WindowWidth - 1)}");
         }
 
         public static void AlignLeft(string text)
         {
-            Console.WriteLine( $"{text.PadRight(Console.WindowWidth - 1)}" );
+            Console.WriteLine($"{text.PadRight(Console.WindowWidth - 1)}");
         }
 
-        public static void AlignCenter(string text){
+        public static void AlignCenter(string text)
+        {
             decimal size = Console.WindowWidth - 1 - text.Length;
             int rightSize = (int)Math.Round(size / 2);
             int leftSize = (int)(size - rightSize);
@@ -41,7 +45,7 @@ namespace Colorify.Terminal
             Console.Write(text);
             Console.WriteLine(rightMargin);
         }
-        
+
         public static void Extreme(string left, string right)
         {
             decimal size = Console.WindowWidth - 1;
@@ -55,7 +59,7 @@ namespace Colorify.Terminal
         public static void DivisionLine(char character)
         {
             string text = new String(character, Console.WindowWidth - 1);
-            Console.WriteLine(text);    
+            Console.WriteLine(text);
         }
 
         public static void BlankLines(int? lines = 1)

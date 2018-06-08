@@ -5,7 +5,7 @@ namespace Colorify.Terminal
 {
     public static class Wrapper
     {
-        static int _chunkSize {get; set;}
+        static int _chunkSize { get; set; }
 
         public static void Text(string text)
         {
@@ -26,7 +26,7 @@ namespace Colorify.Terminal
         static void Line(ref StringBuilder line, string item)
         {
             if (
-                ((line.Length + item.Length) >= _chunkSize) || 
+                ((line.Length + item.Length) >= _chunkSize) ||
                 (line.ToString().Contains(Environment.NewLine))
             )
             {
@@ -37,19 +37,22 @@ namespace Colorify.Terminal
 
         static void Item(ref StringBuilder line, string item)
         {
-            if ( item.Length >= _chunkSize )
+            if (item.Length >= _chunkSize)
             {
-                if (line.Length > 0){
+                if (line.Length > 0)
+                {
                     Out.WriteLine($" {line.ToString().TrimEnd()}");
                     line.Clear();
                 }
-                for (int i = 0; i < item.Length ; i += _chunkSize)
+                for (int i = 0; i < item.Length; i += _chunkSize)
                 {
-                    if (i + _chunkSize > item.Length) { _chunkSize = item.Length  - i; }
+                    if (i + _chunkSize > item.Length) { _chunkSize = item.Length - i; }
                     Out.WriteLine($" {item.Substring(i, _chunkSize).TrimEnd()}");
                     line.Clear();
                 }
-            } else {
+            }
+            else
+            {
                 line.Append($"{item} ");
             }
         }

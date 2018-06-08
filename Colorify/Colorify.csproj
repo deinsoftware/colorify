@@ -3,7 +3,7 @@
   <PropertyGroup>
     <AssemblyName>Colorify</AssemblyName>
     <PackageId>Colorify</PackageId>
-    <VersionPrefix>1.0.4</VersionPrefix>
+    <VersionPrefix>1.0.5</VersionPrefix>
     
     <Authors>Camilo Martinez</Authors>
     <Company>dein Software</Company>
