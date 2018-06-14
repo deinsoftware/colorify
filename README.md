@@ -1,5 +1,11 @@
 # dein Colorify [ for Win, Mac & Linux ]
 
+[![NuGet](https://img.shields.io/nuget/v/dein.Colorify.svg)](https://www.nuget.org/packages/dein.Colorify/) 
+[![NuGet](https://img.shields.io/nuget/dt/dein.Colorify.svg)](https://www.nuget.org/packages/dein.Colorify/)
+[![SonarCloud](https://sonarcloud.io/api/project_badges/measure?project=dein%3Acolorify&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=dein%3Acolorify)
+[![SonarCloud](https://sonarcloud.io/api/project_badges/measure?project=dein%3Acolorify&metric=security_rating)](https://sonarcloud.io/dashboard?id=dein%3Acolorify)
+[![SonarCloud](https://sonarcloud.io/api/project_badges/measure?project=dein%3Acolorify&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=dein%3Acolorify)
+
 **Colorify** was created to simplify and automate tasks related to NET Core console formating. Was born in [HardHat](https://github.com/deinsoftware/hardhat/) project as a Class. Now grew up as library and can be used by other console applications.
 
 Contributions or Beer will be appreciated
