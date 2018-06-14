@@ -1,6 +1,6 @@
 # dein Colorify [ for Win, Mac & Linux ]
 
-[![NuGet](https://img.shields.io/nuget/v/dein.Colorify.svg)](https://www.nuget.org/packages/dein.Colorify/) 
+[![NuGet](https://img.shields.io/nuget/v/dein.Colorify.svg)](https://www.nuget.org/packages/dein.Colorify/)
 [![NuGet](https://img.shields.io/nuget/dt/dein.Colorify.svg)](https://www.nuget.org/packages/dein.Colorify/)
 [![SonarCloud](https://sonarcloud.io/api/project_badges/measure?project=dein%3Acolorify&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=dein%3Acolorify)
 [![SonarCloud](https://sonarcloud.io/api/project_badges/measure?project=dein%3Acolorify&metric=security_rating)](https://sonarcloud.io/dashboard?id=dein%3Acolorify)
