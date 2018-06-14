@@ -67,7 +67,7 @@ In your project folder, where is located .csproj file run this command on termin
 ```terminal
 dotnet add package dein.Colorify
 dotnet add package dein.ToolBox
-dotnet add package Newtonsoft.Json --version 10.0.3
+dotnet add package Newtonsoft.Json --version 11.0.2
 ```
 
 Official documentation: [dotnet add package](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-package)

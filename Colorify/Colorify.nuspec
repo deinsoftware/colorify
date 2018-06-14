@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>dein.Colorify</id>
-    <version>1.0.6</version>
+    <version>1.0.7</version>
     <title>dein Colorify</title>
     <authors>Camilo Martinez</authors>
     <owners>dein,equiman</owners>
@@ -18,7 +18,7 @@
     <language>en-US</language>
     <developmentDependency>true</developmentDependency>
     <dependencies>
-        <dependency id="Newtonsoft.Json" version="10.0.3" />
+        <dependency id="Newtonsoft.Json" version="11.0.2" />
         <dependency id="dein.ToolBox" version="1.2.0" />
     </dependencies>
   </metadata>

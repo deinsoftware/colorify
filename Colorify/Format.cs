@@ -8,6 +8,7 @@ namespace Colorify
     public class Format
     {
         Dictionary<string, Color> _theme { get; set; }
+        private readonly Object colorLock = new Object();
 
         public Format(ITheme theme)
         {
@@ -42,7 +43,7 @@ namespace Colorify
 
         public void ResetColor()
         {
-            lock (Console.Out)
+            lock (colorLock)
             {
                 Console.ResetColor();
                 Clear();
@@ -51,7 +52,7 @@ namespace Colorify
 
         public void Clear()
         {
-            lock (Console.Out)
+            lock (colorLock)
             {
                 Console.Clear();
             }
@@ -59,7 +60,7 @@ namespace Colorify
 
         public void Write(string text, string color = Colors.txtDefault)
         {
-            lock (Console.Out)
+            lock (colorLock)
             {
                 SetColor(color);
                 Out.Write(text);
@@ -69,7 +70,7 @@ namespace Colorify
 
         public void WriteLine(string text, string color = Colors.txtDefault)
         {
-            lock (Console.Out)
+            lock (colorLock)
             {
                 SetColor(color);
                 Out.WriteLine(text);
@@ -79,7 +80,7 @@ namespace Colorify
 
         public void AlignCenter(string text, string color = Colors.txtDefault)
         {
-            lock (Console.Out)
+            lock (colorLock)
             {
                 SetColor(color);
                 Out.AlignCenter(text);
@@ -89,7 +90,7 @@ namespace Colorify
 
         public void AlignRight(string text, string color = Colors.txtDefault)
         {
-            lock (Console.Out)
+            lock (colorLock)
             {
                 SetColor(color);
                 Out.AlignRight(text);
@@ -99,7 +100,7 @@ namespace Colorify
 
         public void AlignLeft(string text, string color = Colors.txtDefault)
         {
-            lock (Console.Out)
+            lock (colorLock)
             {
                 SetColor(color);
                 Out.AlignLeft(text);
@@ -109,7 +110,7 @@ namespace Colorify
 
         public void AlignSplit(string text, string color = Colors.txtDefault)
         {
-            lock (Console.Out)
+            lock (colorLock)
             {
                 SetColor(color);
                 string left = text.Split('|')[0];
@@ -121,7 +122,7 @@ namespace Colorify
 
         public void Wrap(string text, string color = Colors.txtDefault)
         {
-            lock (Console.Out)
+            lock (colorLock)
             {
                 SetColor(color);
                 Wrapper.Text(text);
@@ -136,7 +137,7 @@ namespace Colorify
 
         public void DivisionLine(char character, string color)
         {
-            lock (Console.Out)
+            lock (colorLock)
             {
                 SetColor(color);
                 Out.DivisionLine(character);
@@ -156,7 +157,7 @@ namespace Colorify
 
         public void BlankLines(int lines, string color = Colors.txtDefault)
         {
-            lock (Console.Out)
+            lock (colorLock)
             {
                 SetColor(color);
                 Out.BlankLines(lines);
