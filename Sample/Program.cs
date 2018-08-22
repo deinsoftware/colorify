@@ -8,7 +8,7 @@ namespace Sample
 {
     static class Program
     {
-        private static Format _colorify {get; set;}
+        private static Format _colorify { get; set; }
 
         static void Main(string[] args)
         {
@@ -26,8 +26,10 @@ namespace Sample
                 }
                 Menu();
                 _colorify.ResetColor();
+                _colorify.Clear();
             }
-            catch (ArgumentOutOfRangeException){
+            catch (ArgumentOutOfRangeException)
+            {
                 MessageException("Ahh my eyes! Why this console is too small?");
             }
             catch (Exception ex)
@@ -36,24 +38,25 @@ namespace Sample
             }
         }
 
-        static void Menu(){
+        static void Menu()
+        {
             _colorify.Clear();
             _colorify.DivisionLine('=', Colorify.Colors.bgInfo);
             _colorify.AlignCenter("COLORIFY SAMPLE", Colorify.Colors.bgInfo);
             _colorify.DivisionLine('=', Colorify.Colors.bgInfo);
             _colorify.BlankLines();
-            _colorify.Write($"{" 1]", -4}"); _colorify.WriteLine("Colors");
-            _colorify.Write($"{" 2]", -4}"); _colorify.WriteLine("Write");
-            _colorify.Write($"{" 3]", -4}"); _colorify.WriteLine("WriteLine");
-            _colorify.Write($"{" 4]", -4}"); _colorify.WriteLine("Text Align");
-            _colorify.Write($"{" 5]", -4}"); _colorify.WriteLine("Blank Lines");
-            _colorify.Write($"{" 6]", -4}"); _colorify.WriteLine("Division Lines");
+            _colorify.Write($"{" 1]",-4}"); _colorify.WriteLine("Colors");
+            _colorify.Write($"{" 2]",-4}"); _colorify.WriteLine("Write");
+            _colorify.Write($"{" 3]",-4}"); _colorify.WriteLine("WriteLine");
+            _colorify.Write($"{" 4]",-4}"); _colorify.WriteLine("Text Align");
+            _colorify.Write($"{" 5]",-4}"); _colorify.WriteLine("Blank Lines");
+            _colorify.Write($"{" 6]",-4}"); _colorify.WriteLine("Division Lines");
             _colorify.BlankLines();
             _colorify.AlignRight("[X] Exit ", Colorify.Colors.txtDanger);
             _colorify.BlankLines();
             _colorify.DivisionLine('=', Colorify.Colors.bgInfo);
             _colorify.BlankLines();
-            _colorify.Write($"{" Make your choice:", -25}");
+            _colorify.Write($"{" Make your choice:",-25}");
             string opt = Console.ReadLine();
             opt = opt.ToLower();
 
@@ -71,36 +74,39 @@ namespace Sample
             }
         }
 
-        static void Back(){
+        static void Back()
+        {
             _colorify.BlankLines();
             _colorify.Write("Press [ANY] key to continue ");
             Console.ReadKey();
             Menu();
         }
 
-        static void MessageException(string message) {
+        static void MessageException(string message)
+        {
             _colorify.ResetColor();
             _colorify.Clear();
             _colorify.WriteLine(message, bgDanger);
         }
 
-        static void ThemeColors(){
+        static void ThemeColors()
+        {
             try
             {
-                _colorify.WriteLine("Text Default"      , txtDefault);
-                _colorify.WriteLine("Text Muted"        , txtMuted);
-                _colorify.WriteLine("Text Primary"      , txtPrimary);
-                _colorify.WriteLine("Text Success"      , txtSuccess);
-                _colorify.WriteLine("Text Info"         , txtInfo);
-                _colorify.WriteLine("Text Warning"      , txtWarning);
-                _colorify.WriteLine("Text Danger"       , txtDanger);
+                _colorify.WriteLine("Text Default", txtDefault);
+                _colorify.WriteLine("Text Muted", txtMuted);
+                _colorify.WriteLine("Text Primary", txtPrimary);
+                _colorify.WriteLine("Text Success", txtSuccess);
+                _colorify.WriteLine("Text Info", txtInfo);
+                _colorify.WriteLine("Text Warning", txtWarning);
+                _colorify.WriteLine("Text Danger", txtDanger);
                 _colorify.WriteLine("Background Default", bgDefault);
-                _colorify.WriteLine("Background Muted"  , bgMuted);
+                _colorify.WriteLine("Background Muted", bgMuted);
                 _colorify.WriteLine("Background Primary", bgPrimary);
                 _colorify.WriteLine("Background Success", bgSuccess);
-                _colorify.WriteLine("Background Info"   , bgInfo);
+                _colorify.WriteLine("Background Info", bgInfo);
                 _colorify.WriteLine("Background Warning", bgWarning);
-                _colorify.WriteLine("Background Danger" , bgDanger);
+                _colorify.WriteLine("Background Danger", bgDanger);
 
                 Back();
             }
@@ -110,17 +116,18 @@ namespace Sample
             }
         }
 
-        static void Write(){
+        static void Write()
+        {
             try
             {
-                _colorify.Write(    " Default ", bgDefault);
-                _colorify.Write(    " Muted   ", bgMuted);
-                _colorify.Write(    " Primary ", bgPrimary);
-                _colorify.Write(    " Success ", bgSuccess);
-                _colorify.Write(    " Info    ", bgInfo);
-                _colorify.Write(    " Warning ", bgWarning);
+                _colorify.Write(" Default ", bgDefault);
+                _colorify.Write(" Muted   ", bgMuted);
+                _colorify.Write(" Primary ", bgPrimary);
+                _colorify.Write(" Success ", bgSuccess);
+                _colorify.Write(" Info    ", bgInfo);
+                _colorify.Write(" Warning ", bgWarning);
                 _colorify.WriteLine(" Danger  ", bgDanger);
-                
+
                 Back();
             }
             catch (Exception ex)
@@ -129,7 +136,8 @@ namespace Sample
             }
         }
 
-        static void WriteLine(){
+        static void WriteLine()
+        {
             try
             {
                 _colorify.Write("Short Text at First Preceded with a ", bgInfo);
@@ -143,13 +151,14 @@ namespace Sample
             }
         }
 
-        static void TextAlign(){
+        static void TextAlign()
+        {
             try
             {
-                _colorify.AlignCenter("Text Aligned to Center"  , bgInfo);
-                _colorify.AlignRight("Text Aligned to Right"    , txtDefault);
-                _colorify.AlignLeft("Text Aligned to Left"      , txtDanger);
-                _colorify.AlignSplit("<-Left|Right->"           , bgSuccess);
+                _colorify.AlignCenter("Text Aligned to Center", bgInfo);
+                _colorify.AlignRight("Text Aligned to Right", txtDefault);
+                _colorify.AlignLeft("Text Aligned to Left", txtDanger);
+                _colorify.AlignSplit("<-Left|Right->", bgSuccess);
 
                 Back();
             }
@@ -159,7 +168,8 @@ namespace Sample
             }
         }
 
-        static void BlankLines(){
+        static void BlankLines()
+        {
             try
             {
                 _colorify.BlankLines();
@@ -175,7 +185,8 @@ namespace Sample
             }
         }
 
-        static void DivisionLine(){
+        static void DivisionLine()
+        {
             try
             {
                 _colorify.DivisionLine('-', Colorify.Colors.bgDefault);

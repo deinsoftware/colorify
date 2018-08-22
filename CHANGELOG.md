@@ -9,6 +9,12 @@ Fixed       for any bug fixes.
 Security    to invite users to upgrade in case of vulnerabilities.
 -->
 
+## [1.0.8] - 2018-08-22
+
+**Fixed:**
+
+* Remove clear on ResetColor.
+
 ## [1.0.7] - 2018-06-14
 
 **Fixed:**
