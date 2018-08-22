@@ -46,7 +46,6 @@ namespace Colorify
             lock (colorLock)
             {
                 Console.ResetColor();
-                Clear();
             }
         }
 
