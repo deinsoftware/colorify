@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>dein.Colorify</id>
-    <version>1.0.8</version>
+    <version>2.0.0</version>
     <title>dein Colorify</title>
     <authors>Camilo Martinez</authors>
     <owners>dein,equiman</owners>
@@ -17,10 +17,6 @@
     <tags>colorify dotnet-core macos windows linux library theme csharp format-library colors alignment</tags>
     <language>en-US</language>
     <developmentDependency>true</developmentDependency>
-    <dependencies>
-        <dependency id="Newtonsoft.Json" version="11.0.2" />
-        <dependency id="dein.ToolBox" version="1.2.0" />
-    </dependencies>
   </metadata>
   <files>
     <file src="bin\release\netcoreapp2.0\C*.dll" target="lib\netcoreapp2.0" />

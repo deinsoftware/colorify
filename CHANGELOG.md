@@ -9,6 +9,12 @@ Fixed       for any bug fixes.
 Security    to invite users to upgrade in case of vulnerabilities.
 -->
 
+## [2.0.0] - 2018-08-22
+
+**Removed:**
+
+* ToolBox library and NewtonSoft dependency.
+
 ## [1.0.8] - 2018-08-22
 
 **Fixed:**

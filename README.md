@@ -47,7 +47,6 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install?
 
 * [NET Core SDK](https://www.microsoft.com/net/download)
-* [ToolBox](https://github.com/deinsoftware/toolbox/)
 
 ### Installing
 
@@ -55,7 +54,7 @@ What things you need to install?
 
 Follow this instructions to add **Colorify** in your project.
 
-#### Dependencies
+#### Reomendend Dependencies
 
 * [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json) Library
 * [dein.ToolBox](https://www.nuget.org/packages/dein.ToolBox) Library
@@ -66,6 +65,11 @@ In your project folder, where is located .csproj file run this command on termin
 
 ```terminal
 dotnet add package dein.Colorify
+```
+
+If you want to use OS class highly recommend use [ToolBox](https://github.com/deinsoftware/toolbox/) project.
+
+```terminal
 dotnet add package dein.ToolBox
 dotnet add package Newtonsoft.Json --version 11.0.2
 ```
