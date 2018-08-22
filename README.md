@@ -114,6 +114,7 @@ class Program
         //Foo()
         //Bar()
         _colorify.ResetColor();
+        _colorify.Clear();
     }
 }
 ```
