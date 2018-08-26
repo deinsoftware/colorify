@@ -17,4 +17,7 @@ sonar.txt
 **/bin
 **/obj
 **/Library
+
+### NuGet ###
 **/Package
+!**/Package/README.md
