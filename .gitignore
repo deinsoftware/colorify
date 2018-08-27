@@ -19,5 +19,5 @@ sonar.txt
 **/Library
 
 ### NuGet ###
-**/Package
+**/Package/*
 !**/Package/README.md
