@@ -1,4 +1,6 @@
 {
+    "editor.letterSpacing": 1,
+    "editor.tabSize": 4,
     "cSpell.words": [
         "colorify"
     ]
