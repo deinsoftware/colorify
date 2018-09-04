@@ -142,7 +142,7 @@ Keep calm, you are almost done. Review this usage steps and enjoy the life.
 
 To understand how this library works, take a look inside [Sample](https://github.com/deinsoftware/colorify/tree/master/Sample) folder. Better easy to use guide than words.
 
-Just go to project folder, where is located `Colorify.sln` file run this command on terminal:
+Just go to `Sample` project folder and run this command on terminal:
 
 ```terminal
 cd Sample
