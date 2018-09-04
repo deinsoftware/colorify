@@ -11,7 +11,7 @@ namespace Colorify.Terminal
 
         public static void WriteLine(string text)
         {
-            int size = Console.WindowWidth - 1;
+			int size = Console.WindowWidth - 1;
             if (size != Console.CursorLeft + 1)
             {
                 size = size - Console.CursorLeft;
@@ -20,7 +20,11 @@ namespace Colorify.Terminal
             {
                 size = Console.WindowWidth + size;
             }
-            Console.WriteLine($"{text.PadRight(size)}");
+
+			if (size < 0)
+				size = text.Length;
+
+			Console.WriteLine($"{text.PadRight(size)}");
         }
 
         public static void AlignRight(string text)
