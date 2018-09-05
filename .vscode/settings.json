@@ -1,6 +1,9 @@
 {
-    "editor.tabSize": 4,
     "cSpell.words": [
-        "colorify"
-    ]
+        "Colorify"
+    ],
+    "editor.tabSize": 4,
+    "[markdown]": {
+        "editor.tabSize": 2,
+    }
 }
