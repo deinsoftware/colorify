@@ -14,18 +14,9 @@ namespace Colorify.UI
         }
     }
 
-    public sealed class ThemeLight : ThemeAction, ITheme
+    public sealed class ThemeLight : ThemeAction
     {
-        public ThemeLight()
-        {
-            base._defaultBackground = ConsoleColor.White;
-            base._defaultForeground = ConsoleColor.Black;
-            SetColors();
-        }
-
-        public Dictionary<string, Color> _colors { get; set; }
-
-        public void SetColors()
+        public override void SetColors()
         {
             var colors = new Dictionary<string, Color>();
             colors.Add("text-default", AddColor(null, null));
