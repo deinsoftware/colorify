@@ -20,6 +20,10 @@ namespace Colorify.Terminal
             {
                 size = Console.WindowWidth + size;
             }
+
+            if (size < 0)
+                size = text.Length;
+
             Console.WriteLine($"{text.PadRight(size)}");
         }
 
