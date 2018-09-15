@@ -3,19 +3,32 @@ using System.Collections.Generic;
 
 namespace Colorify.UI
 {
-    public class ThemeAction
+    public abstract class ThemeAction : ITheme
     {
-        protected ConsoleColor _defaultBackground { get; set; }
-        protected ConsoleColor _defaultForeground { get; set; }
+        protected bool _consoleDefault { get; set; }
+        protected ConsoleColor _consoleBackground { get; set; }
+        protected ConsoleColor _consoleForeground { get; set; }
+
+        public Dictionary<string, Color> _colors { get; set; }
+
+        public abstract void SetColors();
+
+        public abstract void SetComponents();
+
+        public void ResetColor()
+        {
+            Console.ResetColor();
+            _consoleBackground = Console.BackgroundColor;
+            _consoleForeground = Console.ForegroundColor;
+        }
 
         public Color AddColor(ConsoleColor? background, ConsoleColor? foreground)
         {
             var color = new Color(
-                background ?? _defaultBackground,
-                foreground ?? _defaultForeground
+                background ?? _consoleBackground,
+                foreground ?? _consoleForeground
             );
             return color;
         }
     }
 }
-

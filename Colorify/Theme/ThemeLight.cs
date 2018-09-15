@@ -9,23 +9,34 @@ namespace Colorify.UI
         {
             get
             {
-                return new ThemeLight();
+                return new ThemeLight(false);
             }
         }
     }
 
-    public sealed class ThemeLight : ThemeAction, ITheme
+    public class ThemeLight : ThemeAction
     {
-        public ThemeLight()
+        public ThemeLight(bool consoleDefault = true)
         {
-            base._defaultBackground = ConsoleColor.White;
-            base._defaultForeground = ConsoleColor.Black;
+            base._consoleDefault = consoleDefault;
             SetColors();
+            SetComponents();
         }
 
-        public Dictionary<string, Color> _colors { get; set; }
+        public override void SetColors()
+        {
+            if (base._consoleDefault)
+            {
+                ResetColor();
+            }
+            else
+            {
+                base._consoleBackground = ConsoleColor.White;
+                base._consoleForeground = ConsoleColor.Black;
+            }
+        }
 
-        public void SetColors()
+        public override void SetComponents()
         {
             var colors = new Dictionary<string, Color>();
             colors.Add("text-default", AddColor(null, null));
@@ -42,7 +53,7 @@ namespace Colorify.UI
             colors.Add("text-info", AddColor(null, ConsoleColor.DarkCyan));
             colors.Add("bg-success", AddColor(ConsoleColor.DarkGreen, ConsoleColor.White));
             colors.Add("bg-info", AddColor(ConsoleColor.DarkCyan, ConsoleColor.White));
-            _colors = colors;
+            base._colors = colors;
         }
     }
 }

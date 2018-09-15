@@ -17,8 +17,10 @@ namespace Sample
                 switch (OS.GetCurrent())
                 {
                     case "win":
-                    case "gnu":
                         _colorify = new Format(Theme.Dark);
+                        break;
+                    case "gnu":
+                        _colorify = new Format(new ThemeDark());
                         break;
                     case "mac":
                         _colorify = new Format(Theme.Light);
