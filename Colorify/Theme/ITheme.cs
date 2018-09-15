@@ -8,6 +8,7 @@ namespace Colorify.UI
         Dictionary<string, Color> _colors { get; set; }
         Color AddColor(ConsoleColor? background, ConsoleColor? foreground);
         void SetColors();
+        void SetComponents();
     }
 }
 

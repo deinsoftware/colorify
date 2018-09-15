@@ -10,7 +10,7 @@
 
 Contributions or Beer will be appreciated
 
-> The Code is Dark and Full of Errors!  
+> The Code is Dark and Full of Errors!
 > Console is your friend ... don't be afraid!
 
 ## Menu
@@ -125,6 +125,8 @@ class Program
 
 Take note that `_colorify.ResetColor();` command is important in order to reset default terminal colors when programs finish.
 
+If you want use themes with current user color use `_colorify = new Format(new ThemeLight());` or `_colorify = new Format(new ThemeDark());`
+
 If you want to use `_colorify` in other class, add an static using to `Program` class:
 
 ```csharp
@@ -138,7 +140,7 @@ replace Namespace with defined namespace in your project.
 
 ## Usage
 
-Keep calm, you are almost done. Review this usage steps and enjoy the life. 
+Keep calm, you are almost done. Review this usage steps and enjoy the life.
 
 To understand how this library works, take a look inside [Sample](https://github.com/deinsoftware/colorify/tree/master/Sample) folder. Better easy to use guide than words.
 
@@ -170,10 +172,10 @@ _colorify.WriteLine("Background Warning", Colors.bgWarning);
 _colorify.WriteLine("Background Danger", Colors.bgDanger);
 ```
 
-**Light (for MacOS):**  
+**Light (for MacOS):**
 ![Ligth](Sample/images/colors-mac.png "Colors for MacOS")
 
-**Dark (for Windows and Linux):**  
+**Dark (for Windows and Linux):**
 ![Dark](Sample/images/colors-win.png "Colors for Window and Linux")
 
 Colors are defined on [Theme](https://github.com/deinsoftware/colorify/tree/master/Colorify/Theme) folder. There is two themes Light (for MacOs) and Dark (for Windows and Linux). You can edit the `ThemeLight.cs` or `ThemeDark.cs` files or create a new one implementing the `ITheme` interface.

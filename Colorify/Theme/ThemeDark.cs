@@ -9,14 +9,34 @@ namespace Colorify.UI
         {
             get
             {
-                return new ThemeDark();
+                return new ThemeDark(false);
             }
         }
     }
 
-    public sealed class ThemeDark : ThemeAction
+    public class ThemeDark : ThemeAction
     {
+        public ThemeDark(bool consoleDefault = true)
+        {
+            base._consoleDefault = consoleDefault;
+            SetColors();
+            SetComponents();
+        }
+
         public override void SetColors()
+        {
+            if (base._consoleDefault)
+            {
+                ResetColor();
+            }
+            else
+            {
+                base._consoleBackground = ConsoleColor.Black;
+                base._consoleForeground = ConsoleColor.White;
+            }
+        }
+
+        public override void SetComponents()
         {
             var colors = new Dictionary<string, Color>();
             colors.Add("text-default", AddColor(null, null));
@@ -33,7 +53,7 @@ namespace Colorify.UI
             colors.Add("text-info", AddColor(null, ConsoleColor.DarkCyan));
             colors.Add("bg-success", AddColor(ConsoleColor.DarkGreen, ConsoleColor.White));
             colors.Add("bg-info", AddColor(ConsoleColor.DarkCyan, ConsoleColor.White));
-            _colors = colors;
+            base._colors = colors;
         }
     }
 }

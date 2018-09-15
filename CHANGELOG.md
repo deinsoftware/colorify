@@ -9,6 +9,16 @@ Fixed       for any bug fixes.
 Security    to invite users to upgrade in case of vulnerabilities.
 -->
 
+## [2.1.0] - 2018-09-15
+
+**Changed:**
+
+- Now you can use themes with the user console colors.
+
+**Update:**
+
+- Sample project using default user colors on 'gnu'.
+
 ## [2.0.1] - 2018-09-05
 
 **Fixed:**

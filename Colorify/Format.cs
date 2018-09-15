@@ -36,9 +36,9 @@ namespace Colorify
 
         void DefaultColor(string color = Colors.bgDefault)
         {
-            var t = _theme[color];
-            Console.BackgroundColor = t._background;
-            Console.ForegroundColor = t._foreground;
+            var theme = _theme[color];
+            Console.BackgroundColor = theme._background;
+            Console.ForegroundColor = theme._foreground;
         }
 
         public void ResetColor()
