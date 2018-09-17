@@ -173,9 +173,11 @@ _colorify.WriteLine("Background Danger", Colors.bgDanger);
 ```
 
 **Light (for MacOS):**
+
 ![Ligth](Sample/images/colors-mac.png "Colors for MacOS")
 
 **Dark (for Windows and Linux):**
+
 ![Dark](Sample/images/colors-win.png "Colors for Window and Linux")
 
 Colors are defined on [Theme](https://github.com/deinsoftware/colorify/tree/master/Colorify/Theme) folder. There is two themes Light (for MacOs) and Dark (for Windows and Linux). You can edit the `ThemeLight.cs` or `ThemeDark.cs` files or create a new one implementing the `ITheme` interface.
