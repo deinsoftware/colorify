@@ -9,6 +9,12 @@ Fixed       for any bug fixes.
 Security    to invite users to upgrade in case of vulnerabilities.
 -->
 
+## [2.2.1] - 2018-11-28
+
+**Fixed:**
+
+- Text Wrapper on item greater than screen width.
+
 ## [2.2.0] - 2018-09-28
 
 **Updated:**
