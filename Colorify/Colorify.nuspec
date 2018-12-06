@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>dein.Colorify</id>
-    <version>2.2.1</version>
+    <version>2.2.2</version>
     <title>dein Colorify</title>
     <authors>Camilo Martinez</authors>
     <owners>dein,equiman</owners>
@@ -19,6 +19,8 @@
     <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
+    <file src="bin\release\netcoreapp2.0\C*.dll" target="lib\netcoreapp2.0" />
+    <file src="bin\release\netcoreapp2.0\C*.pdb" target="lib\netcoreapp2.0" />
     <file src="bin\release\netcoreapp2.1\C*.dll" target="lib\netcoreapp2.1" />
     <file src="bin\release\netcoreapp2.1\C*.pdb" target="lib\netcoreapp2.1" />
   </files>

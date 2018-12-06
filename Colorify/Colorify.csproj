@@ -3,7 +3,7 @@
   <PropertyGroup>
     <AssemblyName>Colorify</AssemblyName>
     <PackageId>Colorify</PackageId>
-    <VersionPrefix>2.2.1</VersionPrefix>
+    <VersionPrefix>2.2.2</VersionPrefix>
     <ProjectGuid>{17e39bbe-4f41-467c-869b-ab6c49fe9b31}</ProjectGuid>
 
     <Authors>Camilo Martinez</Authors>
@@ -20,9 +20,11 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/equiman/colorify</RepositoryUrl>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFrameworks>netcoreapp2.0;netcoreapp2.1</TargetFrameworks>
     <RuntimeIdentifiers>win10-x64;osx.10.12-x64</RuntimeIdentifiers>
   </PropertyGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.1'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
   </ItemGroup>
 </Project>
