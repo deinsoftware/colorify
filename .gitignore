@@ -1,6 +1,6 @@
 ### VisualStudio ###
 .vs/*
-*/*.userprefs
+**/*.userprefs
 
 ### VisualStudioCode ###
 .vscode/*
