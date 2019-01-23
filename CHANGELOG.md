@@ -9,11 +9,18 @@ Fixed       for any bug fixes.
 Security    to invite users to upgrade in case of vulnerabilities.
 -->
 
+## [2.3.0] - 2019-01-23
+
+**Updated:**
+
+- Framework to .Net Core version 2.2
+- Moq to 4.10.1
+
 ## [2.2.2] - 2018-12-06
 
 **Added:**
 
-- Support for .Net Core version 2.0.
+- Support for .Net Core version 2.0
 
 ## [2.2.1] - 2018-11-28
 
@@ -25,7 +32,7 @@ Security    to invite users to upgrade in case of vulnerabilities.
 
 **Updated:**
 
-- To .Net Core version 2.1.0.
+- Framework to .Net Core version 2.1
 
 ## [2.1.0] - 2018-09-15
 
@@ -63,7 +70,7 @@ Security    to invite users to upgrade in case of vulnerabilities.
 
 **Changed:**
 
-- Update Newtonsoft.Json library to 11.0.2 and ToolBox library to 1.2.1.
+- Update Newtonsoft.Json library to 11.0.2 and ToolBox library to 1.2.1
 
 ## [1.0.6] - 2018-06-13
 
@@ -81,7 +88,7 @@ Security    to invite users to upgrade in case of vulnerabilities.
 
 **Changed:**
 
-- Update ToolBox library to 1.1.4.
+- Update ToolBox library to 1.1.4
 
 ## [1.0.3] - 2018-02-19
 
