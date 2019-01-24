@@ -1,5 +1,6 @@
 # dein Colorify [ for Win, Mac & Linux ]
 
+[![Build Status](https://travis-ci.org/deinsoftware/colorify.svg?branch=master)](https://travis-ci.org/deinsoftware/colorify)
 [![NuGet](https://img.shields.io/nuget/v/dein.Colorify.svg)](https://www.nuget.org/packages/dein.Colorify/)
 [![NuGet](https://img.shields.io/nuget/dt/dein.Colorify.svg)](https://www.nuget.org/packages/dein.Colorify/)
 [![SonarCloud](https://sonarcloud.io/api/project_badges/measure?project=dein%3Acolorify&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=dein%3Acolorify)
@@ -15,26 +16,26 @@ Contributions or Beer will be appreciated
 
 ## Menu
 
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-    * [Dependencies](#dependencies)
-    * [Add As Package](#add-as-package)
-    * [Add As Reference](#add-as-reference)
-  * [Instantiate Library](#instantiate-library)
-* [Usage](#usage)
-  * [Colors](#colors)
-  * [Write](#write)
-  * [WriteLine](#writeline)
-  * [Align](#align)
-  * [BlankLines](#blanklines)
-  * [DivisionLine](#divisionline)
-* [About](#about)
-  * [Built With](#built-with)
-  * [Contributing](#contributing)
-  * [Versioning](#versioning)
-  * [Authors](#authors)
-  * [License](#license)
-  * [Acknowledgments](#acknowledgments)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+    - [Dependencies](#dependencies)
+    - [Add As Package](#add-as-package)
+    - [Add As Reference](#add-as-reference)
+  - [Instantiate Library](#instantiate-library)
+- [Usage](#usage)
+  - [Colors](#colors)
+  - [Write](#write)
+  - [WriteLine](#writeline)
+  - [Align](#align)
+  - [BlankLines](#blanklines)
+  - [DivisionLine](#divisionline)
+- [About](#about)
+  - [Built With](#built-with)
+  - [Contributing](#contributing)
+  - [Versioning](#versioning)
+  - [Authors](#authors)
+  - [License](#license)
+  - [Acknowledgments](#acknowledgments)
 
 ---
 
@@ -46,7 +47,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to install?
 
-* [NET Core SDK](https://www.microsoft.com/net/download)
+- [NET Core SDK](https://www.microsoft.com/net/download)
 
 ### Installing
 
@@ -56,8 +57,8 @@ Follow this instructions to add **Colorify** in your project.
 
 #### Reomendend Dependencies
 
-* [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json) Library
-* [dein.ToolBox](https://www.nuget.org/packages/dein.ToolBox) Library
+- [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json) Library
+- [dein.ToolBox](https://www.nuget.org/packages/dein.ToolBox) Library
 
 #### Add As Package
 
@@ -78,25 +79,25 @@ Official documentation: [dotnet add package](https://docs.microsoft.com/en-us/do
 
 #### Add As Reference
 
-Clone **Colorify** from GitHub on *recommended* path. Using this command on terminal:
+Clone **Colorify** from GitHub on _recommended_ path. Using this command on terminal:
 
-| OS | Command |
-| --- | --- |
+| OS  | Command                                                                                      |
+| --- | -------------------------------------------------------------------------------------------- |
 | win | `git clone https://github.com/deinsoftware/colorify.git "D:\Developer\DEIN\Projects\_devCC"` |
-| mac | `git clone https://github.com/deinsoftware/colorify.git ~/Developer/DEIN/Projects/_devCC` |
+| mac | `git clone https://github.com/deinsoftware/colorify.git ~/Developer/DEIN/Projects/_devCC`    |
 
 In your project folder, where is located .csproj file run this command on terminal:
 
-| OS | Command |
-| --- | --- |
+| OS  | Command                                                                             |
+| --- | ----------------------------------------------------------------------------------- |
 | win | `dotnet add reference "D:\Developer\DEIN\Projects\_devCC\Colorify\Colorify.csproj"` |
-| mac | `dotnet add reference ~/Developer/DEIN/Projects/_devCC/Colorify/Colorify.csproj` |
+| mac | `dotnet add reference ~/Developer/DEIN/Projects/_devCC/Colorify/Colorify.csproj`    |
 
 Official documentation: [dotnet add reference](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-reference)
 
 ### Instantiate Library
 
-On the main class Program, add an static property Format and inside Main method create an instance of the  library according the Operative System.
+On the main class Program, add an static property Format and inside Main method create an instance of the library according the Operative System.
 
 ```csharp
 class Program
@@ -132,6 +133,7 @@ If you want to use `_colorify` in other class, add an static using to `Program` 
 ```csharp
 using static Namesapace.Program;
 ```
+
 replace Namespace with defined namespace in your project.
 
 ⇧ [Back to menu](#menu)
@@ -301,9 +303,9 @@ _colorify.DivisionLine('.', Colors.bgDanger);
 
 ### Built With
 
-* [.Net Core](https://dotnet.github.io/) - ASP.NET Core is a free and open-source web framework, and the next generation of ASP.NET, developed by Microsoft and the community.
-* [VS Code](https://code.visualstudio.com/) - Code editing redefined.
-* [SonarQube](https://sonarcloud.io/dashboard/index/dein:colorify) - Continuous code quality.
+- [.Net Core](https://dotnet.github.io/) - ASP.NET Core is a free and open-source web framework, and the next generation of ASP.NET, developed by Microsoft and the community.
+- [VS Code](https://code.visualstudio.com/) - Code editing redefined.
+- [SonarQube](https://sonarcloud.io/dashboard/index/dein:colorify) - Continuous code quality.
 
 ### Contributing
 
@@ -315,7 +317,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ### Authors
 
-* **Camilo Martinez** [[Equiman](http://stackoverflow.com/story/equiman)]
+- **Camilo Martinez** [[Equiman](http://stackoverflow.com/story/equiman)]
 
 See also the list of [contributors](https://github.com/deinsoftware/colorify/contributors) who participated in this project.
 
@@ -325,7 +327,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Acknowledgments
 
-* [StackOverflow](http://stackoverflow.com): The largest online community for programmers.
-* [Dot Net Perls](https://www.dotnetperls.com/console-color): C# Console Color, Text and BackgroundColor.
+- [StackOverflow](http://stackoverflow.com): The largest online community for programmers.
+- [Dot Net Perls](https://www.dotnetperls.com/console-color): C# Console Color, Text and BackgroundColor.
 
 ⇧ [Back to menu](#menu)
