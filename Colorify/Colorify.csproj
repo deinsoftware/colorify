@@ -3,7 +3,7 @@
   <PropertyGroup>
     <AssemblyName>Colorify</AssemblyName>
     <PackageId>Colorify</PackageId>
-    <VersionPrefix>2.3.0</VersionPrefix>
+    <VersionPrefix>2.4.0-beta1</VersionPrefix>
     <ProjectGuid>{17e39bbe-4f41-467c-869b-ab6c49fe9b31}</ProjectGuid>
 
     <Authors>Camilo Martinez</Authors>
@@ -13,20 +13,35 @@
     <Description>C# NETCore Console Library with Text Format: colors, alignment and lot more</Description>
     <Copyright>dein Software © 2017</Copyright>
 
-    <PackageTags>dotnet;core;win10-x64;osx.10.12-x64</PackageTags>
+    <PackageTags>dotnet;core;win-x64;osx-x64;linux-x64;</PackageTags>
     <PackageIconUrl>https://github.com/equiman/colorify/blob/master/icon.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/equiman/colorify</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/equiman/colorify/blob/master/LICENSE</PackageLicenseUrl>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageLicenseFile>..\LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/equiman/colorify</RepositoryUrl>
-    <TargetFrameworks>netcoreapp2.0;netcoreapp2.1;netcoreapp2.2</TargetFrameworks>
-    <RuntimeIdentifiers>win10-x64;osx.10.12-x64</RuntimeIdentifiers>
+    <TargetFrameworks>netstandard1.3;netstandard2.0;netcoreapp2.0;netcoreapp2.1;netcoreapp2.2;</TargetFrameworks>
+    <RuntimeIdentifiers>win-x64;osx-x64;linux-x64;</RuntimeIdentifiers>
   </PropertyGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.3'">
+    <!-- License -->
+    <None Include="..\LICENSE" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <!-- License -->
+    <None Include="..\LICENSE" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
+    <!-- License -->
+    <None Include="..\LICENSE" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.1'">
+    <!-- License -->
+    <None Include="..\LICENSE" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.2'">
+    <!-- License -->
+    <None Include="..\LICENSE" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 </Project>

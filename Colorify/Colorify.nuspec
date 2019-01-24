@@ -2,28 +2,36 @@
 <package >
   <metadata>
     <id>dein.Colorify</id>
-    <version>2.3.0</version>
+    <version>2.4.0-beta1</version>
     <title>dein Colorify</title>
     <authors>Camilo Martinez</authors>
     <owners>dein,equiman</owners>
-    <licenseUrl>https://github.com/equiman/colorify/blob/master/LICENSE</licenseUrl>
+    <license type="file">..\LICENSE</license>
+    <license type="expression">MIT</license>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectUrl>https://github.com/equiman/colorify</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/equiman/colorify/master/icon.png</iconUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>C# NETCore Console Library [for Win and Mac]</description>
+    <description>C# NETCore Console Library [for Win, Mac and Linux]</description>
     <summary>Colorify - C# NETCore Console Library with Text Format: colors, alignment and lot more.</summary>
-    <releaseNotes>This is where it all begins...</releaseNotes>
+    <releaseNotes>Colorify - C# NETCore Console Library with Text Format: colors, alignment and lot more.</releaseNotes>
     <copyright>dein Software © 2017</copyright>
     <tags>colorify dotnet-core macos windows linux library theme csharp format-library colors alignment</tags>
     <language>en-US</language>
     <developmentDependency>true</developmentDependency>
   </metadata>
   <files>
+    <file src="bin\release\netstandard1.3\C*.dll" target="lib\netstandard1.3" />
+    <file src="bin\release\netstandard1.3\C*.pdb" target="lib\netstandard1.3" />
+    <file src="bin\release\netstandard2.0\C*.dll" target="lib\netstandard2.0" />
+    <file src="bin\release\netstandard2.0\C*.pdb" target="lib\netstandard2.0" />
+    <file src="bin\release\netcoreapp2.2\C*.dll" target="lib\netcoreapp2.2" />
     <file src="bin\release\netcoreapp2.0\C*.dll" target="lib\netcoreapp2.0" />
     <file src="bin\release\netcoreapp2.0\C*.pdb" target="lib\netcoreapp2.0" />
     <file src="bin\release\netcoreapp2.1\C*.dll" target="lib\netcoreapp2.1" />
     <file src="bin\release\netcoreapp2.1\C*.pdb" target="lib\netcoreapp2.1" />
     <file src="bin\release\netcoreapp2.2\C*.dll" target="lib\netcoreapp2.2" />
     <file src="bin\release\netcoreapp2.2\C*.pdb" target="lib\netcoreapp2.2" />
+    <file src="..\LICENSE" target="contentFiles\any\any" />
+    <file src="..\LICENSE" target="content\any\any" />
   </files>
 </package>

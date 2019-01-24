@@ -9,6 +9,13 @@ Fixed       for any bug fixes.
 Security    to invite users to upgrade in case of vulnerabilities.
 -->
 
+## [2.4.0] - 2019-01-24
+
+**Added:**
+
+- Support for .NET Standard version 1.3
+- Support for .NET Standard version 2.0
+
 ## [2.3.0] - 2019-01-23
 
 **Updated:**
