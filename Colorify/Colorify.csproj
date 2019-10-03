@@ -3,7 +3,7 @@
   <PropertyGroup>
     <AssemblyName>Colorify</AssemblyName>
     <PackageId>Colorify</PackageId>
-    <VersionPrefix>2.4.0</VersionPrefix>
+    <VersionPrefix>2.4.1</VersionPrefix>
     <ProjectGuid>{17e39bbe-4f41-467c-869b-ab6c49fe9b31}</ProjectGuid>
 
     <Authors>Camilo Martinez</Authors>
@@ -21,26 +21,14 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/equiman/colorify</RepositoryUrl>
-    <TargetFrameworks>netstandard1.3;netstandard2.0;netcoreapp2.0;netcoreapp2.1;netcoreapp2.2;</TargetFrameworks>
+    <TargetFrameworks>netcoreapp2.2;netcoreapp3.0;</TargetFrameworks>
     <RuntimeIdentifiers>win-x64;osx-x64;linux-x64;</RuntimeIdentifiers>
   </PropertyGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.3'">
-    <!-- License -->
-    <None Include="..\LICENSE" CopyToOutputDirectory="PreserveNewest" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
-    <!-- License -->
-    <None Include="..\LICENSE" CopyToOutputDirectory="PreserveNewest" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
-    <!-- License -->
-    <None Include="..\LICENSE" CopyToOutputDirectory="PreserveNewest" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.1'">
-    <!-- License -->
-    <None Include="..\LICENSE" CopyToOutputDirectory="PreserveNewest" />
-  </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.2'">
+    <!-- License -->
+    <None Include="..\LICENSE" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.0'">
     <!-- License -->
     <None Include="..\LICENSE" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>

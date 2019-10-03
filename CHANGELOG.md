@@ -9,6 +9,16 @@ Fixed       for any bug fixes.
 Security    to invite users to upgrade in case of vulnerabilities.
 -->
 
+## [2.4.1] - 2019-10-02
+
+**Updated:**
+
+- Framework to .Net Core version 3.0
+
+**Changed:**
+
+- NuGet support only for .Net Core 2.2 and 3.0
+
 ## [2.4.0] - 2019-01-24
 
 **Added:**
