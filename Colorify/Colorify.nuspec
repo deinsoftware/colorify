@@ -20,11 +20,10 @@
     <developmentDependency>true</developmentDependency>
     <dependencies>
       <group targetFramework="netcoreapp2.2" />
-      <group targetFramework="netcoreapp3.0" /
-      >
-</dependencies>
-<contentFiles>
-<files include="any/**/LICENSE" buildAction="None" copyToOutput="true" flatten="true" />
+      <group targetFramework="netcoreapp3.0" />
+    </dependencies>
+    <contentFiles>
+      <files include="any/**/LICENSE" buildAction="None" copyToOutput="true" flatten="true" />
     </contentFiles>
   </metadata>
   <files>
