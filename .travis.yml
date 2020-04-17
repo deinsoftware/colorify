@@ -15,7 +15,7 @@ before_script:
   - export PATH="$PATH:$HOME/.dotnet/tools"
 
 script:
-  - dotnet sonarscanner begin /k:"dein:colorify" /n:"Colorify" /v:"2.4.1" /o:"dein" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="$SONAR_KEY" /d:sonar.language="cs" /d:sonar.exclusions="**/bin/**/*,**/obj/**/*" /d:sonar.cs.opencover.reportsPaths="lcov.opencover.xml" || true
+  - dotnet sonarscanner begin /k:"dein:colorify" /n:"Colorify" /v:"2.5.0" /o:"dein" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="$SONAR_KEY" /d:sonar.language="cs" /d:sonar.exclusions="**/bin/**/*,**/obj/**/*" /d:sonar.cs.opencover.reportsPaths="lcov.opencover.xml" || true
   - dotnet build Colorify/Colorify.csproj
   - dotnet test Colorify.Tests/Colorify.Tests.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=../lcov
   - dotnet sonarscanner end /d:sonar.login="$SONAR_KEY" || true
