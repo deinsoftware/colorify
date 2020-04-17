@@ -11,7 +11,7 @@ namespace Colorify.Terminal
 
         public static void WriteLine(string text)
         {
-            int size = Console.WindowWidth - 1;
+            int size = Console.WindowWidth;
             if (size != Console.CursorLeft + 1)
             {
                 size = size - Console.CursorLeft;

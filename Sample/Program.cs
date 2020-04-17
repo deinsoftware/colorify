@@ -144,6 +144,7 @@ namespace Sample
             {
                 _colorify.Write("Short Text at First Preceded with a ", bgInfo);
                 _colorify.WriteLine(" Long Multi line text with Line Wrap that bring a new line", bgSuccess);
+                _colorify.Wrap("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed turpis in ligula aliquet ornare tristique sed ante. Nam pretium ullamcorper condimentum. Aliquam quis sodales ex, vitae gravida metus. Suspendisse potenti. Maecenas nunc sapien, semper vel tincidunt sed, scelerisque ut est. Nunc eu venenatis libero. Nulla consectetur pretium leo. Nullam suscipit scelerisque neque fringilla volutpat. Aliquam condimentum, neque quis malesuada ultrices, mauris velit tincidunt arcu, vel sodales tortor felis quis velit. Aliquam tempus ullamcorper orci, vitae pretium leo maximus ut. Aliquam iaculis leo sed tempor mattis.", bgWarning);
 
                 Back();
             }

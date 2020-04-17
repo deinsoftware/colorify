@@ -9,11 +9,29 @@ Fixed       for any bug fixes.
 Security    to invite users to upgrade in case of vulnerabilities.
 -->
 
+## [2.5.0] - 2020-04-16
+
+**Updated:**
+
+- The framework to .Net Core version 3.1
+
+**Changed:**
+
+- NuGet support only for .Net Core 2.2 and 3.1
+
+**Added:**
+
+- Word Wrap sample and readme documentation
+
+**Fixed:**
+
+- `_colorify.WriteLine` end line missing one pixel
+
 ## [2.4.1] - 2019-10-02
 
 **Updated:**
 
-- Framework to .Net Core version 3.0
+- The framework to .Net Core version 3.0
 
 **Changed:**
 
@@ -30,7 +48,7 @@ Security    to invite users to upgrade in case of vulnerabilities.
 
 **Updated:**
 
-- Framework to .Net Core version 2.2
+- The framework to .Net Core version 2.2
 - Moq to 4.10.1
 
 ## [2.2.2] - 2018-12-06
@@ -43,13 +61,13 @@ Security    to invite users to upgrade in case of vulnerabilities.
 
 **Fixed:**
 
-- Text Wrapper on item greater than screen width.
+- Text Wrapper on item greater than the screen width.
 
 ## [2.2.0] - 2018-09-28
 
 **Updated:**
 
-- Framework to .Net Core version 2.1
+- The Framework to .Net Core version 2.1
 
 ## [2.1.0] - 2018-09-15
 

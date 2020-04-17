@@ -7,7 +7,7 @@
 [![SonarCloud](https://sonarcloud.io/api/project_badges/measure?project=dein%3Acolorify&metric=security_rating)](https://sonarcloud.io/dashboard?id=dein%3Acolorify)
 [![SonarCloud](https://sonarcloud.io/api/project_badges/measure?project=dein%3Acolorify&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=dein%3Acolorify)
 
-**Colorify** was created to simplify and automate tasks related to NET Core console formating. Was born in [HardHat](https://github.com/deinsoftware/hardhat/) project as a Class. Now grew up as library and can be used by other console applications.
+**Colorify** was created to simplify and automate tasks related to NET Core console formatting. Was born in [HardHat](https://github.com/deinsoftware/hardhat/) project as a Class. Now grew up as a library and can be used by other console applications.
 
 Contributions or Beer will be appreciated
 
@@ -18,7 +18,7 @@ Contributions or Beer will be appreciated
 
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-    - [Dependencies](#dependencies)
+    - [Recommended Dependencies](#recommended-dependencies)
     - [Add As Package](#add-as-package)
     - [Add As Reference](#add-as-reference)
   - [Instantiate Library](#instantiate-library)
@@ -26,6 +26,7 @@ Contributions or Beer will be appreciated
   - [Colors](#colors)
   - [Write](#write)
   - [WriteLine](#writeline)
+  - [WordWrap](#wordwrap)
   - [Align](#align)
   - [BlankLines](#blanklines)
   - [DivisionLine](#divisionline)
@@ -51,11 +52,11 @@ What things you need to install?
 
 ### Installing
 
-**Colorify** is available as [project](https://github.com/deinsoftware/colorify/) or [package](https://www.nuget.org/packages/dein.Colorify). We strong recommend add as a NuGet package if don't need make modifications directly on source code library.
+**Colorify** is available as [project](https://github.com/deinsoftware/colorify/) or [package](https://www.nuget.org/packages/dein.Colorify). We strong recommend add as a NuGet package if don't need make modifications directly on the source code library.
 
-Follow this instructions to add **Colorify** in your project.
+Follow these instructions to add **Colorify** in your project.
 
-#### Reomendend Dependencies
+#### Recommended Dependencies
 
 - [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json) Library
 - [dein.ToolBox](https://www.nuget.org/packages/dein.ToolBox) Library
@@ -97,7 +98,7 @@ Official documentation: [dotnet add reference](https://docs.microsoft.com/en-us/
 
 ### Instantiate Library
 
-On the main class Program, add an static property Format and inside Main method create an instance of the library according the Operative System.
+On the main class Program, add a static property Format and inside the Main method create an instance of the library according the Operative System.
 
 ```csharp
 class Program
@@ -128,13 +129,13 @@ Take note that `_colorify.ResetColor();` command is important in order to reset 
 
 If you want use themes with current user color use `_colorify = new Format(new ThemeLight());` or `_colorify = new Format(new ThemeDark());`
 
-If you want to use `_colorify` in other class, add an static using to `Program` class:
+If you want to use `_colorify` in other class, add a static using to `Program` class:
 
 ```csharp
 using static Namesapace.Program;
 ```
 
-replace Namespace with defined namespace in your project.
+replace Namespace with a defined namespace in your project.
 
 ⇧ [Back to menu](#menu)
 
@@ -142,9 +143,9 @@ replace Namespace with defined namespace in your project.
 
 ## Usage
 
-Keep calm, you are almost done. Review this usage steps and enjoy the life.
+Keep calm, you are almost done. Review this usage steps and enjoy life.
 
-To understand how this library works, take a look inside [Sample](https://github.com/deinsoftware/colorify/tree/master/Sample) folder. Better easy to use guide than words.
+To understand how this library works, take a look inside [Sample](https://github.com/deinsoftware/colorify/tree/master/Sample) folder. Better easy to use a guide than words.
 
 Just go to `Sample` project folder and run this command on terminal:
 
@@ -174,15 +175,15 @@ _colorify.WriteLine("Background Warning", Colors.bgWarning);
 _colorify.WriteLine("Background Danger", Colors.bgDanger);
 ```
 
-**Light (for MacOS):**
+**Light (for macOS):**
 
-![Ligth](Sample/images/colors-mac.png "Colors for MacOS")
+![Light](Sample/images/colors-mac.png "Colors for macOS")
 
 **Dark (for Windows and Linux):**
 
 ![Dark](Sample/images/colors-win.png "Colors for Window and Linux")
 
-Colors are defined on [Theme](https://github.com/deinsoftware/colorify/tree/master/Colorify/Theme) folder. There is two themes Light (for MacOs) and Dark (for Windows and Linux). You can edit the `ThemeLight.cs` or `ThemeDark.cs` files or create a new one implementing the `ITheme` interface.
+Colors are defined on [Theme](https://github.com/deinsoftware/colorify/tree/master/Colorify/Theme) folder. There is two themes Light (for macOS) and Dark (for Windows and Linux). You can edit the `ThemeLight.cs` or `ThemeDark.cs` files or create a new one implementing the `ITheme` interface.
 
 Take a look on official documentation: [ConsoleColor Enumeration](https://msdn.microsoft.com/en-us/library/system.consolecolor)
 
@@ -224,14 +225,33 @@ _colorify.WriteLine("Text with line terminator");
 _colorify.WriteLine("Text with line terminator", Colors.bgDefault);
 ```
 
-Automatic line wrap with long text:
-
 ```csharp
 _colorify.Write("Short Text at First Preceded with a ", Colorify.Colors.bgInfo);
 _colorify.WriteLine(" Long Multi line text with Line Wrap that bring a new line", Colorify.Colors.bgSuccess);
 ```
 
 ![WriteLine](Sample/images/writeline.png "WriteLine")
+
+### Word Wrap
+
+`_colorify.Wrap` work like `Console.WriteLine` with a line terminator after the text but wrapped with colors and taking care of split words gently. If you don't specify a color will use the `Colors.txtDefault` by default.
+
+`_colorify.Wrap` work like `Console.WriteLine` with a line terminator after the text but wrapped with colors. If you don't specify a color will use the `Colors.txtDefault` by default.
+
+```csharp
+_colorify.Wrap("Very long text with gentle word wrapping at the end of console");
+```
+
+```csharp
+_colorify.Wrap("Very long text with gentle word wrapping at the end of console", Colors.bgDefault);
+
+Automatic line wrap or word wrap with long text:
+
+```csharp
+_colorify.Wrap("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed turpis in ligula aliquet ornare tristique sed ante. Nam pretium ullamcorper condimentum. Aliquam quis sodales ex, vitae gravida metus. Suspendisse potenti. Maecenas nunc sapien, semper vel tincidunt sed, scelerisque ut est. Nunc eu venenatis libero. Nulla consectetur pretium leo. Nullam suscipit scelerisque neque fringilla volutpat. Aliquam condimentum, neque quis malesuada ultrices, mauris velit tincidunt arcu, vel sodales tortor felis quis velit. Aliquam tempus ullamcorper orci, vitae pretium leo maximus ut. Aliquam iaculis leo sed tempor mattis.", bgWarning);
+```
+
+![WordWrap](Sample/images/wordwrap.png "WordWrap")
 
 ### Align
 
@@ -249,7 +269,7 @@ _colorify.AlignRight("Text Aligned to Right", Colors.txtDefault);
 _colorify.AlignLeft("Text Aligned to Left", Colors.txtDanger);
 ```
 
-`AlignSplit` is the way to show two values on the same line. Text will be split with pipe `|` character, the first element will be aligned to left and second aligned to right.
+`AlignSplit` is the way to show two values on the same line. The text will be split with pipe `|` character, the first element will be aligned to left and second aligned to right.
 
 ```csharp
 _colorify.AlignSplit("<-Text to Left| Text to Right->");
@@ -263,7 +283,7 @@ _colorify.AlignSplit("<-Text to Left| Text to Right->", Colors.bgSuccess);
 
 ### BlankLines
 
-`_colorify.BlankLines` works like `Console.WriteLine` but without text. You can combine the amount of lines and color. Default values will be `1` line and `Colors.txtDefault`.
+`_colorify.BlankLines` works like `Console.WriteLine` but without text. You can combine the amount of lines and colors. Default values will be `1` line and `Colors.txtDefault`.
 
 ```csharp
 _colorify.BlankLines();
@@ -277,11 +297,11 @@ _colorify.BlankLines(3);
 _colorify.BlankLines(3, Colors.bgSuccess);
 ```
 
-![BlankLines x 3](Sample/images/linesx3.png "BlankLines x 3")
+![BlankLines x 3](Sample/images/linesX3.png "BlankLines x 3")
 
 ### DivisionLine
 
-`_colorify.DivisionLine` works like `Console.WriteLine` but without the same character as full width text. . If you don't specify a color will use the `Colors.txtDefault` by default.
+`_colorify.DivisionLine` works like `Console.WriteLine` but without the same character as full-width text. If you don't specify a color will use the `Colors.txtDefault` by default.
 
 ```csharp
 _colorify.DivisionLine('-', Colors.bgDefault);
@@ -318,6 +338,8 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ### Authors
 
 - **Camilo Martinez** [[Equiman](http://stackoverflow.com/story/equiman)]
+
+![Buy me a coffee](buy-me-a-coffee.png "Buy me a coffee")
 
 See also the list of [contributors](https://github.com/deinsoftware/colorify/contributors) who participated in this project.
 
