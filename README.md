@@ -340,7 +340,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 - **Camilo Martinez** [[Equiman](http://stackoverflow.com/story/equiman)]
 
-![Buy me a coffee](buy-me-a-coffee.png "Buy me a coffee")
+[![Buy me a coffee](buy-me-a-coffee.png "Buy me a coffee")](http://buymeacoff.ee/equiman)
 
 See also the list of [contributors](https://github.com/deinsoftware/colorify/contributors) who participated in this project.
 
