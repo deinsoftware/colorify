@@ -6,13 +6,8 @@ on:
   pull_request:
     branches: [master]
 
-inputs:
-  version:
-    description: "Project version"
-    required: true
-  testCommand:
-    description: "Command to invoke tests"
-    required: false
+env:
+  version: 2.5.0
 
 jobs:
   build:
@@ -21,7 +16,6 @@ jobs:
       matrix:
         dotnet: ["2.1.805", "3.1.201"]
     name: Dotnet ${{ matrix.dotnet }} sample
-
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
@@ -45,7 +39,7 @@ jobs:
           beginArguments: >
             /k:"dein:colorify"
             /n:"Colorify"
-            /v:"${{ inputs.version }}"
+            /v:"${{ env.version }}"
             /o:"dein"
             /d:sonar.verbose="true"
             /d:sonar.host.url="https://sonarcloud.io"
