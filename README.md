@@ -347,9 +347,9 @@ See also the list of [contributors](https://github.com/deinsoftware/colorify/con
 
 If this project help you reduce time to develop, you can give me a cup of coffee.
 
-<span class="badge-paypal"><a href="https://paypal.me/equiman/3" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" /></a></span>
-<span class="badge-patreon"><a href="https://patreon.com/equiman" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a></span>
-<span class="badge-buymeacoffee"><a href="buymeacoff.ee/equiman" title="Donate to this project using Buy Me A Coffee"><img src="https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg" alt="Buy Me A Coffee donate button" /></a></span>
+[![Donate](https://img.shields.io/badge/paypal-donate-blue)](https://paypal.me/equiman/3)
+[![Donate](https://img.shields.io/badge/patreon-donate-red)](https://patreon.com/equiman)
+[![Donate](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-orange)](https://buymeacoff.ee/equiman)
 
 No sponsors yet! Will you be the first?
 
