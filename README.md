@@ -244,6 +244,7 @@ _colorify.Wrap("Very long text with gentle word wrapping at the end of console")
 
 ```csharp
 _colorify.Wrap("Very long text with gentle word wrapping at the end of console", Colors.bgDefault);
+```
 
 Automatic line wrap or word wrap with long text:
 
