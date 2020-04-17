@@ -35,6 +35,7 @@ Contributions or Beer will be appreciated
   - [Contributing](#contributing)
   - [Versioning](#versioning)
   - [Authors](#authors)
+  - [Sponsors](#sponsors)
   - [License](#license)
   - [Acknowledgments](#acknowledgments)
 
