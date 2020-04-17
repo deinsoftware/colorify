@@ -7,6 +7,10 @@
 [![SonarCloud](https://sonarcloud.io/api/project_badges/measure?project=dein%3Acolorify&metric=security_rating)](https://sonarcloud.io/dashboard?id=dein%3Acolorify)
 [![SonarCloud](https://sonarcloud.io/api/project_badges/measure?project=dein%3Acolorify&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=dein%3Acolorify)
 
+<span class="badge-paypal"><a href="https://paypal.me/equiman/3" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal donate button" /></a></span>
+<span class="badge-patreon"><a href="https://patreon.com/equiman" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a></span>
+<span class="badge-buymeacoffee"><a href="buymeacoff.ee/equiman" title="Donate to this project using Buy Me A Coffee"><img src="https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg" alt="Buy Me A Coffee donate button" /></a></span>
+
 **Colorify** was created to simplify and automate tasks related to NET Core console formatting. Was born in [HardHat](https://github.com/deinsoftware/hardhat/) project as a Class. Now grew up as a library and can be used by other console applications.
 
 Contributions or Beer will be appreciated
