@@ -342,7 +342,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 If this project help you reduce time to develop, you can give me a cup of coffee.
 
-[![Donation](buy-me-a-coffee.png "Buy me a coffee")](http://buymeacoff.ee/equiman)
+[![Donation](assets/images/buy-me-a-coffee.png "Buy me a coffee")](http://buymeacoff.ee/equiman)
 
 See also the list of [contributors](https://github.com/deinsoftware/colorify/contributors) who participated in this project.
 
