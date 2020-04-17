@@ -19,7 +19,7 @@
     <language>en-US</language>
     <developmentDependency>true</developmentDependency>
     <dependencies>
-      <group targetFramework="netcoreapp2.2" />
+      <group targetFramework="netcoreapp2.1" />
       <group targetFramework="netcoreapp3.1" />
     </dependencies>
     <contentFiles>
@@ -28,8 +28,8 @@
   </metadata>
   <files>
     <file src="..\icon.png" target="\" />
-    <file src="bin\release\netcoreapp2.2\C*.dll" target="lib\netcoreapp2.2" />
-    <file src="bin\release\netcoreapp2.2\C*.pdb" target="lib\netcoreapp2.2" />
+    <file src="bin\release\netcoreapp2.1\C*.dll" target="lib\netcoreapp2.1" />
+    <file src="bin\release\netcoreapp2.1\C*.pdb" target="lib\netcoreapp2.1" />
     <file src="bin\release\netcoreapp3.1\C*.dll" target="lib\netcoreapp3.1" />
     <file src="bin\release\netcoreapp3.1\C*.pdb" target="lib\netcoreapp3.1" />
     <file src="..\LICENSE" target="contentFiles\any\any" />
