@@ -297,7 +297,7 @@ _colorify.BlankLines(3);
 _colorify.BlankLines(3, Colors.bgSuccess);
 ```
 
-![BlankLines x 3](Sample/images/linesX3.png "BlankLines x 3")
+![BlankLines x 3](Sample/images/lines-3.png "BlankLines x 3")
 
 ### DivisionLine
 
