@@ -50,4 +50,5 @@ Just go to `Sample` project folder and run this command on terminal:
 
 ```terminal
 cd Sample
-dotnet r
+dotnet run
+```
