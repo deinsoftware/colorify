@@ -12,16 +12,13 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        dotnet: ["2.2.207", "3.1.201"]
-    name: Dotnet ${{ matrix.dotnet }} sample
+    name: Dotnet build
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: ${{ matrix.dotnet }}
+          dotnet-version: "3.1.201"
       - name: Sonarscanner for dotnet
         uses: Secbyte/dotnet-sonarscanner@v2.2
         with:
