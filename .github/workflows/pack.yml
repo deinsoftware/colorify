@@ -26,8 +26,6 @@ jobs:
         run: echo ::set-env name=workspace::$GITHUB_WORKSPACE
       - name: setup nuget config
         run: sed 's/GITHUB_TOKEN/${{ secrets.GITHUB_TOKEN }}/g' "${{ env.workspace }}/Package/nuget.config" > nuget.config
-      - name: cat nuget config
-        run: cat nuget.config
       - name: create file
         run: dotnet pack Colorify/Colorify.csproj /p:NuspecFile=${{ env.workspace }}/Colorify/Colorify.nuspec -o ${{ env.workspace }}/Package/ -c release
       - name: publish nuget on microsoft
