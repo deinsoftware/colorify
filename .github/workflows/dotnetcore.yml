@@ -7,13 +7,30 @@ on:
     branches: [master]
 
 env:
-  dotnet: { build: 2.2.207, test: 3.1.201 }
+  dotnet.build: 2.2.207
+  dotnet.test: 3.1.201
   version: 2.5.0
   key: dein:colorify
   organization: dein
   name: Colorify
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dotnet: [${{ env.dotnet.build }}, ${{ env.dotnet.test }}]
+    name: dotnet build on ${{ matrix.dotnet }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: setup .Net Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: ${{ matrix.dotnet }}
+      - name: restore
+        run: dotnet restore Colorify/Colorify.csproj
+      - name: build
+        run: dotnet build Colorify/Colorify.csproj --no-restore
   test:
     runs-on: ubuntu-latest
     name: dotnet build
