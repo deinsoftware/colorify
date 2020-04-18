@@ -235,9 +235,7 @@ _colorify.WriteLine(" Long Multi line text with Line Wrap that bring a new line"
 
 ### Word Wrap
 
-`_colorify.Wrap` work like `Console.WriteLine` with a line terminator after the text but wrapped with colors and taking care of split words gently. If you don't specify a color will use the `Colors.txtDefault` by default.
-
-`_colorify.Wrap` work like `Console.WriteLine` with a line terminator after the text but wrapped with colors. If you don't specify a color will use the `Colors.txtDefault` by default.
+`_colorify.Wrap` works like `Console.WriteLine` with a line terminator after the text but wrapped with colors. If you don't specify a color then it will use the `Colors.txtDefault` by default.
 
 ```csharp
 _colorify.Wrap("Very long text with gentle word wrapping at the end of console");
