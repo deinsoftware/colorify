@@ -8,14 +8,17 @@ on:
 
 env:
   version: 2.5.0
+  key: dein:colorify
+  organization: dein
+  name: Colorify
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Dotnet build
+    name: dotnet build
     steps:
       - uses: actions/checkout@v2
-      - name: Setup .NET Core
+      - name: setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 3.1.201
@@ -25,23 +28,15 @@ jobs:
         run: dotnet restore Colorify/Colorify.csproj
       - name: build
         run: dotnet build Colorify/Colorify.csproj --no-restore
-      - name: Sonarscanner for dotnet
-        uses: Secbyte/dotnet-sonarscanner@v2.2
-        with:
-          buildCommand: dotnet build Colorify/Colorify.csproj
-          testCommand: dotnet test Colorify.Tests/Colorify.Tests.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=../lcov
-          projectKey: dein:colorify
-          projectName: Colorify
-          sonarOrganisation: dein
-          beginArguments: >
-            /k:"dein:colorify"
-            /n:"Colorify"
-            /v:"${{ env.version }}"
-            /o:"dein"
-            /d:sonar.verbose="true"
-            /d:sonar.language="cs"
-            /d:sonar.exclusions="**/bin/**/*,**/obj/**/*"
-            /d:sonar.cs.opencover.reportsPaths="lcov.opencover.xml"
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: restore test
+        run: dotnet restore Colorify.Tests/Colorify.Tests.csproj
+      - name: build test
+        run: dotnet build Colorify.Tests/Colorify.Tests.csproj --no-restore
+      - name: scanner begin
+        run: dotnet sonarscanner begin /k:"${{ env.key }}" /n:"${{ env.name }}" /v:"${{ env.version }}" /o:"${{ env.organization }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.language="cs" /d:sonar.exclusions="**/bin/**/*,**/obj/**/*" /d:sonar.cs.opencover.reportsPaths="lcov.opencover.xml"
+      - name: scanner build
+        run: dotnet build Colorify/Colorify.csproj
+      - name: scanner test
+        run: dotnet test Colorify.Tests/Colorify.Tests.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=../lcov
+      - name: scanner end
+        run: dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
