@@ -7,9 +7,8 @@ on:
     branches: [master]
 
 env:
-  app_version: 2.5.0
-  build_versions: [2.2.207, 3.1.201]
-  test_version: 3.1.201
+  dotnet = {"build": 2.2.207, "test": 3.1.201}
+  version: 2.5.0
   key: dein:colorify
   organization: dein
   name: Colorify
@@ -19,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        dotnet: ${{ env.build_versions }}
+        dotnet: [${{ env.dotnet.build }}, ${{ env.dotnet.test }}]
     name: dotnet build on ${{ matrix.dotnet }}
     steps:
       - uses: actions/checkout@v2
@@ -39,7 +38,7 @@ jobs:
       - name: setup .Net Core
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: ${{ env.test_versions }}
+          dotnet-version: ${{ env.dotnet.test }}
       - name: install sonar-scanner
         run: dotnet tool install --global dotnet-sonarscanner
       - name: restore
@@ -51,7 +50,7 @@ jobs:
       - name: build test
         run: dotnet build Colorify.Tests/Colorify.Tests.csproj --no-restore
       - name: scanner begin
-        run: dotnet sonarscanner begin /k:"${{ env.key }}" /n:"${{ env.name }}" /v:"${{ env.app_version }}" /o:"${{ env.organization }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.language="cs" /d:sonar.exclusions="**/bin/**/*,**/obj/**/*" /d:sonar.cs.opencover.reportsPaths="lcov.opencover.xml"
+        run: dotnet sonarscanner begin /k:"${{ env.key }}" /n:"${{ env.name }}" /v:"${{ env.version }}" /o:"${{ env.organization }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.language="cs" /d:sonar.exclusions="**/bin/**/*,**/obj/**/*" /d:sonar.cs.opencover.reportsPaths="lcov.opencover.xml"
       - name: scanner build
         run: dotnet build Colorify/Colorify.csproj
       - name: scanner test
