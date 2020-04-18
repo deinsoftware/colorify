@@ -31,4 +31,4 @@ jobs:
       - name: publish nuget on microsoft
         run: dotnet nuget push "${{ env.workspace }}/Package/dein.Colorify.${{ env.version }}.nupkg" -k ${{ secrets.NUGET_TOKEN }} -s "nuget" --skip-duplicate --no-symbols true
       - name: publish nuget on github
-        run: dotnet nuget push "${{ env.workspace }}/Package/dein.Colorify.${{ env.version }}.nupkg" -k ${{ secrets.NUGET_TOKEN }}  -s "github" --skip-duplicate --no-symbols true
+        run: dotnet nuget push "${{ env.workspace }}/Package/dein.Colorify.${{ env.version }}.nupkg" -s "github" --skip-duplicate --no-symbols true
