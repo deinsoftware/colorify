@@ -14,13 +14,13 @@
     <Copyright>dein Software © 2017</Copyright>
 
     <PackageTags>dotnet;core;win-x64;osx-x64;linux-x64;</PackageTags>
-    <PackageIconUrl>https://github.com/equiman/colorify/blob/master/icon.png</PackageIconUrl>
-    <PackageProjectUrl>https://github.com/equiman/colorify</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/equiman/colorify/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageIconUrl>https://github.com/deinsoftware/colorify/blob/master/icon.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/deinsoftware/colorify</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/deinsoftware/colorify/blob/master/LICENSE</PackageLicenseUrl>
     <PackageLicenseFile>..\LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/equiman/colorify</RepositoryUrl>
+    <RepositoryUrl>https://github.com/deinsoftware/colorify</RepositoryUrl>
     <TargetFrameworks>netcoreapp2.2;netcoreapp3.1;</TargetFrameworks>
     <RuntimeIdentifiers>win-x64;osx-x64;linux-x64;</RuntimeIdentifiers>
   </PropertyGroup>
