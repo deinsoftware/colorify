@@ -15,7 +15,7 @@ env:
 jobs:
   microsoft:
     runs-on: ubuntu-latest
-    name: packing
+    name: microsoft
     steps:
       - uses: actions/checkout@v2
       - name: setup .Net Core
@@ -28,26 +28,22 @@ jobs:
         run: dotnet pack Colorify/Colorify.csproj /p:NuspecFile=${{ env.workspace }}/Colorify/Colorify.nuspec -o ${{ env.workspace }}/Package/ -c release
       - name: publish on microsoft
         run: dotnet nuget push "${{ env.workspace }}/Package/dein.Colorify.${{ env.version }}.nupkg" -k ${{ secrets.NUGET_TOKEN }} -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols true
-        env:
-          NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
   github:
     runs-on: ubuntu-latest
-    name: packing
+    name: github
     steps:
       - uses: actions/checkout@v2
       - name: setup .Net Core
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: ${{ env.dotnet }}
-      - name: Setup NuGet.exe
+      - name: setup NuGet
         uses: NuGet/setup-nuget@v1.0.2
       - name: set environment
         run: echo ::set-env name=workspace::$GITHUB_WORKSPACE
       - name: create file
         run: dotnet pack Colorify/Colorify.csproj /p:NuspecFile=${{ env.workspace }}/Colorify/Colorify.nuspec -o ${{ env.workspace }}/Package/ -c release
-      - name: create GPR source
-        run: nuget sources add -Name "GPR" -Source https://nuget.pkg.github.com/deinsoftware/index.json -UserName deinsoftware -Password ${{ secrets.GITHUB_TOKEN }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: publish on github
-        run: nuget push "${{ env.workspace }}/Package/dein.Colorify.${{ env.version }}.nupkg" -Source "GPR" -SkipDuplicate -NoSymbols true
+      - name: Setup nuget config
+        run: sed 's/GITHUB_TOKEN/${{ secrets.GITHUB_TOKEN }}/g' .nuget.config > nuget.config
+      - name: Publish nuget
+        run: dotnet nuget push "${{ env.workspace }}/Package/dein.Colorify.${{ env.version }}.nupkg" -s "github" --skip-duplicate --no-symbols true
