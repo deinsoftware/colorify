@@ -15,13 +15,16 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: dotnet build
+    strategy:
+      matrix:
+        dotnet: [2.2.207, 3.1.201]
+    name: dotnet build on ${{ matrix.dotnet }}
     steps:
       - uses: actions/checkout@v2
-      - name: Setup .NET Core
+      - name: setup .Net Core
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 3.1.201
+          dotnet-version: ${{ matrix.dotnet }}
       - name: install sonar-scanner
         run: dotnet tool install --global dotnet-sonarscanner
       - name: restore
