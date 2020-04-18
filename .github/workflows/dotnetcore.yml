@@ -23,11 +23,8 @@ jobs:
         with:
           dotnet-version: ${{ matrix.dotnet }}
       - name: Install dependencies
-        run: dotnet restore
-      - name: Build
-        run: dotnet build --configuration Release --no-restore
-      - name: Test
-        run: dotnet test --no-restore --verbosity normal
+        run: dotnet restore Colorify/Colorify.csproj
+          dotnet restore Colorify.Tests/Colorify.Tests.csproj
       - name: Sonarscanner for dotnet
         uses: Secbyte/dotnet-sonarscanner@v2.2
         with:
