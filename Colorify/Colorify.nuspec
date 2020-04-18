@@ -25,6 +25,7 @@
     <contentFiles>
       <files include="any/**/LICENSE" buildAction="None" copyToOutput="true" flatten="true" />
     </contentFiles>
+    <repository type="git" url="https://github.com/deinsoftware/colorify" />
   </metadata>
   <files>
     <file src="..\icon.png" target="\" />
