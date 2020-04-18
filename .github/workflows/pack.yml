@@ -27,6 +27,6 @@ jobs:
       - name: create file
         run: dotnet pack Colorify/Colorify.csproj /p:NuspecFile=${{ env.workspace }}/Colorify/Colorify.nuspec -c release
       - name: publish github
-        run: dotnet nuget push "bin/release/dein.Colorify.${{ env.version }}.nupkg" --source "github"
+        run: dotnet nuget push "bin/release/dein.Colorify.${{ env.version }}.nupkg"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
