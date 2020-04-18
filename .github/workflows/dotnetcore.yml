@@ -17,7 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     name: dotnet build
     steps:
-      - name: setup .NET Core
+      - uses: actions/checkout@v2
+      - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 3.1.201
