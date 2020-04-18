@@ -35,4 +35,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: publish on github
-        run: dotnet nuget push "${{ env.workspace }}/Package/dein.Colorify.${{ env.version }}.nupkg" -s "GPR" --skip-duplicate --no-symbols true
+        run: dotnet nuget push "${{ env.workspace }}/Package/dein.Colorify.${{ env.version }}.nupkg" -source "GPR" --skip-duplicate --no-symbols true
