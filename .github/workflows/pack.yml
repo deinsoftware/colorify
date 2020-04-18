@@ -31,8 +31,8 @@ jobs:
         env:
           NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
       - name: create GPR source
-        run: run: nuget sources add -name "GPR" -Source https://nuget.pkg.github.com/deinsoftware/index.json -Username deinsoftware -Password ${{ secrets.GITHUB_TOKEN }}
-      - name: publish on github
-        run: dotnet nuget push "${{ env.workspace }}/Package/dein.Colorify.${{ env.version }}.nupkg" -s "GPR" --skip-duplicate --no-symbols true
+        run: nuget sources add -name "GPR" -Source https://nuget.pkg.github.com/deinsoftware/index.json -Username deinsoftware -Password ${{ secrets.GITHUB_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: publish on github
+        run: dotnet nuget push "${{ env.workspace }}/Package/dein.Colorify.${{ env.version }}.nupkg" -s "GPR" --skip-duplicate --no-symbols true
