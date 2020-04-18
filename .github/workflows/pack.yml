@@ -1,0 +1,30 @@
+name: pack
+
+on:
+  push:
+    tags:
+      - "*"
+
+env:
+  dotnet: 3.1.201
+  version: 2.5.0
+  key: dein:colorify
+  organization: dein
+  name: Colorify
+
+jobs:
+  pack:
+    runs-on: ubuntu-latest
+    name: pack
+    steps:
+      - uses: actions/checkout@v2
+      - name: setup .Net Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: ${{ env.dotnet }}
+      - name: create file
+        run: dotnet pack Colorify/Colorify.csproj /p:NuspecFile=Colorify/Colorify.nuspec -o /Package/ -c release
+      - name: publish github
+        run: dotnet nuget push "Package/dein.Colorify.${{ env.version }}.nupkg" --source "github"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
