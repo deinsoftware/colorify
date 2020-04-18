@@ -3,7 +3,7 @@ name: pack
 on:
   push:
     tags:
-      - "*"
+      - "v*"
 
 env:
   dotnet: 3.1.201
