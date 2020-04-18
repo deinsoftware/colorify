@@ -22,7 +22,7 @@ jobs:
       - name: restore
         run: dotnet restore Colorify/Colorify.csproj
       - name: build
-        run: dotnet build Colorify/Colorify.csproj
+        run: dotnet build Colorify/Colorify.csproj --no-restore
       - name: Sonarscanner for dotnet
         uses: Secbyte/dotnet-sonarscanner@v2.2
         with:

@@ -1,3 +1,7 @@
+branches:
+  except:
+    - master
+
 language: csharp
 mono: none
 sudo: required
