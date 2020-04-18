@@ -33,7 +33,6 @@ jobs:
             /v:"${{ env.version }}"
             /o:"dein"
             /d:sonar.verbose="true"
-            /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
             /d:sonar.language="cs"
             /d:sonar.exclusions="**/bin/**/*,**/obj/**/*"
             /d:sonar.cs.opencover.reportsPaths="lcov.opencover.xml"
