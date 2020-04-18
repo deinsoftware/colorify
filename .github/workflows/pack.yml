@@ -31,7 +31,7 @@ jobs:
         env:
           NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
       - name: create GPR source
-        run: nuget sources add -name "GPR" -Source https://nuget.pkg.github.com/deinsoftware/index.json -Username deinsoftware -Password ${{ secrets.GITHUB_TOKEN }}
+        run: nuget sources add -name "GPR" -source https://nuget.pkg.github.com/deinsoftware/index.json -username deinsoftware -password ${{ secrets.GITHUB_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: publish on github
