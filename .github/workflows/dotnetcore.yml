@@ -15,12 +15,12 @@ env:
 
 jobs:
   build:
+    runs-on: ${{ matrix.platform }}
     strategy:
       matrix:
         dotnet: [2.2.207, 3.1.201]
         platform: [ubuntu-latest, macos-latest, windows-latest]
     name: build on ${{ matrix.platform }} with dotnet ${{ matrix.dotnet }}
-    runs-on: ${{ matrix.platform }}
     steps:
       - uses: actions/checkout@v2
       - name: setup .Net Core
@@ -33,7 +33,7 @@ jobs:
         run: dotnet build Colorify/Colorify.csproj --no-restore
   test:
     runs-on: ubuntu-latest
-    name: dotnet test
+    name: test
     steps:
       - uses: actions/checkout@v2
       - name: setup .Net Core
