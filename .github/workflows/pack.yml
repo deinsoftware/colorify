@@ -27,7 +27,7 @@ jobs:
       - name: create file
         run: dotnet pack Colorify/Colorify.csproj /p:NuspecFile=${{ env.workspace }}/Colorify/Colorify.nuspec -o ${{ env.workspace }}/Package/ -c release
       - name: publish on nuget
-        run: dotnet nuget push "${{ env.workspace }}/Package//dein.Colorify.${{ env.version }}.nupkg" -k ${{ secrets.NUGET_TOKEN }} -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols true
+        run: dotnet nuget push "${{ env.workspace }}/Package/dein.Colorify.${{ env.version }}.nupkg" -k ${{ secrets.NUGET_TOKEN }} -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols true
         env:
           NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
       - name: publish on github
