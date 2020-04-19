@@ -32,3 +32,21 @@ jobs:
         run: dotnet nuget push "${{ env.workspace }}/Package/dein.Colorify.${{ env.version }}.nupkg" -k ${{ secrets.NUGET_TOKEN }} -s "nuget" --skip-duplicate --no-symbols true
       - name: publish nuget on github
         run: dotnet nuget push "${{ env.workspace }}/Package/dein.Colorify.${{ env.version }}.nupkg" -s "github" --skip-duplicate --no-symbols true
+  tweet:
+    runs-on: ubuntu-latest
+    name: message
+    needs: pack
+    steps:
+      - uses: actions/checkout@v2
+      - name: setup Twitter
+        uses: ethomson/send-tweet-action@v1
+        with:
+          status: "$ dotnet add package dein.colorify\n
+          👆${{ env.version }} 🐛🛠\n
+          \n
+          Colorify - C# .Net Core Console Library with Text Format: colors, alignment and lot more  [ for Win, Mac & Linux ]\n
+          https://github.com/deinsoftware/colorify"
+          consumer-key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
+          consumer-secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
+          access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          access-token-secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
