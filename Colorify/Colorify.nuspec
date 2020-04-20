@@ -10,6 +10,7 @@
     <license type="expression">MIT</license>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectUrl>https://github.com/deinsoftware/colorify</projectUrl>
+    <repository type="git" url="https://github.com/deinsoftware/colorify" />
     <icon>icon.png</icon>
     <description>C# .Net Core Color Library for Console [ Win, Mac & Linux ]</description>
     <summary>C# .Net Core Console Library with Text Format: colors, alignment and lot more.</summary>
@@ -25,7 +26,6 @@
     <contentFiles>
       <files include="any/**/LICENSE" buildAction="None" copyToOutput="true" flatten="true" />
     </contentFiles>
-    <repository type="git" url="https://github.com/deinsoftware/colorify" />
   </metadata>
   <files>
     <file src="..\icon.png" target="\" />

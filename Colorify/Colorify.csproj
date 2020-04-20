@@ -19,10 +19,14 @@
     <PackageLicenseUrl>https://github.com/deinsoftware/colorify/blob/master/LICENSE</PackageLicenseUrl>
     <PackageLicenseFile>..\LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/deinsoftware/colorify</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+
     <TargetFrameworks>netcoreapp2.2;netcoreapp3.1;</TargetFrameworks>
     <RuntimeIdentifiers>win-x64;osx-x64;linux-x64;</RuntimeIdentifiers>
+
+    <DebugType>full</DebugType>
+    <DebugSymbols>True</DebugSymbols>
   </PropertyGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.2'">
     <!-- License -->
