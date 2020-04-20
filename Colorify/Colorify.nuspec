@@ -12,7 +12,7 @@
     <projectUrl>https://github.com/deinsoftware/colorify</projectUrl>
     <repository type="git" url="https://github.com/deinsoftware/colorify" />
     <icon>icon.png</icon>
-    <description>C# .Net Core Color Library for Console [ Win, Mac & Linux ]</description>
+    <description>C# .Net Core Color Library for Console [ Win+Mac+Linux ]</description>
     <summary>C# .Net Core Console Library with Text Format: colors, alignment and lot more.</summary>
     <releaseNotes>C# .Net Core Console Library with Text Format: colors, alignment and lot more.</releaseNotes>
     <copyright>dein Software © 2017</copyright>

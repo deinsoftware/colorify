@@ -87,6 +87,6 @@
     ],
     "editor.tabSize": 4,
     "[markdown]": {
-        "editor.tabSize": 2,
+        "editor.tabSize": 2
     }
 }
