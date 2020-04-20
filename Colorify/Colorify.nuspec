@@ -11,9 +11,9 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectUrl>https://github.com/deinsoftware/colorify</projectUrl>
     <icon>icon.png</icon>
-    <description>C# NETCore Console Library [for Win, Mac and Linux]</description>
-    <summary>Colorify - C# NETCore Console Library with Text Format: colors, alignment and lot more.</summary>
-    <releaseNotes>Colorify - C# NETCore Console Library with Text Format: colors, alignment and lot more.</releaseNotes>
+    <description>C# .Net Core Color Library for Console [ Win, Mac & Linux ]</description>
+    <summary>C# .Net Core Console Library with Text Format: colors, alignment and lot more.</summary>
+    <releaseNotes>C# .Net Core Console Library with Text Format: colors, alignment and lot more.</releaseNotes>
     <copyright>dein Software © 2017</copyright>
     <tags>colorify dotnet-core macos windows linux library theme csharp format-library colors alignment</tags>
     <language>en-US</language>
