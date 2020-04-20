@@ -8,9 +8,6 @@ on:
 env:
   dotnet: 3.1.201
   version: 2.5.0
-  key: dein:colorify
-  organization: dein
-  name: Colorify
 
 jobs:
   pack:

@@ -1,6 +1,7 @@
 # dein Colorify [ for Win, Mac & Linux ]
 
 [![build](https://github.com/deinsoftware/colorify/workflows/build/badge.svg?branch=master)](https://github.com/deinsoftware/colorify/actions?query=workflow%3Abuild)
+[![pack](https://github.com/deinsoftware/colorify/workflows/pack/badge.svg)](https://github.com/deinsoftware/colorify/actions?query=workflow%3Apack)
 [![NuGet](https://img.shields.io/nuget/v/dein.Colorify.svg)](https://www.nuget.org/packages/dein.Colorify/)
 [![NuGet](https://img.shields.io/nuget/dt/dein.Colorify.svg)](https://www.nuget.org/packages/dein.Colorify/)
 [![SonarCloud](https://sonarcloud.io/api/project_badges/measure?project=dein%3Acolorify&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=dein%3Acolorify)
