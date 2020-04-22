@@ -13,8 +13,10 @@
     <repository type="git" url="https://github.com/deinsoftware/colorify" />
     <icon>icon.png</icon>
     <documentation src="../Package/README.md" />
-    <description>C# .Net Core Console Library with Text Format: colors, alignment and lot more  [ for Win, Mac + Linux ]</description>
-    <releaseNotes>Refer to [CHANGELOG](https://github.com/deinsoftware/colorify/blob/master/CHANGELOG.md) file on GitHub.</releaseNotes>
+    <description>C# .Net Core Console Library with Text Format: colors, alignment and lot more [ for Win, Mac + Linux ]</description>
+    <sumary>C# .Net Core Console Library with Text Format: colors, alignment and lot more [ for Win, Mac + Linux ]</sumary>
+    <documentation src="README.md" />
+    <releaseNotes>Refer to https://github.com/deinsoftware/colorify/blob/master/CHANGELOG.md on GitHub.</releaseNotes>
     <copyright>dein Software © 2017</copyright>
     <tags>colorify dotnet-core macos windows linux library theme csharp format-library colors alignment</tags>
     <language>en-US</language>
@@ -23,16 +25,13 @@
       <group targetFramework="netcoreapp2.2" />
       <group targetFramework="netcoreapp3.1" />
     </dependencies>
-    <contentFiles>
-      <files include="any/**/LICENSE" buildAction="None" copyToOutput="true" flatten="true" />
-    </contentFiles>
   </metadata>
   <files>
     <file src="..\icon.png" target="\" />
+    <file src="..\Package\README.md" target="README.md" />
     <file src="bin\release\netcoreapp2.2\C*.dll" target="lib\netcoreapp2.2" />
     <file src="bin\release\netcoreapp2.2\C*.pdb" target="lib\netcoreapp2.2" />
     <file src="bin\release\netcoreapp3.1\C*.dll" target="lib\netcoreapp3.1" />
     <file src="bin\release\netcoreapp3.1\C*.pdb" target="lib\netcoreapp3.1" />
-    <file src="..\LICENSE" target="contentFiles\any\any" />
   </files>
 </package>
