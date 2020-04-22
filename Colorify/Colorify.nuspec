@@ -66,7 +66,7 @@
       dotnet run
       ```
     </description>
-    <releaseNotes>Refer to [CHANGELOG](https://github.com/deinsoftware/colorify/blob/master/CHANGELOG.md) file on GiItHub.</releaseNotes>
+    <releaseNotes>Refer to [CHANGELOG](https://github.com/deinsoftware/colorify/blob/master/CHANGELOG.md) file on GitHub.</releaseNotes>
     <copyright>dein Software © 2017</copyright>
     <tags>colorify dotnet-core macos windows linux library theme csharp format-library colors alignment</tags>
     <language>en-US</language>
