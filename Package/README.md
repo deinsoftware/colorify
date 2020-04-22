@@ -11,13 +11,13 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install?
+What things do you need to install?
 
 * [NET Core SDK](https://www.microsoft.com/net/download)
 
 ### Installing
 
-**ToolBox** is available as [project](https://github.com/deinsoftware/toolbox/) or [package](https://www.nuget.org/packages/dein.ToolBox). We strong recommend add as a NuGet package if don't need make modifications directly on the source code library.
+**ToolBox** is available as [project](https://github.com/deinsoftware/toolbox/) or [package](https://www.nuget.org/packages/dein.ToolBox). We strongly recommend adding as a NuGet package if you don't need to make modifications directly on the source code library.
 
 Follow these instructions to add **ToolBox** in your project.
 
@@ -40,7 +40,7 @@ Official documentation: [dotnet add package](https://docs.microsoft.com/en-us/do
 
 ## Usage
 
-Refer to [README](https://github.com/deinsoftware/colorify/blob/master/README.md) file on GItHub.
+Refer to [README](https://github.com/deinsoftware/colorify/blob/master/README.md) file on GitHub.
 
 To understand how this library works, take a look inside [Sample](https://github.com/deinsoftware/colorify/tree/master/Sample) folder. Better easy to use a guide than words.
 
