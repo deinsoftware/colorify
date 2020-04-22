@@ -30,6 +30,18 @@ jobs:
         run: dotnet restore Colorify/Colorify.csproj
       - name: build
         run: dotnet build Colorify/Colorify.csproj --no-restore
+  sample:
+    name: build
+    steps:
+      - uses: actions/checkout@v2
+      - name: setup .Net Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: ${{ env.dotnet }}
+      - name: restore
+        run: dotnet restore Sample/Sample.csproj
+      - name: build
+        run: dotnet build Sample/Sample.csproj --no-restore
   test:
     runs-on: ubuntu-latest
     name: test
