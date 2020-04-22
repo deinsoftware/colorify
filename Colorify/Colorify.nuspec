@@ -12,60 +12,8 @@
     <projectUrl>https://github.com/deinsoftware/colorify</projectUrl>
     <repository type="git" url="https://github.com/deinsoftware/colorify" />
     <icon>icon.png</icon>
-    <description>
-      # dein Colorify [ for Win, Mac + Linux ]
-
-      **Colorify** was created to simplify and automate tasks related to NET Core console formatting. Was born in [HardHat](https://github.com/deinsoftware/hardhat/) project as a Class. Now grew up as a library and can be used by other console applications.
-
-      > The Code is Dark and Full of Errors!
-      > Console is your friend ... don't be afraid!
-
-      ## Getting Started
-
-      These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
-      ### Prerequisites
-
-      What things do you need to install?
-
-      * [NET Core SDK](https://www.microsoft.com/net/download)
-
-      ### Installing
-
-      **ToolBox** is available as [project](https://github.com/deinsoftware/toolbox/) or [package](https://www.nuget.org/packages/dein.ToolBox). We strongly recommend adding as a NuGet package if you don't need to make modifications directly on the source code library.
-
-      Follow these instructions to add **ToolBox** in your project.
-
-      #### Add As Package
-
-      In your project folder, where is located .csproj file run this command on terminal:
-
-      ```terminal
-      dotnet add package dein.Colorify
-      ```
-
-      If you want to use OS class highly recommend use [ToolBox](https://github.com/deinsoftware/toolbox/) project.
-
-      ```terminal
-      dotnet add package dein.ToolBox
-      dotnet add package Newtonsoft.Json
-      ```
-
-      Official documentation: [dotnet add package](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-package)
-
-      ## Usage
-
-      Refer to [README](https://github.com/deinsoftware/colorify/blob/master/README.md) file on GitHub.
-
-      To understand how this library works, take a look inside [Sample](https://github.com/deinsoftware/colorify/tree/master/Sample) folder. Better easy to use a guide than words.
-
-      Just go to `Sample` project folder and run this command on terminal:
-
-      ```terminal
-      cd Sample
-      dotnet run
-      ```
-    </description>
+    <documentation src="../Package/README.md" />
+    <description>C# .Net Core Console Library with Text Format: colors, alignment and lot more  [ for Win, Mac + Linux ]</description>
     <releaseNotes>Refer to [CHANGELOG](https://github.com/deinsoftware/colorify/blob/master/CHANGELOG.md) file on GitHub.</releaseNotes>
     <copyright>dein Software © 2017</copyright>
     <tags>colorify dotnet-core macos windows linux library theme csharp format-library colors alignment</tags>
