@@ -31,6 +31,7 @@ jobs:
       - name: build
         run: dotnet build Colorify/Colorify.csproj --no-restore
   sample:
+    runs-on: ubuntu-latest
     name: build
     steps:
       - uses: actions/checkout@v2
