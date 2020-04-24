@@ -1,7 +1,7 @@
 @echo off
 set /p token=<sonar.txt
 :: https://docs.sonarqube.org/display/SONAR/Analysis+Parameters
-dotnet sonarscanner begin /k:"dein:colorify" /n:"Colorify" /v:"2.5.0" /o:"dein" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="%token%" /d:sonar.language="cs" /d:sonar.exclusions="**/bin/**/*,**/obj/**/*"
+dotnet sonarscanner begin /k:"dein:colorify" /n:"Colorify" /v:"2.5.1" /o:"dein" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="%token%" /d:sonar.language="cs" /d:sonar.exclusions="**/bin/**/*,**/obj/**/*"
 dotnet restore
 dotnet build
 dotnet test Colorify.Tests/Colorify.Tests.csproj

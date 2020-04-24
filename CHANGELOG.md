@@ -9,6 +9,16 @@ Fixed       for any bug fixes.
 Security    to invite users to upgrade in case of vulnerabilities.
 -->
 
+## [2.5.1] - 2020-04-24
+
+**Added:**
+
+- Switch theme color on Sample
+
+**Fixed:**
+
+- `_colorify.WriteLine` adding one more pixel that cause break line on windows
+
 ## [2.5.0] - 2020-04-16
 
 **Updated:**
