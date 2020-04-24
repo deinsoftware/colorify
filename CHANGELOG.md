@@ -17,7 +17,7 @@ Security    to invite users to upgrade in case of vulnerabilities.
 
 **Fixed:**
 
-- `_colorify.WriteLine` adding one more pixel that cause break line on windows
+- `_colorify.WriteLine` adding one more pixel that causes break line on windows
 
 ## [2.5.0] - 2020-04-16
 
