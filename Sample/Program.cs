@@ -54,6 +54,9 @@ namespace Sample
             _colorify.Write($"{" 5]",-4}"); _colorify.WriteLine("Blank Lines");
             _colorify.Write($"{" 6]",-4}"); _colorify.WriteLine("Division Lines");
             _colorify.BlankLines();
+            _colorify.Write($"{" D]",-4}"); _colorify.WriteLine("Theme Dark");
+            _colorify.Write($"{" L]",-4}"); _colorify.WriteLine("Theme Light");
+            _colorify.BlankLines();
             _colorify.AlignRight("[X] Exit ", Colorify.Colors.txtDanger);
             _colorify.BlankLines();
             _colorify.DivisionLine('=', Colorify.Colors.bgInfo);
@@ -71,6 +74,10 @@ namespace Sample
                 case "4": TextAlign(); break;
                 case "5": BlankLines(); break;
                 case "6": DivisionLine(); break;
+                case "d":
+                case "l":
+                    ThemeSwitch(opt);
+                    break;
                 case "x": break;
                 default: Menu(); break;
             }
@@ -206,6 +213,23 @@ namespace Sample
             {
                 MessageException(ex.ToString());
             }
+        }
+
+        public static void ThemeSwitch(string option)
+        {
+            if (!String.IsNullOrEmpty(option))
+            {
+                switch (option)
+                {
+                    case "d":
+                        _colorify = new Format(Theme.Dark);
+                        break;
+                    case "l":
+                        _colorify = new Format(Theme.Light);
+                        break;
+                }
+            }
+            Menu();
         }
     }
 }
