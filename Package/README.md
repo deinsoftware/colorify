@@ -1,4 +1,4 @@
-# dein Colorify [ for Win, Mac & Linux ]
+# dein Colorify [ Win+Mac+Linux ]
 
 **Colorify** was created to simplify and automate tasks related to NET Core console formatting. Was born in [HardHat](https://github.com/deinsoftware/hardhat/) project as a Class. Now grew up as a library and can be used by other console applications.
 

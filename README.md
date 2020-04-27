@@ -1,4 +1,4 @@
-# dein Colorify [ for Win, Mac & Linux ]
+# dein Colorify [ Win+Mac+Linux ]
 
 [![build](https://github.com/deinsoftware/colorify/workflows/build/badge.svg?branch=master)](https://github.com/deinsoftware/colorify/actions?query=workflow%3Abuild)
 [![pack](https://github.com/deinsoftware/colorify/workflows/pack/badge.svg)](https://github.com/deinsoftware/colorify/actions?query=workflow%3Apack)

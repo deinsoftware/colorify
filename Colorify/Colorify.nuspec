@@ -13,8 +13,8 @@
     <repository type="git" url="https://github.com/deinsoftware/colorify" />
     <icon>icon.png</icon>
     <documentation src="../Package/README.md" />
-    <description>C# .Net Core Console Library with Text Format: colors, alignment and lot more [ for Win, Mac + Linux ]</description>
-    <sumary>C# .Net Core Console Library with Text Format: colors, alignment and lot more [ for Win, Mac + Linux ]</sumary>
+    <description>C# .Net Core Console Library with Text Format: colors, alignment and lot more [ Win+Mac+Linux ]</description>
+    <sumary>C# .Net Core Console Library with Text Format: colors, alignment and lot more [ Win+Mac+Linux ]</sumary>
     <documentation src="README.md" />
     <releaseNotes>Refer to https://github.com/deinsoftware/colorify/blob/master/CHANGELOG.md on GitHub.</releaseNotes>
     <copyright>dein Software © since 2017</copyright>
