@@ -6,7 +6,7 @@
     <title>dein Colorify</title>
     <authors>Camilo Martinez</authors>
     <owners>dein,equiman</owners>
-    <license type="file">..\LICENSE</license>
+    <license type="file">LICENSE.md</license>
     <license type="expression">MIT</license>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectUrl>https://github.com/deinsoftware/colorify</projectUrl>
@@ -27,6 +27,7 @@
   </metadata>
   <files>
     <file src="..\icon.png" target="\" />
+    <file src="..\LICENSE.md" target="LICENSE.md" />
     <file src="..\Package\README.md" target="README.md" />
     <file src="bin\release\netcoreapp2.2\C*.dll" target="lib\netcoreapp2.2" />
     <file src="bin\release\netcoreapp2.2\C*.pdb" target="lib\netcoreapp2.2" />

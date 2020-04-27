@@ -7,7 +7,7 @@
 [![SonarCloud](https://sonarcloud.io/api/project_badges/measure?project=dein%3Acolorify&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=dein%3Acolorify)
 [![SonarCloud](https://sonarcloud.io/api/project_badges/measure?project=dein%3Acolorify&metric=security_rating)](https://sonarcloud.io/dashboard?id=dein%3Acolorify)
 [![SonarCloud](https://sonarcloud.io/api/project_badges/measure?project=dein%3Acolorify&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=dein%3Acolorify)
-[![License](https://img.shields.io/github/license/deinsoftware/colorify)](LICENSE)
+[![License](https://img.shields.io/github/license/deinsoftware/colorify)](LICENSE.md)
 
 ![Colorify](.github/social/preview.png "Colorify")
 
@@ -355,7 +355,7 @@ No sponsors yet! Will you be the first?
 
 ### License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
 
 ### Acknowledgments
 

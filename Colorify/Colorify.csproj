@@ -16,8 +16,8 @@
     <PackageTags>dotnet;core;win-x64;osx-x64;linux-x64;</PackageTags>
     <PackageIconUrl>https://github.com/deinsoftware/colorify/blob/master/icon.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/deinsoftware/colorify</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/deinsoftware/colorify/blob/master/LICENSE</PackageLicenseUrl>
-    <PackageLicenseFile>..\LICENSE</PackageLicenseFile>
+    <PackageLicenseUrl>https://github.com/deinsoftware/colorify/blob/master/LICENSE.md</PackageLicenseUrl>
+    <PackageLicenseFile>..\LICENSE.md</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <RepositoryUrl>https://github.com/deinsoftware/colorify</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -30,10 +30,10 @@
   </PropertyGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.2'">
     <!-- License -->
-    <None Include="..\LICENSE" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\LICENSE.md" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
     <!-- License -->
-    <None Include="..\LICENSE" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\LICENSE.md" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 </Project>
