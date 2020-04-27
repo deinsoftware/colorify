@@ -12,7 +12,6 @@
     <projectUrl>https://github.com/deinsoftware/colorify</projectUrl>
     <repository type="git" url="https://github.com/deinsoftware/colorify" />
     <icon>icon.png</icon>
-    <documentation src="../Package/README.md" />
     <description>C# .Net Core Console Library with Text Format: colors, alignment and lot more [ Win+Mac+Linux ]</description>
     <sumary>C# .Net Core Console Library with Text Format: colors, alignment and lot more [ Win+Mac+Linux ]</sumary>
     <documentation src="README.md" />
