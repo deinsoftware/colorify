@@ -3,7 +3,7 @@
   <PropertyGroup>
     <AssemblyName>Colorify</AssemblyName>
     <PackageId>Colorify</PackageId>
-    <VersionPrefix>2.5.1</VersionPrefix>
+    <VersionPrefix>2.5.2</VersionPrefix>
     <ProjectGuid>{17e39bbe-4f41-467c-869b-ab6c49fe9b31}</ProjectGuid>
 
     <Authors>Camilo Martinez</Authors>
@@ -11,7 +11,7 @@
     <NeutralLanguage>en-US</NeutralLanguage>
     <AssemblyTitle>Colorify</AssemblyTitle>
     <Description>C# NETCore Console Library with Text Format: colors, alignment and lot more</Description>
-    <Copyright>dein Software © 2017</Copyright>
+    <Copyright>dein Software © since 2017</Copyright>
 
     <PackageTags>dotnet;core;win-x64;osx-x64;linux-x64;</PackageTags>
     <PackageIconUrl>https://github.com/deinsoftware/colorify/blob/master/icon.png</PackageIconUrl>

@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>dein.Colorify</id>
-    <version>2.5.1</version>
+    <version>2.5.2</version>
     <title>dein Colorify</title>
     <authors>Camilo Martinez</authors>
     <owners>dein,equiman</owners>
@@ -17,10 +17,10 @@
     <sumary>C# .Net Core Console Library with Text Format: colors, alignment and lot more [ for Win, Mac + Linux ]</sumary>
     <documentation src="README.md" />
     <releaseNotes>Refer to https://github.com/deinsoftware/colorify/blob/master/CHANGELOG.md on GitHub.</releaseNotes>
-    <copyright>dein Software © 2017</copyright>
+    <copyright>dein Software © since 2017</copyright>
     <tags>colorify dotnet-core macos windows linux library theme csharp format-library colors alignment</tags>
     <language>en-US</language>
-    <developmentDependency>true</developmentDependency>
+    <developmentDependency>false</developmentDependency>
     <dependencies>
       <group targetFramework="netcoreapp2.2" />
       <group targetFramework="netcoreapp3.1" />

@@ -7,7 +7,7 @@ on:
 
 env:
   dotnet: 3.1.201
-  version: 2.5.1
+  version: 2.5.2
 
 jobs:
   pack:
