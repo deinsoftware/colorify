@@ -85,6 +85,14 @@
         "ITheme",
         "BlankLines"
     ],
+    "grammarly.diagnostics": {
+        "[markdown]": {
+            "ignore": [
+                "inlineCode",
+                "code"
+            ]
+        }
+    },
     "editor.tabSize": 4,
     "[markdown]": {
         "editor.tabSize": 2
