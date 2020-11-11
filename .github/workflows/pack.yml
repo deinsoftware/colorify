@@ -6,8 +6,8 @@ on:
       - "v*"
 
 env:
-  dotnet: 3.1.201
-  version: 2.5.2
+  dotnet: 5.0.0
+  version: 2.6.0
 
 jobs:
   pack:
@@ -15,7 +15,7 @@ jobs:
     name: packing
     steps:
       - uses: actions/checkout@v2
-      - name: setup .Net Core
+      - name: setup .Net
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: ${{ env.dotnet }}
@@ -38,7 +38,7 @@ jobs:
       - name: setup Twitter
         uses: ethomson/send-tweet-action@v1
         with:
-          status: "Colorify - C# .Net Core Console Library with Text Format: colors, alignment and lot more [ Win+Mac+Linux ]\n
+          status: "Colorify - C# .Net Console Library with Text Format: colors, alignment and lot more [ Win+Mac+Linux ]\n
           ${{ env.version }} 🐛🛠 version available as NuGet package\n
           $ dotnet add package dein.colorify\n
           \n

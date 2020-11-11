@@ -3,14 +3,14 @@
   <PropertyGroup>
     <AssemblyName>Colorify</AssemblyName>
     <PackageId>Colorify</PackageId>
-    <VersionPrefix>2.5.2</VersionPrefix>
+    <VersionPrefix>2.6.0</VersionPrefix>
     <ProjectGuid>{17e39bbe-4f41-467c-869b-ab6c49fe9b31}</ProjectGuid>
 
     <Authors>Camilo Martinez</Authors>
     <Company>dein Software</Company>
     <NeutralLanguage>en-US</NeutralLanguage>
     <AssemblyTitle>Colorify</AssemblyTitle>
-    <Description>C# NETCore Console Library with Text Format: colors, alignment and lot more</Description>
+    <Description>C# .Net Console Library with Text Format: colors, alignment and lot more</Description>
     <Copyright>dein Software © since 2017</Copyright>
 
     <PackageTags>dotnet;core;win-x64;osx-x64;linux-x64;</PackageTags>
@@ -22,17 +22,17 @@
     <RepositoryUrl>https://github.com/deinsoftware/colorify</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
 
-    <TargetFrameworks>netcoreapp2.2;netcoreapp3.1;</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1;net5.0;</TargetFrameworks>
     <RuntimeIdentifiers>win-x64;osx-x64;linux-x64;</RuntimeIdentifiers>
 
     <DebugType>full</DebugType>
     <DebugSymbols>True</DebugSymbols>
   </PropertyGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.2'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
     <!-- License -->
     <None Include="..\LICENSE.md" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
     <!-- License -->
     <None Include="..\LICENSE.md" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>

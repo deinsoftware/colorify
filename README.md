@@ -11,7 +11,7 @@
 
 ![Colorify](.github/social/preview.png "Colorify")
 
-**Colorify** was created to simplify and automate tasks related to NET Core console formatting. Was born in [HardHat](https://github.com/deinsoftware/hardhat/) project as a Class. Now grown up as a library and can be used by other console applications.
+**Colorify** was created to simplify and automate tasks related to .Net console formatting. Was born in [HardHat](https://github.com/deinsoftware/hardhat/) project as a Class. Now grown up as a library and can be used by other console applications.
 
 > The Code is Dark and Full of Errors!
 > Console is your friend ... don't be afraid!
@@ -51,7 +51,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to install?
 
-- [NET Core SDK](https://www.microsoft.com/net/download)
+- [.Net SDK](https://www.microsoft.com/net/download)
 
 ### Installing
 
@@ -325,7 +325,7 @@ _colorify.DivisionLine('.', Colors.bgDanger);
 
 ### Built With
 
-- [.Net Core](https://dotnet.github.io/) - ASP.NET Core is a free and open-source web framework, and the next generation of ASP.NET, developed by Microsoft and the community.
+- [.Net](https://dotnet.github.io/) - .Net is a free and open-source web framework, developed by Microsoft and the community.
 - [VS Code](https://code.visualstudio.com/) - Code editing redefined.
 - [SonarQube](https://sonarcloud.io/dashboard/index/dein:colorify) - Continuous code quality.
 
