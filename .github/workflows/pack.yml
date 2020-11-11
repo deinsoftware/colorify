@@ -6,7 +6,7 @@ on:
       - "v*"
 
 env:
-  dotnet: 5.0
+  dotnet: 5.0.100
   version: 2.6.0
 
 jobs:
