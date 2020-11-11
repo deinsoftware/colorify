@@ -53,6 +53,8 @@ What things you need to install?
 
 - [.Net SDK](https://www.microsoft.com/net/download)
 
+**Colorify** supports `netcoreapp3.1` and `net5.0` target frameworks.
+
 ### Installing
 
 **Colorify** is available as [project](https://github.com/deinsoftware/colorify/) or [package](https://www.nuget.org/packages/dein.Colorify). We strong recommend add as a NuGet package if don't need make modifications directly on the source code library.
