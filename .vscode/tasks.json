@@ -1,125 +1,117 @@
 {
-    "version": "2.0.0",
-    "tasks": [{
-            "label": "build",
-            "command": "dotnet",
-            "type": "process",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "args": [
-                "build",
-                "${workspaceFolder}/Colorify/Colorify.csproj"
-            ],
-            "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "build tests",
-            "command": "dotnet",
-            "type": "process",
-            "group": "build",
-            "args": [
-                "build",
-                "${workspaceFolder}/Colorify.Tests/Colorify.Tests.csproj"
-            ],
-            "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "test",
-            "command": "dotnet",
-            "type": "process",
-            "group": {
-                "kind": "test",
-                "isDefault": true
-            },
-            "args": [
-                "test",
-                "${workspaceFolder}/ToolBox.Tests/ToolBox.Tests.csproj"
-            ],
-            "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "build sample",
-            "command": "dotnet",
-            "type": "process",
-            "group": "build",
-            "args": [
-                "build",
-                "${workspaceFolder}/Sample/Sample.csproj"
-            ],
-            "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "publish win",
-            "command": "dotnet",
-            "args": [
-                "publish",
-                "${workspaceRoot}/Colorify/Colorify.csproj",
-                "-o",
-                "${workspaceRoot}/Library/win/",
-                "-c",
-                "release",
-                "-r",
-                "win10-x64"
-            ],
-            "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "publish mac",
-            "command": "dotnet",
-            "args": [
-                "publish",
-                "${workspaceRoot}/Colorify/Colorify.csproj",
-                "-o",
-                "${workspaceRoot}/Library/mac/",
-                "-c",
-                "release",
-                "-r",
-                "osx.10.12-x64"
-            ],
-            "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "pack",
-            "command": "dotnet",
-            "args": [
-                "pack",
-                "${workspaceRoot}/Colorify/Colorify.csproj",
-                "/p:NuspecFile=${workspaceRoot}/Colorify/Colorify.nuspec",
-                "-o",
-                "${workspaceRoot}/Package/",
-                "-c",
-                "release"
-            ],
-            "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "permissions",
-            "type": "shell",
-            "osx": {
-                "command": "chmod +x ${workspaceRoot}/sonar.sh"
-            },
-            "presentation": {
-                "reveal": "always",
-                "panel": "new"
-            },
-            "problemMatcher": []
-        },
-        {
-            "label": "sonar",
-            "type": "shell",
-            "windows": {
-                "command": "${workspaceRoot}\\sonar.bat"
-            },
-            "osx": {
-                "command": "${workspaceRoot}/sonar.sh"
-            },
-            "presentation": {
-                "reveal": "always",
-                "panel": "new"
-            },
-            "problemMatcher": []
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "command": "dotnet",
+      "type": "process",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "args": ["build", "${workspaceFolder}/Colorify/Colorify.csproj"],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "build tests",
+      "command": "dotnet",
+      "type": "process",
+      "group": "build",
+      "args": [
+        "build",
+        "${workspaceFolder}/Colorify.Tests/Colorify.Tests.csproj"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "test",
+      "command": "dotnet",
+      "type": "process",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "args": ["test", "${workspaceFolder}/ToolBox.Tests/ToolBox.Tests.csproj"],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "build sample",
+      "command": "dotnet",
+      "type": "process",
+      "group": "build",
+      "args": ["build", "${workspaceFolder}/Sample/Sample.csproj"],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "publish win",
+      "command": "dotnet",
+      "args": [
+        "publish",
+        "${workspaceRoot}/Colorify/Colorify.csproj",
+        "-o",
+        "${workspaceRoot}/Library/win/",
+        "-c",
+        "release",
+        "-r",
+        "win10-x64"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "publish mac",
+      "command": "dotnet",
+      "args": [
+        "publish",
+        "${workspaceRoot}/Colorify/Colorify.csproj",
+        "-o",
+        "${workspaceRoot}/Library/mac/",
+        "-c",
+        "release",
+        "-r",
+        "osx.10.12-x64"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "pack",
+      "command": "dotnet",
+      "args": [
+        "pack",
+        "${workspaceRoot}/Colorify/Colorify.csproj",
+        "/p:NuspecFile=${workspaceRoot}/Colorify/Colorify.nuspec",
+        "-o",
+        "${workspaceRoot}/Package/",
+        "-c",
+        "release"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "permissions",
+      "type": "shell",
+      "osx": {
+        "command": "chmod +x ${workspaceRoot}/sonar.sh"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "sonar",
+      "type": "shell",
+      "windows": {
+        "command": "${workspaceRoot}\\sonar.bat"
+      },
+      "osx": {
+        "command": "${workspaceRoot}/sonar.sh"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    }
+  ]
 }

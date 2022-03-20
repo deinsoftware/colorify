@@ -53,7 +53,7 @@ What things you need to install?
 
 - [.Net SDK](https://www.microsoft.com/net/download)
 
-**Colorify** supports `netcoreapp3.1` and `net5.0` target frameworks.
+**Colorify** supports `netstandard2.1`, `netcoreapp3.1`, `net5.0` and `net6.0` target frameworks.
 
 ### Installing
 
