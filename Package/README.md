@@ -33,7 +33,6 @@ If you want to use OS class highly recommend use [ToolBox](https://github.com/de
 
 ```terminal
 dotnet add package dein.ToolBox
-dotnet add package Newtonsoft.Json
 ```
 
 Official documentation: [dotnet add package](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-package)

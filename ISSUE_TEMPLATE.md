@@ -39,7 +39,6 @@ Please provide any relevant information about your setup. This is important in c
 
 - Colorify Version:
 - ToolBox Version:
-- Newtonsoft.Json Version:
 
 - VS Code Version:
 - VS Version:
