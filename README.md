@@ -327,7 +327,7 @@ _colorify.DivisionLine('.', Colors.bgDanger);
 
 - [.Net](https://dotnet.github.io/) - .Net is a free and open-source web framework, developed by Microsoft and the community.
 - [VS Code](https://code.visualstudio.com/) - Code editing redefined.
-- [SonarQube](https://sonarcloud.io/dashboard/index/dein:colorify) - Continuous code quality.
+- [SonarQube](https://sonarcloud.io/) - Continuous code quality.
 
 ### Contributing
 
