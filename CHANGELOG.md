@@ -15,6 +15,10 @@ Security    to invite users to upgrade in case of vulnerabilities.
 
 - Support for Twitter API v2
 
+**Fixed:**
+
+- Support with dotnet 6 publish NuGet commands
+
 ## [2.7.0] - 2022-03-20
 
 **Added:**
