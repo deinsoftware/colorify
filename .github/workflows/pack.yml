@@ -1,13 +1,11 @@
 name: pack
 
 on:
-  push:
-    tags:
-      - "v*"
+  release:
+    types: [published]
 
 env:
   dotnet: 6.0.201
-  version: 2.7.0
 
 jobs:
   pack:
@@ -24,24 +22,25 @@ jobs:
       - name: create file
         run: dotnet pack Colorify/Colorify.csproj /p:NuspecFile=${{ github.workspace }}/Colorify/Colorify.nuspec -o ${{ github.workspace }}/Package/ -c release
       - name: publish nuget on microsoft
-        run: dotnet nuget push "${{ github.workspace }}/Package/dein.Colorify.${{ env.version }}.nupkg" -k ${{ secrets.NUGET_TOKEN }} -s "nuget" --skip-duplicate --no-symbols true
+        run: dotnet nuget push "${{ github.workspace }}/Package/dein.Colorify.${{ github.event.release.tag_name:1 }}.nupkg" -k ${{ secrets.NUGET_TOKEN }} -s "nuget" --skip-duplicate --no-symbols true
       - name: publish nuget on github
-        run: dotnet nuget push "${{ github.workspace }}/Package/dein.Colorify.${{ env.version }}.nupkg" -s "github" --skip-duplicate --no-symbols true
+        run: dotnet nuget push "${{ github.workspace }}/Package/dein.Colorify.${{ github.event.release.tag_name:1 }}.nupkg" -s "github" --skip-duplicate --no-symbols true
+
   tweet:
-    runs-on: ubuntu-latest
-    name: message
     needs: pack
+    if: ${{ success() }}
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: setup Twitter
-        uses: ethomson/send-tweet-action@v1
+      - uses: Eomm/why-don-t-you-tweet@v1
+        if: ${{ !github.event.repository.private }}
         with:
-          status: "Colorify - C# .Net Console Library with Text Format: colors, alignment and lot more [ Win+Mac+Linux ]\n
-          ${{ env.version }} 🐛🛠 version available as NuGet package\n
-          $ dotnet add package dein.colorify\n
-          \n
+          tweet-message: "Colorify ${{ github.event.release.tag_name }} 🐛🛠 is here 🥳\n
+          C# .Net Console Library with Text Format: colors, alignment and lot more [ Win+Mac+Linux ]\n\n
+          $ dotnet add package dein.colorify\n\n
+          #dotnet #csharp #cli\n\n
           https://github.com/deinsoftware/colorify"
-          consumer-key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
-          consumer-secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
-          access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
-          access-token-secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+        env:
+          TWITTER_CONSUMER_API_KEY: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
+          TWITTER_CONSUMER_API_SECRET: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
+          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}

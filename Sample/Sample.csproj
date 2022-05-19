@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
-    <PackageReference Include="dein.Colorify" Version="2.7.0" />
+    <PackageReference Include="dein.Colorify" Version="2.7.1" />
     <!-- <ProjectReference Include="../Colorify/Colorify.csproj" /> -->
     <PackageReference Include="dein.ToolBox" Version="1.9.0" />
   </ItemGroup>
