@@ -7,7 +7,7 @@ on:
     branches: [master]
 
 env:
-  dotnet: 6.0.201
+  dotnet: 6.0.5
   version: 2.8.0
   key: dein:colorify
   organization: dein

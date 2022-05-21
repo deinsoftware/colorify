@@ -5,7 +5,7 @@ on:
     types: [published]
 
 env:
-  dotnet: 6.0.201
+  dotnet: 6.0.5
   version: 2.8.0
 
 jobs:
@@ -23,9 +23,9 @@ jobs:
       - name: create file
         run: dotnet pack Colorify/Colorify.csproj /p:NuspecFile=${{ github.workspace }}/Colorify/Colorify.nuspec -o ${{ github.workspace }}/Package/ -c release
       - name: publish nuget on microsoft
-        run: dotnet nuget push "${{ github.workspace }}/Package/dein.Colorify.${{ env.version }}.nupkg" -k ${{ secrets.NUGET_TOKEN }} -s "nuget" --skip-duplicate --no-symbols true
+        run: dotnet nuget push "${{ github.workspace }}/Package/dein.Colorify.${{ env.version }}.nupkg" -k ${{ secrets.NUGET_TOKEN }} -s "nuget" --skip-duplicate --no-symbols
       - name: publish nuget on github
-        run: dotnet nuget push "${{ github.workspace }}/Package/dein.Colorify.${{ env.version }}.nupkg" -s "github" --skip-duplicate --no-symbols true
+        run: dotnet nuget push "${{ github.workspace }}/Package/dein.Colorify.${{ env.version }}.nupkg" -s "github" --skip-duplicate --no-symbols
 
   tweet:
     needs: pack
