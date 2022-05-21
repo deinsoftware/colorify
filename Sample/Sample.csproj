@@ -2,7 +2,7 @@
   <ItemGroup>
     <PackageReference Include="dein.Colorify" Version="2.8.0" />
     <!-- <ProjectReference Include="../Colorify/Colorify.csproj" /> -->
-    <PackageReference Include="dein.ToolBox" Version="1.9.2" />
+    <PackageReference Include="dein.ToolBox" Version="1.10.0" />
   </ItemGroup>
   <PropertyGroup>
     <OutputType>Exe</OutputType>
