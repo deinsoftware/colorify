@@ -8,7 +8,7 @@ on:
 
 env:
   dotnet: 6.0.201
-  version: 2.7.1
+  version: 2.8.0
   key: dein:colorify
   organization: dein
   name: Colorify
