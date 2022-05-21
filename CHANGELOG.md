@@ -9,6 +9,12 @@ Fixed       for any bug fixes.
 Security    to invite users to upgrade in case of vulnerabilities.
 -->
 
+## [2.8.0] - 2022-05-21
+
+**Changed:**
+
+- Brand images with new dein standard
+
 ## [2.7.1] - 2022-05-19
 
 **Changed:**
