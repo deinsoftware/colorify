@@ -23,9 +23,9 @@ jobs:
       - name: create file
         run: dotnet pack Colorify/Colorify.csproj /p:NuspecFile=${{ github.workspace }}/Colorify/Colorify.nuspec -o ${{ github.workspace }}/Package/ -c release
       - name: publish nuget on microsoft
-        run: dotnet nuget push "${{ github.workspace }}/Package/dein.Colorify.${{ env.version }}.nupkg" -k ${{ secrets.NUGET_TOKEN }} -s "nuget" --skip-duplicate --no-symbols true 2>/dev/null
+        run: dotnet nuget push "${{ github.workspace }}/Package/dein.Colorify.${{ env.version }}.nupkg" -k ${{ secrets.NUGET_TOKEN }} -s "nuget" --skip-duplicate --no-symbols true
       - name: publish nuget on github
-        run: dotnet nuget push "${{ github.workspace }}/Package/dein.Colorify.${{ env.version }}.nupkg" -s "github" --skip-duplicate --no-symbols true 2>/dev/null
+        run: dotnet nuget push "${{ github.workspace }}/Package/dein.Colorify.${{ env.version }}.nupkg" -s "github" --skip-duplicate --no-symbols true
 
   tweet:
     needs: pack
