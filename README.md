@@ -53,7 +53,7 @@ What things you need to install?
 
 - [.Net SDK](https://www.microsoft.com/net/download)
 
-**Colorify** supports `netstandard2.1`, `netcoreapp3.1`, `net5.0` and `net6.0` target frameworks.
+**Colorify** supports `netstandard2.1`, `netcoreapp3.1`, `net5.0`, `net6.0` and `net7.0` target frameworks.
 
 ### Installing
 
@@ -347,8 +347,8 @@ See also the list of [contributors](https://github.com/deinsoftware/colorify/con
 
 If this project help you reduce time to develop, you can give me a cup of coffee.
 
+[![GitHub Sponsors](https://img.shields.io/badge/-GitHub%20Sponsors-gray?style=flat&labelColor=171515&logo=github&logoColor=white&link=https://github.com/sponsors/deinsoftware)](https://github.com/sponsors/deinsoftware)
 [![paypal](https://img.shields.io/badge/-PayPal-gray?style=flat&labelColor=00457C&logo=paypal&logoColor=white&link=https://paypal.me/equiman/3)](https://paypal.me/equiman/3)
-[![ko-fi](https://img.shields.io/badge/-Ko–Fi-gray?style=flat&labelColor=fd444a&logo=ko-fi&logoColor=white&link=https://ko-fi.com/equiman)](https://ko-fi.com/equiman)
 
 No sponsors yet! Will you be the first?
 
